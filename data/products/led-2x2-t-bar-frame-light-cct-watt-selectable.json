@@ -1,0 +1,42 @@
+{
+  "name": "LED 2X2 T-Bar Frame Light CCT & WATT Selectable",
+  "slug": "led-2x2-t-bar-frame-light-cct-watt-selectable",
+  "url": "https://zionledusa.com/product/led-2x2-t-bar-frame-light-cct-watt-selectable/",
+  "sku": "",
+  "price": "",
+  "description": "This T-Bar Frame Light from ZION LED USA offers a modern, upscale aesthetic with functionality and performance to match. Featuring Switchable color temperature and adjustable lumen technology, This frame light allows you to fine tune the look and feel of your space.",
+  "short_desc": "Features Wattage: 23W – 39.4W depends on Selected CCT & Lumens Voltage: 120-277V Colour Temperature: 3500K / 4000K / 5000K Switchable CRI: 80 ‘Snap’ Connect for quick assembly Dimensions Length: 23.8″ Width: 23.8″ Height: 1″ Weight: 2.4 lbs Estimated Life 80% LED lumen maintenance at 60,000 hours (L80/60,000) Warranty 5 Year Limited",
+  "images": [
+    {
+      "original": "images\\products\\4-13-300x300.png",
+      "webp": "images_optimized\\products\\4-13-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/4-13-300x300.png",
+      "filename": "4-13-300x300.png",
+      "alt": "2x2ft LED Backlit Panel Light 5CCT & 5WATT selectable"
+    },
+    {
+      "original": "images\\products\\LED-FRAME-LIGHTS4-300x300.png",
+      "webp": "images_optimized\\products\\LED-FRAME-LIGHTS4-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/LED-FRAME-LIGHTS4-300x300.png",
+      "filename": "LED-FRAME-LIGHTS4-300x300.png",
+      "alt": "LED 2X4 T-Bar Frame Light CCT & WATT Selectable"
+    },
+    {
+      "original": "images\\products\\3-15-300x300.png",
+      "webp": "images_optimized\\products\\3-15-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/3-15-300x300.png",
+      "filename": "3-15-300x300.png",
+      "alt": "2x4 LED Backlit Panel Light 5CCT & 5WATT Selectable"
+    }
+  ],
+  "categories": [
+    {
+      "name": "BACKLIT PANEL LIGHTS",
+      "slug": "backlit-panel-lights"
+    }
+  ],
+  "attributes": {},
+  "meta_title": "LED 2X2 T-Bar Frame Light CCT & WATT Selectable",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:24:59.670436"
+}

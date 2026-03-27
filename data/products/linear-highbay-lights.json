@@ -1,0 +1,30 @@
+{
+  "name": "LINEAR HIGHBAY LIGHTS",
+  "slug": "linear-highbay-lights",
+  "url": "https://zionledusa.com/product-category/indoor/linear-highbay-lights/",
+  "sku": "",
+  "price": "",
+  "description": "",
+  "short_desc": "",
+  "images": [
+    {
+      "original": "images\\products\\4-10-300x300.png",
+      "webp": "images_optimized\\products\\4-10-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/4-10-300x300.png",
+      "filename": "4-10-300x300.png",
+      "alt": "110W/165W/220W Linear High Bay Light CCT 4000K/5000K AC 120-277V"
+    },
+    {
+      "original": "images\\products\\1-11-300x300.png",
+      "webp": "images_optimized\\products\\1-11-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/1-11-300x300.png",
+      "filename": "1-11-300x300.png",
+      "alt": "300W LED Linear High Bay Light 5000K AC 120-277V"
+    }
+  ],
+  "categories": [],
+  "attributes": {},
+  "meta_title": "LINEAR HIGHBAY LIGHTS",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:23:58.775467"
+}

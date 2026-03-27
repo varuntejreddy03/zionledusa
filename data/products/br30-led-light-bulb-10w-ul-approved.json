@@ -1,0 +1,35 @@
+{
+  "name": "BR30 LED Light Bulb – 10W – UL Approved",
+  "slug": "br30-led-light-bulb-10w-ul-approved",
+  "url": "https://zionledusa.com/product/br30-led-light-bulb/",
+  "sku": "",
+  "price": "",
+  "description": "Features: Energy Efficient: 10W LED bulb replaces a 75W incandescent bulb, reducing energy costs. Adjustable CCT: Choose between 3000K, 4000K, and 5000K to match your desired ambiance. Dimmable Feature: Compatible with most dimmers for customizable brightness. Long Lifespan: Delivers up to 25,000 hours of consistent, reliable lighting. ETL Certified: Complies with recognized safety and efficiency standards for residential and commercial applications.",
+  "short_desc": "Product Attributes: Wattage: 10W Lumen Output: 860 Lumens Adjustable CCT: 3000K, 4000K, 5000K Dimmable: Yes Housing Color: White Size: BR30 Base Type: E26 Light Color: Warm White (WW), Neutral White (NW), Cool White (CW) Watt Equivalent: 75W Brightness: 4 out of 5 Pack Size: 4 Pack ETL Listed: Yes Height: 5.1 in. Diameter: 3.7 in. Voltage: 120V AC Warranty: 1 Year CRI (Color Rendering Index): >80 Lifespan: 25,000 hours",
+  "images": [
+    {
+      "original": "images\\products\\BR40-300x300.png",
+      "webp": "images_optimized\\products\\BR40-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/BR40-300x300.png",
+      "filename": "BR40-300x300.png",
+      "alt": "BR40 LED Light Bulb - 17W – Energy Star Approved"
+    },
+    {
+      "original": "images\\products\\BR20-300x300.png",
+      "webp": "images_optimized\\products\\BR20-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/BR20-300x300.png",
+      "filename": "BR20-300x300.png",
+      "alt": "BR20 LED Bulb - 550 Lumens"
+    }
+  ],
+  "categories": [
+    {
+      "name": "BR LED BULBS",
+      "slug": "br-led-bulbs"
+    }
+  ],
+  "attributes": {},
+  "meta_title": "BR30 LED Light Bulb – 10W – UL Approved",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:24:57.313551"
+}

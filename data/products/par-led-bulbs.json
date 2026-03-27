@@ -1,0 +1,37 @@
+{
+  "name": "PAR LED BULBS",
+  "slug": "par-led-bulbs",
+  "url": "https://zionledusa.com/product-category/indoor/led-bulbs/par-led-bulbs/",
+  "sku": "",
+  "price": "",
+  "description": "",
+  "short_desc": "",
+  "images": [
+    {
+      "original": "images\\products\\PAR-20-LED-BULB-300x300.png",
+      "webp": "images_optimized\\products\\PAR-20-LED-BULB-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/PAR-20-LED-BULB-300x300.png",
+      "filename": "PAR-20-LED-BULB-300x300.png",
+      "alt": "PAR20 LED Bulb - 7 Watts - 500 Lumens – Energy Star and UL listed."
+    },
+    {
+      "original": "images\\products\\PAR-30-LED-BULB-300x300.png",
+      "webp": "images_optimized\\products\\PAR-30-LED-BULB-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/PAR-30-LED-BULB-300x300.png",
+      "filename": "PAR-30-LED-BULB-300x300.png",
+      "alt": "PAR30 LED Bulb - 11 Watts -  850 Lumens - Energy Star and UL listed."
+    },
+    {
+      "original": "images\\products\\PAR-38-LED-BULB-300x300.png",
+      "webp": "images_optimized\\products\\PAR-38-LED-BULB-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/PAR-38-LED-BULB-300x300.png",
+      "filename": "PAR-38-LED-BULB-300x300.png",
+      "alt": "PAR38 LED Bulb - 13W - 1050 Lumens - Energy Star and UL listed."
+    }
+  ],
+  "categories": [],
+  "attributes": {},
+  "meta_title": "PAR LED BULBS",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:26:01.231216"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "BR20 LED Bulb – 550 Lumens",
+  "slug": "br20-led-bulb-550-lumens",
+  "url": "https://zionledusa.com/product/br20-led-light-bulb/",
+  "sku": "",
+  "price": "",
+  "description": "Features: Seamless Dimming: Offers 10%–100% dimming range to create the perfect ambiance for any space. Energy Saving: Uses only 7W of power, replacing 50W traditional bulbs and reducing energy consumption by up to 85%. Wide and Bright Illumination: Designed for 4″ recessed cans with a 110° flood beam, ideal for broad, even lighting. Certified for Safety and Performance: Energy Star, UL, FCC, and RoHS certified for quality assurance and safety. Long-Lasting Durability: Rated for 25,000 hours of use, damp location rated, and backed by a 5-year warranty for reliable performance.",
+  "short_desc": "Product Attributes: Lumens: 550 LM Efficacy: 79 LM/W Wattage: 7W Wattage Equivalency: 50W Voltage: 120V Operating Temperature: 4°F – 104°F Dimmable: Yes Color Temperature: 2200K, 2700K, 3000K, 4000K, 5000K, 6000K CRI: 80+ Beam Angle: 110° Moisture Rating: Damp Rated Bulb Base: E26 Finish: Frosted Material: Aluminum, Polycarbonate Certifications: UL, Energy Star, FCC, RoHS Switching Cycles: 30,000 Lifetime: 25,000 Hours Warranty: 5-Year",
+  "images": [
+    {
+      "original": "images\\products\\BR40-300x300.png",
+      "webp": "images_optimized\\products\\BR40-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/BR40-300x300.png",
+      "filename": "BR40-300x300.png",
+      "alt": "BR40 LED Light Bulb - 17W – Energy Star Approved"
+    },
+    {
+      "original": "images\\products\\BR30-300x300.png",
+      "webp": "images_optimized\\products\\BR30-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/BR30-300x300.png",
+      "filename": "BR30-300x300.png",
+      "alt": "BR30 LED Light Bulb – 10W – UL Approved"
+    }
+  ],
+  "categories": [
+    {
+      "name": "BR LED BULBS",
+      "slug": "br-led-bulbs"
+    }
+  ],
+  "attributes": {},
+  "meta_title": "BR20 LED Bulb – 550 Lumens",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:25:26.526140"
+}

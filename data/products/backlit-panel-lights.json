@@ -1,0 +1,44 @@
+{
+  "name": "BACKLIT PANEL LIGHTS",
+  "slug": "backlit-panel-lights",
+  "url": "https://zionledusa.com/product-category/indoor/backlit-panel-lights/",
+  "sku": "",
+  "price": "",
+  "description": "",
+  "short_desc": "",
+  "images": [
+    {
+      "original": "images\\products\\4-13-300x300.png",
+      "webp": "images_optimized\\products\\4-13-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/4-13-300x300.png",
+      "filename": "4-13-300x300.png",
+      "alt": "2x2ft LED Backlit Panel Light 5CCT & 5WATT selectable"
+    },
+    {
+      "original": "images\\products\\3-15-300x300.png",
+      "webp": "images_optimized\\products\\3-15-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/3-15-300x300.png",
+      "filename": "3-15-300x300.png",
+      "alt": "2x4 LED Backlit Panel Light 5CCT & 5WATT Selectable"
+    },
+    {
+      "original": "images\\products\\LED-FRAME-LIGHTS1-300x300.png",
+      "webp": "images_optimized\\products\\LED-FRAME-LIGHTS1-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/LED-FRAME-LIGHTS1-300x300.png",
+      "filename": "LED-FRAME-LIGHTS1-300x300.png",
+      "alt": "LED 2X2 T-Bar Frame Light CCT & WATT Selectable"
+    },
+    {
+      "original": "images\\products\\LED-FRAME-LIGHTS4-300x300.png",
+      "webp": "images_optimized\\products\\LED-FRAME-LIGHTS4-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/LED-FRAME-LIGHTS4-300x300.png",
+      "filename": "LED-FRAME-LIGHTS4-300x300.png",
+      "alt": "LED 2X4 T-Bar Frame Light CCT & WATT Selectable"
+    }
+  ],
+  "categories": [],
+  "attributes": {},
+  "meta_title": "BACKLIT PANEL LIGHTS",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:25:16.307288"
+}

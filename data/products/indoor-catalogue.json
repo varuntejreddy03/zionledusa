@@ -1,0 +1,20 @@
+{
+  "id": 1921,
+  "name": "Indoor Catalogue",
+  "slug": "indoor-catalogue",
+  "url": "https://zionledusa.com/indoor-catalogue/",
+  "description": "",
+  "short_desc": "",
+  "images": [],
+  "categories": [
+    {
+      "name": "Catalogue",
+      "slug": "catalogue"
+    },
+    {
+      "name": "Indoor",
+      "slug": "indoor"
+    }
+  ],
+  "scraped_at": "2026-03-26T21:21:34.916381"
+}

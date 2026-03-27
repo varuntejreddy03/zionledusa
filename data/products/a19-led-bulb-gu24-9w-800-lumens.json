@@ -1,0 +1,49 @@
+{
+  "name": "A19 LED Bulb, GU24, 9W, 800 Lumens",
+  "slug": "a19-led-bulb-gu24-9w-800-lumens",
+  "url": "https://zionledusa.com/product/a19-led-bulb-gu24-9w-800-lumens/",
+  "sku": "",
+  "price": "",
+  "description": "Features: Seamless Dimming : Offers 10%-100% dimming for customizable lighting, providing sunlight-like quality with true color rendering and a GU24 twist-lock base. Energy Efficient : Reduces energy consumption by up to 85%, lasting longer than traditional bulbs and lowering relamping costs. Versatile Applications : Safe for artwork and ideal for various spaces, including bedrooms, kitchens, offices, and lamps, with low heat output and no UV emission. Certified Performance : ENERGY STAR, UL, FCC, and RoHS certified, ensuring instant bright light without buzzing or flickering, compliant with Title 20 standards. Durable and Reliable : 5-year warranty, 25,000-hour lifetime, and a robust build with frosted aluminum and polycarbonate materials for damp-rated environments.",
+  "short_desc": "Specifications: Lumen Output: 800 lm Efficacy: 89 lm/W Wattage: 9W Wattage Equivalent: 60W Input Voltage: 120V Operating Temperature: 4°F – 104°F Dimmable: Yes Color Temperature Options: 2700K / 3000K / 4000K / 5000K / 6000K CRI: 90+ Beam Angle: 240° Moisture Rating: Damp Rated Bulb Base: GU24 Finish: Frosted Material: Aluminum, Polycarbonate Certifications: ENERGY STAR, UL, FCC, RoHS Switching Cycles: 10,000 Lifetime: 25,000 Hours Warranty: 5 Years",
+  "images": [
+    {
+      "original": "images\\products\\GU24-LED-BULB.png",
+      "webp": "images_optimized\\products\\GU24-LED-BULB.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/GU24-LED-BULB.png",
+      "filename": "GU24-LED-BULB.png",
+      "alt": "A19 LED Bulb, GU24, 9W, 800 Lumens"
+    },
+    {
+      "original": "images\\products\\A21-LED-BULB-300x300.png",
+      "webp": "images_optimized\\products\\A21-LED-BULB-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/A21-LED-BULB-300x300.png",
+      "filename": "A21-LED-BULB-300x300.png",
+      "alt": "LED A21 Bulb – 15 Watt - Energy Star and UL listed."
+    },
+    {
+      "original": "images\\products\\A19-LED-BULB-300x300.png",
+      "webp": "images_optimized\\products\\A19-LED-BULB-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/A19-LED-BULB-300x300.png",
+      "filename": "A19-LED-BULB-300x300.png",
+      "alt": "LED A19 Bulb - 12 Watt - Energy Star and UL listed."
+    },
+    {
+      "original": "images\\products\\A21-LED-BULB-3-300x300.png",
+      "webp": "images_optimized\\products\\A21-LED-BULB-3-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/A21-LED-BULB-3-300x300.png",
+      "filename": "A21-LED-BULB-3-300x300.png",
+      "alt": "LED A19 Bulb - 9 Watt - Energy Star and UL listed."
+    }
+  ],
+  "categories": [
+    {
+      "name": "A19 & A21 LED BULBS",
+      "slug": "a19-a21-led-bulbs"
+    }
+  ],
+  "attributes": {},
+  "meta_title": "A19 LED Bulb, GU24, 9W, 800 Lumens",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:26:11.671405"
+}

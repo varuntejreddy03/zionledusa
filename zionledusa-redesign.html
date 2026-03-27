@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZION LED USA — Premium LED Lighting Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+:root {
+  --bg-void:    #040810;
+  --bg-deep:    #060c1a;
+  --bg-surface: #0b1426;
+  --bg-card:    #0f1d35;
+  --bg-card2:   #132240;
+  --blue-core:  #0d7fd4;
+  --blue-bright:#1a9fe8;
+  --blue-glow:  #38bdf8;
+  --blue-ice:   #7dd3fc;
+  --gold:       #f0a500;
+  --gold-light: #fbbf24;
+  --white:      #ffffff;
+  --off-white:  #e8f4fd;
+  --muted:      #6b8db5;
+  --dim:        #3a5272;
+  --border:     rgba(13,127,212,0.18);
+  --border-glow:rgba(13,127,212,0.45);
+  --radius-sm:  8px;
+  --radius-md:  14px;
+  --radius-lg:  20px;
+  --font-head:  'Rajdhani', sans-serif;
+  --font-body:  'Exo 2', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg-void); color: var(--off-white); overflow-x: hidden; cursor: none; }
+
+/* CURSOR */
+#cursor { position: fixed; width: 10px; height: 10px; background: var(--blue-bright); border-radius: 50%; pointer-events: none; z-index: 99999; transform: translate(-50%,-50%); transition: transform 0.1s; mix-blend-mode: screen; }
+#cursor-ring { position: fixed; width: 38px; height: 38px; border: 1px solid rgba(26,159,232,0.5); border-radius: 50%; pointer-events: none; z-index: 99998; transform: translate(-50%,-50%); transition: width 0.3s, height 0.3s, border-color 0.3s; }
+
+/* BG CANVAS */
+#bg-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 74px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 3.5rem;
+  background: rgba(4,8,16,0.78);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.4s, box-shadow 0.4s;
+}
+nav::after {
+  content: ''; position: absolute; bottom: 0; left: 10%; right: 10%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--blue-core), transparent); opacity: 0.5;
+}
+nav.scrolled { background: rgba(4,8,16,0.97); box-shadow: 0 8px 40px rgba(0,0,0,0.6); }
+
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-logo img { height: 46px; width: auto; object-fit: contain; filter: brightness(1.08) drop-shadow(0 0 10px rgba(13,127,212,0.4)); transition: filter 0.3s; }
+.nav-logo img:hover { filter: brightness(1.2) drop-shadow(0 0 18px rgba(26,159,232,0.7)); }
+.logo-fallback { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; letter-spacing: 3px; color: var(--white); display: none; }
+.logo-fallback span { color: var(--blue-bright); }
+
+.nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+.nav-links > li { position: relative; }
+.nav-links a { font-family: var(--font-head); font-size: 0.88rem; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.25s; padding: 4px 0; position: relative; }
+.nav-links a:hover { color: var(--white); }
+.nav-links a::before { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: linear-gradient(90deg, var(--blue-core), var(--blue-glow)); transition: width 0.3s; }
+.nav-links a:hover::before { width: 100%; }
+
+.has-drop .drop-menu { display: none; position: absolute; top: calc(100% + 16px); left: 50%; transform: translateX(-50%); background: rgba(6,12,26,0.97); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 0.6rem; min-width: 210px; box-shadow: 0 24px 60px rgba(0,0,0,0.7); z-index: 200; backdrop-filter: blur(20px); }
+.has-drop:hover .drop-menu { display: block; animation: dropIn 0.2s ease; }
+@keyframes dropIn { from { opacity: 0; transform: translateX(-50%) translateY(-8px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+.drop-menu a { display: block; padding: 0.5rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.82rem; text-transform: none; letter-spacing: 0.3px; color: var(--muted) !important; font-weight: 400; transition: background 0.2s, color 0.2s; }
+.drop-menu a::before { display: none !important; }
+.drop-menu a:hover { background: rgba(13,127,212,0.12); color: var(--white) !important; }
+
+.nav-phone { color: var(--gold-light) !important; font-weight: 700 !important; letter-spacing: 1px !important; }
+.nav-phone:hover { color: var(--gold) !important; }
+.nav-phone::before { display: none !important; }
+
+.nav-btn { font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.6rem 1.6rem; border-radius: var(--radius-sm); background: linear-gradient(135deg, var(--blue-core), var(--blue-bright)); color: var(--white) !important; text-decoration: none; box-shadow: 0 0 24px rgba(13,127,212,0.3); transition: box-shadow 0.3s, transform 0.2s; position: relative; overflow: hidden; }
+.nav-btn::after { display: none !important; }
+.nav-btn::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent); pointer-events: none; }
+.nav-btn:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(13,127,212,0.55); }
+
+/* HERO */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 9rem 3.5rem 5rem; z-index: 1; overflow: hidden; }
+.hero-mesh { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 55% at 65% 45%, rgba(13,127,212,0.09) 0%, transparent 65%), radial-gradient(ellipse 40% 30% at 15% 75%, rgba(56,189,248,0.05) 0%, transparent 60%); pointer-events: none; }
+.hero::before { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--blue-glow), transparent); opacity: 0.25; animation: scanLine 8s linear infinite; top: 0; }
+@keyframes scanLine { 0% { top: 0%; opacity: 0; } 5% { opacity: 0.25; } 95% { opacity: 0.25; } 100% { top: 100%; opacity: 0; } }
+
+.hero-content { position: relative; z-index: 2; max-width: 660px; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 3.5px; text-transform: uppercase; color: var(--blue-glow); margin-bottom: 1.6rem; opacity: 0; animation: riseIn 0.9s cubic-bezier(.22,1,.36,1) 0.2s forwards; }
+.pulse-dot { width: 7px; height: 7px; background: var(--blue-glow); border-radius: 50%; box-shadow: 0 0 0 0 rgba(56,189,248,0.7); animation: pulseDot 2s ease-in-out infinite; }
+@keyframes pulseDot { 0%,100% { box-shadow: 0 0 0 0 rgba(56,189,248,0.7); } 50% { box-shadow: 0 0 0 8px rgba(56,189,248,0); } }
+@keyframes riseIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+.hero-title { font-family: var(--font-head); font-size: clamp(3.2rem, 6.5vw, 6.8rem); font-weight: 700; line-height: 0.93; letter-spacing: 2px; text-transform: uppercase; color: var(--white); margin-bottom: 1.6rem; opacity: 0; animation: riseIn 0.9s cubic-bezier(.22,1,.36,1) 0.35s forwards; }
+.line-blue { background: linear-gradient(90deg, var(--blue-bright), var(--blue-glow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 0 28px rgba(26,159,232,0.45)); }
+.line-gold { color: var(--gold); }
+
+.hero-sub { font-size: 1.05rem; font-weight: 300; color: var(--muted); max-width: 500px; line-height: 1.75; margin-bottom: 2.5rem; opacity: 0; animation: riseIn 0.9s cubic-bezier(.22,1,.36,1) 0.5s forwards; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: riseIn 0.9s cubic-bezier(.22,1,.36,1) 0.65s forwards; }
+
+.btn-glow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-head); font-size: 0.9rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 1rem 2.2rem; border-radius: var(--radius-sm); background: linear-gradient(135deg, var(--blue-core), var(--blue-bright)); color: var(--white); text-decoration: none; border: none; cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 0 36px rgba(13,127,212,0.35); transition: transform 0.3s, box-shadow 0.3s; }
+.btn-glow::before { content: ''; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.5s; }
+.btn-glow:hover { transform: translateY(-3px); box-shadow: 0 0 60px rgba(13,127,212,0.55), 0 12px 30px rgba(0,0,0,0.4); }
+.btn-glow:hover::before { left: 150%; }
+.btn-outline { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-head); font-size: 0.9rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 1rem 2.2rem; border-radius: var(--radius-sm); background: transparent; border: 1px solid var(--border-glow); color: var(--off-white); text-decoration: none; cursor: pointer; transition: all 0.3s; }
+.btn-outline:hover { background: rgba(13,127,212,0.1); border-color: var(--blue-glow); transform: translateY(-3px); }
+
+.hero-3d-wrap { position: absolute; right: 3%; top: 50%; transform: translateY(-50%); width: 45%; max-width: 580px; z-index: 2; opacity: 0; animation: riseIn 1.2s cubic-bezier(.22,1,.36,1) 0.7s forwards; }
+#hero-canvas-3d { width: 100%; aspect-ratio: 1/1; border-radius: var(--radius-lg); }
+.stat-float { position: absolute; background: rgba(6,12,26,0.92); border: 1px solid var(--border-glow); border-radius: var(--radius-md); padding: 0.9rem 1.2rem; backdrop-filter: blur(12px); animation: floatY 4s ease-in-out infinite; box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+.stat-float:nth-child(2) { animation-delay: -1.5s; }
+.stat-float:nth-child(3) { animation-delay: -3s; }
+@keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.sf-num { font-family: var(--font-head); font-size: 1.8rem; font-weight: 700; background: linear-gradient(135deg, var(--blue-bright), var(--blue-glow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; display: block; }
+.sf-lbl { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.5px; margin-top: 2px; display: block; }
+.sf-1 { top: 12%; left: -4%; }
+.sf-2 { bottom: 18%; left: -6%; }
+.sf-3 { top: 8%; right: -2%; }
+
+/* TRUST */
+.trust-row { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 1.3rem 3.5rem; background: rgba(11,20,38,0.6); border-bottom: 1px solid var(--border); }
+.trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.82rem; color: var(--muted); }
+.trust-icon { width: 34px; height: 34px; background: rgba(13,127,212,0.1); border: 1px solid rgba(13,127,212,0.2); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+.trust-sep { width: 1px; height: 28px; background: var(--border); }
+
+/* TICKER */
+.ticker-wrap { position: relative; z-index: 1; background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
+.ticker-track { display: flex; align-items: center; animation: ticker 35s linear infinite; width: max-content; padding: 0.9rem 0; }
+.ticker-item { display: flex; align-items: center; gap: 10px; padding: 0 2.5rem; font-family: var(--font-head); font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.t-icon { color: var(--blue-glow); }
+.ticker-sep { color: var(--dim); padding: 0 0.5rem; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* STATS BAND */
+.stats-band { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4,1fr); margin: 3rem 3.5rem 0; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: 0 0 60px rgba(13,127,212,0.06), 0 40px 80px rgba(0,0,0,0.4); }
+.stat-cell { padding: 2.5rem 2rem; background: var(--bg-card); text-align: center; position: relative; transition: background 0.3s; }
+.stat-cell:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 20%; bottom: 20%; width: 1px; background: var(--border); }
+.stat-cell:hover { background: var(--bg-card2); }
+.stat-big { font-family: var(--font-head); font-size: 3rem; font-weight: 700; letter-spacing: 2px; background: linear-gradient(135deg, var(--blue-bright), var(--blue-glow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; line-height: 1; margin-bottom: 6px; }
+.stat-lbl { font-size: 0.78rem; color: var(--muted); font-weight: 300; }
+
+/* SECTION BASE */
+section { position: relative; z-index: 1; padding: 7rem 3.5rem; }
+.s-label { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 3.5px; text-transform: uppercase; color: var(--blue-glow); margin-bottom: 0.8rem; }
+.s-label::before { content: ''; display: block; width: 28px; height: 1px; background: linear-gradient(90deg, var(--blue-core), var(--blue-glow)); }
+.s-title { font-family: var(--font-head); font-size: clamp(2rem, 3.8vw, 3.6rem); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; line-height: 1.05; color: var(--white); margin-bottom: 1rem; }
+.s-title .ab { color: var(--blue-bright); }
+.s-title .ag { color: var(--gold); }
+.s-desc { font-size: 1rem; color: var(--muted); max-width: 520px; line-height: 1.75; font-weight: 300; }
+
+/* PRODUCTS */
+.products-section { background: var(--bg-deep); }
+.prod-hdr { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; gap: 2rem; }
+.prod-tabs { display: flex; gap: 0.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+.prod-tab { font-family: var(--font-head); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.55rem 1.4rem; border-radius: 100px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.25s; }
+.prod-tab.active, .prod-tab:hover { background: rgba(13,127,212,0.15); border-color: var(--blue-bright); color: var(--white); }
+.prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(265px, 1fr)); gap: 1.25rem; }
+.prod-card { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius-lg); overflow: hidden; position: relative; cursor: pointer; transition: border-color 0.3s, box-shadow 0.3s; will-change: transform; }
+.prod-card:hover { border-color: rgba(13,127,212,0.4); box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(13,127,212,0.08); }
+.prod-card-gfx { height: 160px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.card-bg-indoor  { background: linear-gradient(135deg, #0a1830, #0d2247); }
+.card-bg-outdoor { background: linear-gradient(135deg, #0a1820, #0d2535); }
+.card-bg-pole    { background: linear-gradient(135deg, #120d1f, #1a0d2e); }
+.mini-canvas { width: 120px; height: 120px; z-index: 1; }
+.prod-card-body { padding: 1.5rem 1.6rem 1.8rem; }
+.card-tag { display: inline-block; font-family: var(--font-head); font-size: 0.62rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: 0.9rem; }
+.tag-in   { background: rgba(13,127,212,0.15); color: var(--blue-glow); border: 1px solid rgba(13,127,212,0.25); }
+.tag-out  { background: rgba(240,165,0,0.12); color: var(--gold-light); border: 1px solid rgba(240,165,0,0.25); }
+.tag-pole { background: rgba(167,139,250,0.12); color: #c4b5fd; border: 1px solid rgba(167,139,250,0.25); }
+.card-title { font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+.card-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.65; font-weight: 300; margin-bottom: 1.2rem; }
+.card-link { font-family: var(--font-head); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--blue-bright); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s, color 0.2s; }
+.card-link:hover { gap: 12px; color: var(--blue-glow); }
+
+/* WHY US */
+.why-section { background: var(--bg-void); overflow: hidden; }
+.why-wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 5rem; align-items: center; }
+.feat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2.5rem; }
+.feat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; position: relative; overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
+.feat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--blue-core), var(--blue-glow)); opacity: 0; transition: opacity 0.3s; }
+.feat-card:hover { border-color: var(--border-glow); transform: translateY(-3px); }
+.feat-card:hover::before { opacity: 1; }
+.feat-ico { width: 46px; height: 46px; background: rgba(13,127,212,0.1); border: 1px solid rgba(13,127,212,0.2); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem; }
+.feat-name { font-family: var(--font-head); font-size: 0.92rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
+.feat-text { font-size: 0.8rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
+.why-right { position: relative; }
+#cert-canvas-3d { width: 100%; border-radius: var(--radius-lg); aspect-ratio: 4/3.5; display: block; }
+.cert-overlay { position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; background: rgba(4,8,20,0.92); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.4rem 1.6rem; backdrop-filter: blur(12px); }
+.cert-title { font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--blue-glow); margin-bottom: 0.9rem; }
+.cert-badges { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.cbadge { font-family: var(--font-head); font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; padding: 4px 12px; border-radius: 6px; background: var(--bg-card2); border: 1px solid var(--border); color: var(--blue-ice); }
+
+/* ENERGY */
+.energy-section { background: var(--bg-surface); }
+.energy-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.energy-bars { margin-top: 2.5rem; }
+.ebar-row { display: flex; align-items: center; gap: 16px; margin-bottom: 1.1rem; }
+.ebar-lbl { font-size: 0.82rem; color: var(--muted); width: 110px; flex-shrink: 0; }
+.ebar-track { flex: 1; height: 7px; background: rgba(255,255,255,0.05); border-radius: 4px; overflow: hidden; }
+.ebar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--blue-core), var(--blue-glow)); box-shadow: 0 0 10px rgba(13,127,212,0.5); transform-origin: left; transform: scaleX(0); transition: transform 1.6s cubic-bezier(.22,1,.36,1); }
+.ebar-fill.go { transform: scaleX(1); }
+.ebar-pct { font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; color: var(--blue-glow); width: 38px; text-align: right; }
+#energy-canvas-3d { width: 100%; aspect-ratio: 1; border-radius: var(--radius-lg); display: block; }
+
+/* TESTIMONIALS */
+.testi-section { background: var(--bg-deep); }
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.testi-card { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius-lg); padding: 2rem; position: relative; overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
+.testi-card::before { content: ''; position: absolute; bottom: 0; right: 0; width: 120px; height: 120px; background: radial-gradient(circle, rgba(13,127,212,0.08), transparent 70%); pointer-events: none; }
+.testi-card:hover { border-color: var(--border-glow); transform: translateY(-3px); }
+.testi-stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 1rem; }
+.testi-quote { font-size: 2.8rem; color: rgba(13,127,212,0.2); font-family: Georgia, serif; line-height: 0.7; margin-bottom: 0.8rem; }
+.testi-text { font-size: 0.88rem; color: var(--muted); line-height: 1.75; font-style: italic; font-weight: 300; margin-bottom: 1.5rem; }
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-av { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--blue-core), var(--blue-glow)); display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: white; flex-shrink: 0; }
+.testi-name { font-family: var(--font-head); font-size: 0.92rem; font-weight: 700; color: var(--white); display: block; }
+.testi-role { font-size: 0.75rem; color: var(--dim); }
+
+/* CTA */
+.cta-section { background: var(--bg-void); text-align: center; overflow: hidden; padding: 8rem 3.5rem; position: relative; }
+#cta-canvas-3d { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.55; pointer-events: none; }
+.cta-inner { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+.cta-title { font-family: var(--font-head); font-size: clamp(2.4rem, 5vw, 4.8rem); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; line-height: 1; color: var(--white); margin-bottom: 1.2rem; }
+.cta-title span { color: var(--gold); }
+.cta-sub { font-size: 1.05rem; color: var(--muted); font-weight: 300; line-height: 1.75; margin-bottom: 2.5rem; max-width: 560px; margin-left: auto; margin-right: auto; }
+.cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.cta-contact { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+.cta-contact-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--muted); }
+.cta-contact-item a { color: var(--blue-glow); text-decoration: none; font-weight: 500; }
+
+/* FOOTER */
+footer { position: relative; z-index: 1; background: var(--bg-deep); border-top: 1px solid var(--border); padding: 4.5rem 3.5rem 2.5rem; }
+footer::before { content: ''; position: absolute; top: 0; left: 15%; right: 15%; height: 1px; background: linear-gradient(90deg, transparent, var(--blue-core), transparent); opacity: 0.5; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 2rem; }
+.footer-logo img { height: 50px; width: auto; object-fit: contain; filter: brightness(1.05) drop-shadow(0 0 12px rgba(13,127,212,0.35)); margin-bottom: 1rem; display: block; }
+.footer-tagline { font-size: 0.84rem; color: var(--muted); line-height: 1.75; font-weight: 300; max-width: 270px; margin-bottom: 1.5rem; }
+.social-row { display: flex; gap: 0.6rem; }
+.soc { width: 36px; height: 36px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; text-decoration: none; transition: all 0.3s; }
+.soc:hover { background: rgba(13,127,212,0.15); border-color: rgba(13,127,212,0.4); transform: translateY(-2px); }
+.footer-col h4 { font-family: var(--font-head); font-size: 0.75rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--white); margin-bottom: 1.2rem; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.55rem; }
+.footer-col a { font-size: 0.82rem; color: var(--muted); text-decoration: none; font-weight: 300; transition: color 0.2s; }
+.footer-col a:hover { color: var(--off-white); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--dim); flex-wrap: wrap; gap: 1rem; }
+.footer-bottom a { color: var(--dim); text-decoration: none; transition: color 0.2s; }
+.footer-bottom a:hover { color: var(--muted); }
+.fbadge { display: flex; align-items: center; gap: 6px; }
+.fbadge span { color: var(--blue-glow); }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.8s cubic-bezier(.22,1,.36,1), transform 0.8s cubic-bezier(.22,1,.36,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* RESPONSIVE */
+@media (max-width: 1100px) { .hero-3d-wrap { display: none; } .why-wrap { grid-template-columns: 1fr; } .energy-wrap { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } .stats-band { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 768px) { nav { padding: 0 1.5rem; } .nav-links { display: none; } section { padding: 4.5rem 1.5rem; } .hero { padding: 7rem 1.5rem 4rem; } .trust-row { padding: 1rem 1.5rem; flex-direction: column; align-items: flex-start; } .trust-sep { display: none; } .stats-band { grid-template-columns: repeat(2,1fr); margin: 2rem 1.5rem 0; } footer { padding: 3rem 1.5rem 2rem; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } body { cursor: auto; } #cursor, #cursor-ring { display: none; } .feat-grid { grid-template-columns: 1fr; } .prod-hdr { flex-direction: column; align-items: flex-start; } }
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo">
+    <img src="https://zionledusa.com/wp-content/uploads/2025/07/ZION-LED-USA-HEADER-LOGO-TM-scaled.webp" alt="ZION LED USA"
+      onerror="this.style.display='none';document.querySelector('.logo-fallback').style.display='block';">
+    <span class="logo-fallback">ZION <span>LED</span> USA</span>
+  </a>
+  <ul class="nav-links">
+    <li class="has-drop"><a href="#">Indoor ▾</a>
+      <div class="drop-menu">
+        <a href="#">UFO Highbay Lights</a><a href="#">Down Lights</a><a href="#">Backlit Panel Lights</a>
+        <a href="#">Troffer Lights</a><a href="#">Linear Highbay Lights</a><a href="#">LED Bulbs</a>
+        <a href="#">Integrated Tube Lights</a><a href="#">Exit Signs</a><a href="#">Strip Lights</a>
+      </div>
+    </li>
+    <li class="has-drop"><a href="#">Outdoor ▾</a>
+      <div class="drop-menu">
+        <a href="#">Shoebox Lights</a><a href="#">Wallpack Lights</a><a href="#">Canopy Lights</a>
+        <a href="#">Flood Lights</a><a href="#">Vapor Tight Lights</a><a href="#">Bollard Lights</a>
+        <a href="#">Emergency Lights</a><a href="#">Rope Lights</a><a href="#">Module Lights</a>
+      </div>
+    </li>
+    <li class="has-drop"><a href="#">Light Poles ▾</a>
+      <div class="drop-menu">
+        <a href="#">Square Light Poles</a><a href="#">Round Light Poles</a><a href="#">Brackets & Bullhorns</a>
+      </div>
+    </li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="tel:+18179382959" class="nav-phone">☎ (817) 938-2959</a></li>
+    <li><a href="#contact" class="nav-btn">Free Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span class="pulse-dot"></span> Premium LED Lighting — Dallas, TX</div>
+    <h1 class="hero-title">YOUR ONE STOP<br>DESTINATION FOR<br><span class="line-blue">BRILLIANT</span><br><span class="line-gold">LIGHTING</span></h1>
+    <p class="hero-sub">High-performance LED solutions for Residential, Office & Commercial environments. Built to perform, made to last — honest pricing, unmatched support.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-glow">⚡ Get a Free Quote</a>
+      <a href="#products" class="btn-outline">Browse Products →</a>
+    </div>
+  </div>
+  <div class="hero-3d-wrap">
+    <canvas id="hero-canvas-3d"></canvas>
+    <div class="stat-float sf-1"><span class="sf-num">75%</span><span class="sf-lbl">Energy Savings</span></div>
+    <div class="stat-float sf-2"><span class="sf-num">50K+</span><span class="sf-lbl">Hours Lifespan</span></div>
+    <div class="stat-float sf-3"><span class="sf-num">5★</span><span class="sf-lbl">Rated Service</span></div>
+  </div>
+</section>
+
+<!-- TRUST ROW -->
+<div class="trust-row">
+  <div class="trust-item"><div class="trust-icon">✅</div> DLC & UL Certified</div>
+  <div class="trust-sep"></div>
+  <div class="trust-item"><div class="trust-icon">🛡️</div> Industry Warranties</div>
+  <div class="trust-sep"></div>
+  <div class="trust-item"><div class="trust-icon">💰</div> Utility Rebate Eligible</div>
+  <div class="trust-sep"></div>
+  <div class="trust-item"><div class="trust-icon">🚚</div> Fast Nationwide Shipping</div>
+  <div class="trust-sep"></div>
+  <div class="trust-item"><div class="trust-icon">🔧</div> Free Consultation</div>
+  <div class="trust-sep"></div>
+  <div class="trust-item"><div class="trust-icon">📞</div><strong style="color:var(--off-white)">(817) 938-2959</strong></div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="t-icon">⚡</span>UFO Highbay Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Linear Highbay</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Shoebox Area Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Wallpack Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Canopy Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Flood Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Vapor Tight</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Panel Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Square Poles</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Round Poles</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Down Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Strip Lights</span><span class="ticker-sep">◆</span>
+    <!-- duplicate -->
+    <span class="ticker-item"><span class="t-icon">⚡</span>UFO Highbay Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Linear Highbay</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Shoebox Area Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Wallpack Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Canopy Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Flood Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Vapor Tight</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Panel Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Square Poles</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Round Poles</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Down Lights</span><span class="ticker-sep">◆</span>
+    <span class="ticker-item"><span class="t-icon">⚡</span>Strip Lights</span>
+  </div>
+</div>
+
+<!-- STATS BAND -->
+<div class="stats-band reveal">
+  <div class="stat-cell"><span class="stat-big" data-target="500" data-suffix="+">0+</span><div class="stat-lbl">Products in Catalog</div></div>
+  <div class="stat-cell"><span class="stat-big" data-target="75" data-suffix="%">0%</span><div class="stat-lbl">Average Energy Savings</div></div>
+  <div class="stat-cell"><span class="stat-big" data-target="50" data-suffix="K">0K</span><div class="stat-lbl">Hour Rated Lifespan</div></div>
+  <div class="stat-cell"><span class="stat-big" data-target="100" data-suffix="%">0%</span><div class="stat-lbl">Satisfaction Guaranteed</div></div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="prod-hdr reveal">
+    <div>
+      <div class="s-label">Product Catalog</div>
+      <h2 class="s-title">LIGHTING FOR EVERY <span class="ab">APPLICATION</span></h2>
+      <p class="s-desc">From warehouse ceilings to parking lots — the right LED for your exact space.</p>
+    </div>
+    <a href="#" class="btn-outline" style="white-space:nowrap">View All →</a>
+  </div>
+  <div class="prod-tabs reveal">
+    <button class="prod-tab active" onclick="filterProds('all',this)">All Products</button>
+    <button class="prod-tab" onclick="filterProds('indoor',this)">Indoor</button>
+    <button class="prod-tab" onclick="filterProds('outdoor',this)">Outdoor</button>
+    <button class="prod-tab" onclick="filterProds('pole',this)">Light Poles</button>
+  </div>
+  <div class="prod-grid" id="prod-grid">
+    <div class="prod-card reveal" data-cat="indoor"><div class="prod-card-gfx card-bg-indoor"><canvas class="mini-canvas" data-shape="sphere"></canvas></div><div class="prod-card-body"><span class="card-tag tag-in">Indoor</span><div class="card-title">UFO Highbay Lights</div><p class="card-desc">Maximum lumens for warehouses, gyms & industrial facilities. IP65-rated, DLC listed.</p><a href="#" class="card-link">Shop Now →</a></div></div>
+    <div class="prod-card reveal" data-cat="indoor"><div class="prod-card-gfx card-bg-indoor"><canvas class="mini-canvas" data-shape="torus"></canvas></div><div class="prod-card-body"><span class="card-tag tag-in">Indoor</span><div class="card-title">Backlit Panel Lights</div><p class="card-desc">Ultra-slim edge-lit panels for offices & retail. Flicker-free, uniform illumination.</p><a href="#" class="card-link">Shop Now →</a></div></div>
+    <div class="prod-card reveal" data-cat="indoor"><div class="prod-card-gfx card-bg-indoor"><canvas class="mini-canvas" data-shape="cylinder"></canvas></div><div class="prod-card-body"><span class="card-tag tag-in">Indoor</span><div class="card-title">Linear Highbay Lights</div><p class="card-desc">Long-span linear fixtures for aisles & production floors. Sleek, powerful, efficient.</p><a href="#" class="card-link">Shop Now →</a></div></div>
+    <div class="prod-card reveal" data-cat="indoor"><div class="prod-card-gfx card-bg-indoor"><canvas class="mini-canvas" data-shape="box"></canvas></div><div class="prod-card-body"><span class="card-tag tag-in">Indoor</span><div class="card-title">Troffer & Down Lights</div><p class="card-desc">Drop-ceiling grid lights and precision downlights for professional interiors.</p><a href="#" class="card-link">Shop Now →</a></div></div>
+    <div class="prod-card reveal" data-cat="outdoor"><div class="prod-card-gfx card-bg-outdoor"><canvas class="mini-canvas" data-shape="octahedron" data-color="f0a500"></canvas></div><div class="prod-card-body"><span class="card-tag tag-out">Outdoor</span><div class="card-title">Shoebox Area Lights</div><p class="card-desc">Industrial-grade parking lot & street lighting. IP65, multiple arm-mount options.</p><a href="#" class="card-link">Shop Now →</a></div></div>
+    <div class="prod-card reveal" data-cat="outdoor"><div class="prod-card-gfx card-bg-outdoor"><canvas class="mini-canvas" data-shape="cone" data-color="f0a500"></canvas></div><div class="prod-card-body"><span class="card-tag tag-out">Outdoor</span><div class="card-title">Flood & Wallpack Lights</div><p class="card-desc">Powerful exterior illumination for facades, security perimeters & loading docks.</p><a href="#" class="card-link">Shop Now →</a></div></div>
+    <div class="prod-card reveal" data-cat="outdoor"><div class="prod-card-gfx card-bg-outdoor"><canvas class="mini-canvas" data-shape="torus" data-color="fbbf24"></canvas></div><div class="prod-card-body"><span class="card-tag tag-out">Outdoor</span><div class="card-title">Canopy Lights</div><p class="card-desc">Petrol station, carport & walkway canopy lighting. Flush-mount, ultra-bright.</p><a href="#" class="card-link">Shop Now →</a></div></div>
+    <div class="prod-card reveal" data-cat="outdoor"><div class="prod-card-gfx card-bg-outdoor"><canvas class="mini-canvas" data-shape="sphere" data-color="f0a500"></canvas></div><div class="prod-card-body"><span class="card-tag tag-out">Outdoor</span><div class="card-title">Vapor Tight Lights</div><p class="card-desc">Sealed fixtures for car washes, food processing & wet environments. IP69K rated.</p><a href="#" class="card-link">Shop Now →</a></div></div>
+    <div class="prod-card reveal" data-cat="pole"><div class="prod-card-gfx card-bg-pole"><canvas class="mini-canvas" data-shape="cylinder" data-color="a78bfa"></canvas></div><div class="prod-card-body"><span class="card-tag tag-pole">Light Poles</span><div class="card-title">Square Light Poles</div><p class="card-desc">Heavy-duty galvanized steel. Multiple heights for streets, campuses & industry.</p><a href="#" class="card-link">Shop Now →</a></div></div>
+    <div class="prod-card reveal" data-cat="pole"><div class="prod-card-gfx card-bg-pole"><canvas class="mini-canvas" data-shape="cylinder" data-color="c4b5fd"></canvas></div><div class="prod-card-body"><span class="card-tag tag-pole">Light Poles</span><div class="card-title">Round Light Poles</div><p class="card-desc">Tapered round steel poles with decorative base options & integrated LED arms.</p><a href="#" class="card-link">Shop Now →</a></div></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section">
+  <div class="why-wrap">
+    <div class="reveal">
+      <div class="s-label">Why Zion LED USA</div>
+      <h2 class="s-title">WE CAME TO<br><span class="ag">SERVE FIRST</span></h2>
+      <p class="s-desc">Born in a challenging era with one belief — Serve First. Zero-compromise quality, honest pricing, and unmatched support on every order.</p>
+      <div class="feat-grid">
+        <div class="feat-card"><div class="feat-ico">⚡</div><div class="feat-name">High Performance</div><p class="feat-text">Premium chips & drivers rated 50,000+ hours of flawless, full-brightness operation.</p></div>
+        <div class="feat-card"><div class="feat-ico">💰</div><div class="feat-name">Value Pricing</div><p class="feat-text">Factory-direct sourcing cuts the middleman — top quality at prices that genuinely make sense.</p></div>
+        <div class="feat-card"><div class="feat-ico">🛡️</div><div class="feat-name">Warranty Backed</div><p class="feat-text">Industry-leading warranty on every fixture. We stand behind everything we sell.</p></div>
+        <div class="feat-card"><div class="feat-ico">📋</div><div class="feat-name">Free Consultation</div><p class="feat-text">Expert lighting design for your space — free, no-obligation, custom-fit every time.</p></div>
+      </div>
+    </div>
+    <div class="why-right reveal">
+      <canvas id="cert-canvas-3d"></canvas>
+      <div class="cert-overlay">
+        <div class="cert-title">Certifications & Standards</div>
+        <div class="cert-badges"><span class="cbadge">✓ DLC Listed</span><span class="cbadge">✓ UL Certified</span><span class="cbadge">✓ RoHS</span><span class="cbadge">✓ CE</span><span class="cbadge">✓ FCC</span><span class="cbadge">✓ IP65+</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENERGY -->
+<section class="energy-section">
+  <div class="energy-wrap">
+    <div class="reveal"><canvas id="energy-canvas-3d"></canvas></div>
+    <div class="reveal">
+      <div class="s-label">Performance Analysis</div>
+      <h2 class="s-title">LED VS <span class="ab">TRADITIONAL</span></h2>
+      <p class="s-desc">See how Zion LED products dramatically outperform traditional lighting across every key metric.</p>
+      <div class="energy-bars">
+        <div class="ebar-row"><span class="ebar-lbl">Energy Use</span><div class="ebar-track"><div class="ebar-fill" style="width:25%"></div></div><span class="ebar-pct">25%</span></div>
+        <div class="ebar-row"><span class="ebar-lbl">Heat Output</span><div class="ebar-track"><div class="ebar-fill" style="width:15%"></div></div><span class="ebar-pct">15%</span></div>
+        <div class="ebar-row"><span class="ebar-lbl">Lifespan</span><div class="ebar-track"><div class="ebar-fill" style="width:95%"></div></div><span class="ebar-pct">5×</span></div>
+        <div class="ebar-row"><span class="ebar-lbl">Light Quality</span><div class="ebar-track"><div class="ebar-fill" style="width:98%"></div></div><span class="ebar-pct">98%</span></div>
+        <div class="ebar-row"><span class="ebar-lbl">Annual Savings</span><div class="ebar-track"><div class="ebar-fill" style="width:80%"></div></div><span class="ebar-pct">80%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section">
+  <div style="text-align:center" class="reveal">
+    <div class="s-label" style="justify-content:center">Customer Stories</div>
+    <h2 class="s-title" style="text-align:center">WHAT OUR <span class="ab">CLIENTS SAY</span></h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><div class="testi-quote">"</div><p class="testi-text">Switched our entire 80,000 sq ft warehouse to Zion LED highbay lights. Energy bills dropped over 60% and quality is exceptional. Zero issues in 18 months.</p><div class="testi-author"><div class="testi-av">RK</div><div><span class="testi-name">Robert K.</span><span class="testi-role">Warehouse Operations Manager</span></div></div></div>
+    <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><div class="testi-quote">"</div><p class="testi-text">We needed exterior lighting for our commercial parking lot. Zion LED delivered on time, on budget, with the best customer service I've ever experienced.</p><div class="testi-author"><div class="testi-av">SL</div><div><span class="testi-name">Sandra L.</span><span class="testi-role">Commercial Property Manager</span></div></div></div>
+    <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><div class="testi-quote">"</div><p class="testi-text">Outstanding product quality at prices nobody can beat. The free consultation saved us thousands — these guys genuinely know their stuff inside and out.</p><div class="testi-author"><div class="testi-av">MT</div><div><span class="testi-name">Marcus T.</span><span class="testi-role">Facilities Director</span></div></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <canvas id="cta-canvas-3d"></canvas>
+  <div class="cta-inner reveal">
+    <div class="s-label" style="justify-content:center;margin-bottom:1rem">Get Started Today</div>
+    <h2 class="cta-title">READY TO <span>UPGRADE</span><br>YOUR LIGHTING?</h2>
+    <p class="cta-sub">Talk to our experts and receive a free, no-obligation lighting quote — designed to fit your space and your budget.</p>
+    <div class="cta-btns">
+      <a href="tel:+18179382959" class="btn-glow">📞 Call (817) 938-2959</a>
+      <a href="mailto:contact@zionledusa.com" class="btn-outline">✉ Email Us</a>
+    </div>
+    <div class="cta-contact">
+      <div class="cta-contact-item">📍 Dallas / Fort Worth, Texas</div>
+      <div class="cta-contact-item">📧 <a href="mailto:contact@zionledusa.com">contact@zionledusa.com</a></div>
+      <div class="cta-contact-item">🕐 Mon–Fri: 9AM–6PM CST</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <img src="https://zionledusa.com/wp-content/uploads/2025/07/ZION-LED-USA-HEADER-LOGO-TM-scaled.webp" alt="ZION LED USA"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+        <span style="display:none;font-family:var(--font-head);font-size:1.4rem;font-weight:700;letter-spacing:3px;color:var(--white);margin-bottom:1rem;">ZION <span style="color:var(--blue-bright)">LED</span> USA</span>
+      </div>
+      <p class="footer-tagline">Your one-stop destination for brilliant lighting — serving residential, office & commercial clients nationwide with premium LED solutions.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/zionledusa" target="_blank" class="soc">📘</a>
+        <a href="https://x.com/zionledusa" target="_blank" class="soc">🐦</a>
+        <a href="#" class="soc">📸</a>
+        <a href="#" class="soc">💼</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Indoor</h4><ul><li><a href="#">UFO Highbay Lights</a></li><li><a href="#">Down Lights</a></li><li><a href="#">Backlit Panel Lights</a></li><li><a href="#">Troffer Lights</a></li><li><a href="#">Linear Highbay</a></li><li><a href="#">LED Bulbs</a></li><li><a href="#">Strip Lights</a></li><li><a href="#">Exit Signs</a></li></ul></div>
+    <div class="footer-col"><h4>Outdoor</h4><ul><li><a href="#">Shoebox Lights</a></li><li><a href="#">Wallpack Lights</a></li><li><a href="#">Canopy Lights</a></li><li><a href="#">Flood Lights</a></li><li><a href="#">Vapor Tight Lights</a></li><li><a href="#">Bollard Lights</a></li><li><a href="#">Rope Lights</a></li><li><a href="#">Module Lights</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Light Poles</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Get a Quote</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Zion LED USA™. All rights reserved. Dallas, TX.</span>
+    <div class="fbadge"><span>⚡</span> Powered by <span>Premium LED Technology</span></div>
+    <span><a href="tel:+18179382959">(817) 938-2959</a> · <a href="mailto:contact@zionledusa.com">contact@zionledusa.com</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ── CURSOR ── */
+const cur = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+function loopCursor(){
+  rx+=(mx-rx)*0.18; ry+=(my-ry)*0.18;
+  if(cur) cur.style.cssText=`left:${mx}px;top:${my}px;`;
+  if(ring) ring.style.cssText=`left:${rx}px;top:${ry}px;`;
+  requestAnimationFrame(loopCursor);
+}
+loopCursor();
+
+/* ── NAV SCROLL ── */
+const nav=document.getElementById('main-nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+
+/* ── BG PARTICLE FIELD — runs immediately (fixed canvas) ── */
+(function(){
+  const cvs=document.getElementById('bg-canvas');
+  const R=new THREE.WebGLRenderer({canvas:cvs,alpha:true,antialias:false});
+  R.setPixelRatio(Math.min(devicePixelRatio,1.5));
+  R.setSize(innerWidth,innerHeight);
+  const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,0.1,200);
+  C.position.z=60;
+  const N=1800,G=new THREE.BufferGeometry();
+  const P=new Float32Array(N*3);
+  for(let i=0;i<N;i++){P[i*3]=(Math.random()-.5)*200;P[i*3+1]=(Math.random()-.5)*200;P[i*3+2]=(Math.random()-.5)*100;}
+  G.setAttribute('position',new THREE.BufferAttribute(P,3));
+  S.add(new THREE.Points(G,new THREE.PointsMaterial({color:0x0d7fd4,size:0.32,transparent:true,opacity:0.5})));
+  const grd=new THREE.Mesh(new THREE.PlaneGeometry(300,300,40,40),new THREE.MeshBasicMaterial({color:0x0d7fd4,wireframe:true,transparent:true,opacity:0.03}));
+  grd.rotation.x=-Math.PI/3; grd.position.y=-40; S.add(grd);
+  let bx=0,by=0,t=0;
+  document.addEventListener('mousemove',e=>{bx=(e.clientX/innerWidth-.5)*2;by=-(e.clientY/innerHeight-.5)*2;});
+  window.addEventListener('resize',()=>{R.setSize(innerWidth,innerHeight);C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix();});
+  (function loop(){t+=0.0008;S.children[0].rotation.y=t*.3;S.children[0].rotation.x=t*.1;C.position.x+=(bx*8-C.position.x)*.04;C.position.y+=(by*5-C.position.y)*.04;C.lookAt(S.position);R.render(S,C);requestAnimationFrame(loop);})();
+})();
+
+/* ── ALL OTHER 3D CANVASES — wait for layout ── */
+window.addEventListener('load', function() {
+
+/* ── HERO 3D ── */
+(function(){
+  const cvs=document.getElementById('hero-canvas-3d');
+  if(!cvs)return;
+  // Use offsetWidth; fall back to 500 before layout is complete
+  const W=cvs.offsetWidth||cvs.parentElement.offsetWidth||500;
+  const H=W; // square
+  const R=new THREE.WebGLRenderer({canvas:cvs,alpha:true,antialias:true});
+  R.setPixelRatio(Math.min(devicePixelRatio,2));
+  R.setSize(W,H);
+  const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(45,W/H,0.1,200);
+  C.position.z=7;
+  S.add(new THREE.AmbientLight(0x0d2040,2));
+  const l1=new THREE.PointLight(0x0d7fd4,6,20); l1.position.set(3,3,3); S.add(l1);
+  const l2=new THREE.PointLight(0x38bdf8,4,18); l2.position.set(-3,-2,2); S.add(l2);
+  const l3=new THREE.PointLight(0xf0a500,2,15); l3.position.set(0,-4,-2); S.add(l3);
+  // Core sphere
+  const sph=new THREE.Mesh(new THREE.IcosahedronGeometry(1.6,4),new THREE.MeshPhongMaterial({color:0x0a1f40,emissive:0x0d3a6e,emissiveIntensity:0.4,shininess:80,transparent:true,opacity:0.92}));
+  S.add(sph);
+  const wf=new THREE.Mesh(new THREE.IcosahedronGeometry(1.62,4),new THREE.MeshBasicMaterial({color:0x0d7fd4,wireframe:true,transparent:true,opacity:0.25}));
+  S.add(wf);
+  S.add(new THREE.Mesh(new THREE.SphereGeometry(2.1,32,32),new THREE.MeshBasicMaterial({color:0x0d7fd4,transparent:true,opacity:0.04,side:THREE.BackSide})));
+  // Rings
+  function mkRing(r,t,c){const m=new THREE.Mesh(new THREE.TorusGeometry(r,0.018,8,120),new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:0.7}));m.rotation.x=t;return m;}
+  const rg=new THREE.Group();
+  rg.add(mkRing(2.5,Math.PI/2.5,0x0d7fd4));
+  rg.add(mkRing(3.0,Math.PI/4,0x38bdf8));
+  rg.add(mkRing(2.2,-Math.PI/3,0xf0a500));
+  S.add(rg);
+  // Nodes
+  const nodes=[[0.12,0x38bdf8,2.5,0],[0.1,0x0d7fd4,3.0,1.2],[0.14,0xf0a500,2.2,2.4],[0.09,0x38bdf8,2.8,3.6],[0.11,0x7dd3fc,2.6,4.8]].map(([sz,col,dist,phase])=>{
+    const m=new THREE.Mesh(new THREE.SphereGeometry(sz,16,16),new THREE.MeshPhongMaterial({color:col,emissive:col,emissiveIntensity:0.8}));
+    m.userData={dist,phase};S.add(m);return m;
+  });
+  // Particles
+  const pG=new THREE.BufferGeometry();
+  const pP=new Float32Array(500*3);
+  for(let i=0;i<500;i++){const ph=Math.acos(2*Math.random()-1),th=2*Math.PI*Math.random(),r=1.8+Math.random()*2.5;pP[i*3]=r*Math.sin(ph)*Math.cos(th);pP[i*3+1]=r*Math.sin(ph)*Math.sin(th);pP[i*3+2]=r*Math.cos(ph);}
+  pG.setAttribute('position',new THREE.BufferAttribute(pP,3));
+  S.add(new THREE.Points(pG,new THREE.PointsMaterial({color:0x38bdf8,size:0.04,transparent:true,opacity:0.6})));
+  let t=0,hmx=0,hmy=0;
+  cvs.addEventListener('mousemove',e=>{const rc=cvs.getBoundingClientRect();hmx=(e.clientX-rc.left)/rc.width*2-1;hmy=-((e.clientY-rc.top)/rc.height*2-1);});
+  (function loop(){t+=0.012;
+    sph.rotation.y=t*.3;sph.rotation.x=t*.1;wf.rotation.y=-t*.2;wf.rotation.z=t*.15;
+    rg.rotation.y=t*.18;rg.children[0].rotation.z=t*.25;rg.children[1].rotation.z=-t*.2;rg.children[2].rotation.x=t*.3;
+    nodes.forEach(n=>{const a=t*.9+n.userData.phase;n.position.x=Math.cos(a)*n.userData.dist;n.position.z=Math.sin(a)*n.userData.dist;n.position.y=Math.sin(a*1.3)*.8;});
+    l1.position.x=Math.cos(t*.7)*4;l1.position.z=Math.sin(t*.7)*4;
+    l2.position.x=Math.cos(t*.5+2)*4;l2.position.z=Math.sin(t*.5+2)*4;
+    S.rotation.x+=(hmy*.3-S.rotation.x)*.05;S.rotation.y+=(hmx*.5-S.rotation.y)*.05;
+    R.render(S,C);requestAnimationFrame(loop);
+  })();
+})();
+
+/* ── MINI CARD 3D ── */
+function initMini(cvs){
+  if(!cvs||cvs.dataset.init)return; cvs.dataset.init='1';
+  const shape=cvs.dataset.shape||'sphere';
+  const hexCol=cvs.dataset.color?parseInt(cvs.dataset.color,16):0x0d7fd4;
+  const R=new THREE.WebGLRenderer({canvas:cvs,alpha:true,antialias:true});
+  R.setPixelRatio(Math.min(devicePixelRatio,2)); R.setSize(120,120);
+  const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(40,1,.1,100);
+  C.position.z=3.5;
+  S.add(new THREE.AmbientLight(0xffffff,.3));
+  const pl=new THREE.PointLight(hexCol,5,15); pl.position.set(2,2,3); S.add(pl);
+  S.add(Object.assign(new THREE.PointLight(0x38bdf8,2,10),{position:{x:-2,y:-1,z:1}}));
+  let geo;
+  if(shape==='sphere')     geo=new THREE.IcosahedronGeometry(.9,3);
+  else if(shape==='torus') geo=new THREE.TorusGeometry(.7,.28,16,60);
+  else if(shape==='cylinder') geo=new THREE.CylinderGeometry(.5,.7,1.4,32);
+  else if(shape==='box')   geo=new THREE.BoxGeometry(1.1,1.1,1.1);
+  else if(shape==='octahedron') geo=new THREE.OctahedronGeometry(1.0);
+  else if(shape==='cone')  geo=new THREE.ConeGeometry(.7,1.5,32);
+  else geo=new THREE.IcosahedronGeometry(.9,3);
+  const mat=new THREE.MeshPhongMaterial({color:hexCol,emissive:hexCol,emissiveIntensity:.25,shininess:90});
+  const mesh=new THREE.Mesh(geo,mat);
+  const wfm=new THREE.Mesh(geo.clone(),new THREE.MeshBasicMaterial({color:hexCol,wireframe:true,transparent:true,opacity:.2}));
+  S.add(mesh,wfm);
+  let lt=Math.random()*100;
+  (function loop(){lt+=.025;mesh.rotation.y=lt;mesh.rotation.x=lt*.5;wfm.rotation.y=-lt*.7;wfm.rotation.x=lt*.3;pl.position.x=Math.cos(lt*.8)*2;pl.position.y=Math.sin(lt*.6)*2;R.render(S,C);requestAnimationFrame(loop);})();
+}
+document.querySelectorAll('.mini-canvas').forEach(initMini);
+
+/* ── CERT 3D ── */
+(function(){
+  const cvs=document.getElementById('cert-canvas-3d');
+  if(!cvs)return;
+  const W=cvs.offsetWidth||cvs.parentElement.offsetWidth||500;
+  const H=Math.round(W*.875);
+  const R=new THREE.WebGLRenderer({canvas:cvs,alpha:true,antialias:true});
+  R.setPixelRatio(Math.min(devicePixelRatio,2)); R.setSize(W,H);
+  const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(42,W/H,.1,200);
+  C.position.set(0,1,7);
+  S.add(new THREE.AmbientLight(0x050f20,2));
+  const l1=new THREE.PointLight(0x0d7fd4,8,20); l1.position.set(4,4,4); S.add(l1);
+  const l2=new THREE.PointLight(0x38bdf8,4,15); l2.position.set(-4,-2,2); S.add(l2);
+  const l3=new THREE.PointLight(0xf0a500,3,12); l3.position.set(0,-4,-2); S.add(l3);
+  const crystal=new THREE.Mesh(new THREE.OctahedronGeometry(1.4,2),new THREE.MeshPhongMaterial({color:0x0a2050,emissive:0x0d5099,emissiveIntensity:.5,shininess:140,transparent:true,opacity:.85}));
+  S.add(crystal);
+  const cwf=new THREE.Mesh(new THREE.OctahedronGeometry(1.42,2),new THREE.MeshBasicMaterial({color:0x38bdf8,wireframe:true,transparent:true,opacity:.3}));
+  S.add(cwf);
+  const mG=new THREE.Group();
+  for(let i=0;i<22;i++){
+    const sz=.06+Math.random()*.12;
+    const mc=new THREE.Mesh(new THREE.BoxGeometry(sz,sz,sz),new THREE.MeshPhongMaterial({color:i%2===0?0x0d7fd4:0x38bdf8,emissive:i%2===0?0x0d7fd4:0x38bdf8,emissiveIntensity:.5}));
+    const phi=Math.acos(2*Math.random()-1),theta=2*Math.PI*Math.random(),r=2.2+Math.random()*1.8;
+    mc.position.set(r*Math.sin(phi)*Math.cos(theta),r*Math.sin(phi)*Math.sin(theta),r*Math.cos(phi));
+    mc.userData.spd=.3+Math.random()*.5; mG.add(mc);
+  }
+  S.add(mG);
+  for(let i=0;i<3;i++){const rm=new THREE.Mesh(new THREE.TorusGeometry(2+i*.6,.015,8,100),new THREE.MeshBasicMaterial({color:0x0d7fd4,transparent:true,opacity:.28-i*.07}));rm.rotation.x=(i*Math.PI)/3+.5;rm.rotation.z=(i*Math.PI)/4;S.add(rm);}
+  let t=0;
+  (function loop(){t+=.01;crystal.rotation.y=t*.4;crystal.rotation.x=t*.2;cwf.rotation.y=-t*.3;cwf.rotation.z=t*.25;mG.rotation.y=t*.15;mG.rotation.x=t*.08;mG.children.forEach(mc=>{mc.rotation.x+=mc.userData.spd*.01;mc.rotation.y+=mc.userData.spd*.007;});l1.position.x=Math.cos(t*.6)*5;l1.position.z=Math.sin(t*.6)*5;R.render(S,C);requestAnimationFrame(loop);})();
+  window.addEventListener('resize',()=>{const nW=cvs.clientWidth,nH=Math.round(nW*.875);R.setSize(nW,nH);C.aspect=nW/nH;C.updateProjectionMatrix();});
+})();
+
+/* ── ENERGY 3D ── */
+(function(){
+  const cvs=document.getElementById('energy-canvas-3d');
+  if(!cvs)return;
+  const W=cvs.offsetWidth||cvs.parentElement.offsetWidth||480;
+  const R=new THREE.WebGLRenderer({canvas:cvs,alpha:true,antialias:true});
+  R.setPixelRatio(Math.min(devicePixelRatio,2)); R.setSize(W,W);
+  const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(45,1,.1,200);
+  C.position.z=6;
+  S.add(new THREE.AmbientLight(0x020810,2));
+  const l1=new THREE.PointLight(0x0d7fd4,10,20); S.add(l1);
+  const l2=new THREE.PointLight(0xf0a500,6,15); l2.position.set(-3,-2,2); S.add(l2);
+  const meshes=[
+    new THREE.Mesh(new THREE.IcosahedronGeometry(.6,5),new THREE.MeshPhongMaterial({color:0x0d7fd4,emissive:0x0a4a8a,emissiveIntensity:.5,shininess:100})),
+    new THREE.Mesh(new THREE.IcosahedronGeometry(.9,5),new THREE.MeshPhongMaterial({color:0x0a2040,emissive:0x0d3a6e,emissiveIntensity:.3,transparent:true,opacity:.8})),
+    new THREE.Mesh(new THREE.IcosahedronGeometry(1.0,3),new THREE.MeshBasicMaterial({color:0x38bdf8,wireframe:true,transparent:true,opacity:.2})),
+    new THREE.Mesh(new THREE.IcosahedronGeometry(1.4,3),new THREE.MeshBasicMaterial({color:0x0d7fd4,wireframe:true,transparent:true,opacity:.08})),
+  ];
+  meshes.forEach(m=>S.add(m));
+  // Arc lines
+  const arcs=[];
+  for(let i=0;i<6;i++){
+    const pts=[];
+    for(let j=0;j<=80;j++){const a=(j/80)*Math.PI*2;pts.push(new THREE.Vector3(Math.cos(a)*(1.8+i*.15),Math.sin(a)*(1.8+i*.15),0));}
+    const ag=new THREE.BufferGeometry().setFromPoints(pts);
+    const arc=new THREE.Line(ag,new THREE.LineBasicMaterial({color:0x38bdf8,transparent:true,opacity:.12+i*.04}));
+    arc.rotation.x=(i*Math.PI)/4; arc.rotation.z=(i*Math.PI)/5;
+    arc.userData.rs=.005+i*.003; S.add(arc); arcs.push(arc);
+  }
+  const bG=new THREE.BufferGeometry();
+  const bP=new Float32Array(300*3);
+  for(let i=0;i<300;i++){const r=1.6+Math.random()*1.5,phi=Math.acos(2*Math.random()-1),th=2*Math.PI*Math.random();bP[i*3]=r*Math.sin(phi)*Math.cos(th);bP[i*3+1]=r*Math.sin(phi)*Math.sin(th);bP[i*3+2]=r*Math.cos(phi);}
+  bG.setAttribute('position',new THREE.BufferAttribute(bP,3));
+  S.add(new THREE.Points(bG,new THREE.PointsMaterial({color:0xf0a500,size:.05,transparent:true,opacity:.7})));
+  let t=0;
+  (function loop(){t+=.01;
+    meshes[0].rotation.y=t*.8;meshes[0].rotation.x=t*.5;
+    meshes[1].rotation.y=-t*.4;meshes[1].rotation.z=t*.3;
+    meshes[2].rotation.y=t*.6;meshes[2].rotation.x=-t*.2;
+    meshes[3].rotation.y=-t*.2;meshes[3].rotation.z=-t*.15;
+    arcs.forEach(a=>{a.rotation.y+=a.userData.rs;a.rotation.z+=a.userData.rs*.6;});
+    l1.position.x=Math.cos(t*.7)*4;l1.position.z=Math.sin(t*.7)*4;
+    l2.position.x=Math.cos(t*.5+2)*4;l2.position.z=Math.sin(t*.5+2)*4;
+    R.render(S,C);requestAnimationFrame(loop);
+  })();
+  window.addEventListener('resize',()=>{const nW=cvs.clientWidth;R.setSize(nW,nW);});
+})();
+
+/* ── CTA RINGS 3D ── */
+(function(){
+  const cvs=document.getElementById('cta-canvas-3d');
+  if(!cvs)return;
+  const W=cvs.offsetWidth||cvs.parentElement.offsetWidth||1200;
+  const H=cvs.offsetHeight||cvs.parentElement.offsetHeight||500;
+  const R=new THREE.WebGLRenderer({canvas:cvs,alpha:true,antialias:false});
+  R.setPixelRatio(Math.min(devicePixelRatio,1.5)); R.setSize(W,H);
+  const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(50,W/H,.1,300);
+  C.position.set(0,5,18); C.lookAt(0,0,0);
+  const rings=[];
+  for(let i=0;i<12;i++){
+    const m=new THREE.Mesh(new THREE.TorusGeometry(1+i*1.5,.02,6,80),new THREE.MeshBasicMaterial({color:i%3===0?0xf0a500:0x0d7fd4,transparent:true,opacity:0}));
+    m.rotation.x=Math.PI/2; m.userData.delay=i*.3; S.add(m); rings.push(m);
+  }
+  const pG2=new THREE.BufferGeometry();
+  const pP2=new Float32Array(1000*3);
+  for(let i=0;i<1000;i++){pP2[i*3]=(Math.random()-.5)*60;pP2[i*3+1]=(Math.random()-.5)*20;pP2[i*3+2]=(Math.random()-.5)*60;}
+  pG2.setAttribute('position',new THREE.BufferAttribute(pP2,3));
+  S.add(new THREE.Points(pG2,new THREE.PointsMaterial({color:0x0d7fd4,size:.1,transparent:true,opacity:.35})));
+  let t=0;
+  (function loop(){t+=.018;
+    rings.forEach((r)=>{const w=Math.sin(t-r.userData.delay);r.material.opacity=Math.max(0,w*.32);r.scale.setScalar(.8+(Math.sin(t*.5-r.userData.delay)+1)*.3);r.rotation.z=t*.05;});
+    C.position.y=5+Math.sin(t*.3)*2;
+    R.render(S,C);requestAnimationFrame(loop);
+  })();
+  window.addEventListener('resize',()=>{const nW=cvs.offsetWidth,nH=cvs.offsetHeight;if(nW&&nH){R.setSize(nW,nH);C.aspect=nW/nH;C.updateProjectionMatrix();}});
+})();
+
+}); // end window.load
+
+/* ── 3D CARD TILT ── */
+document.querySelectorAll('.prod-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`perspective(700px) rotateY(${x*12}deg) rotateX(${-y*12}deg) translateY(-4px)`;
+  });
+  card.addEventListener('mouseleave',()=>card.style.transform='');
+});
+
+/* ── COUNTER ── */
+function runCounter(el){
+  if(el.dataset.counted)return; el.dataset.counted='1';
+  const target=parseInt(el.dataset.target), suffix=el.dataset.suffix||'';
+  const dur=2000, start=performance.now();
+  (function step(now){const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.round(ease*target)+suffix;if(p<1)requestAnimationFrame(step);})(performance.now());
+}
+
+/* ── SCROLL REVEAL ── */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      e.target.style.transitionDelay=(i%4)*.08+'s';
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('[data-target]').forEach(runCounter);
+      e.target.querySelectorAll('.ebar-fill').forEach(b=>b.classList.add('go'));
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ── PRODUCT FILTER ── */
+window.filterProds=function(cat,btn){
+  document.querySelectorAll('.prod-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.prod-card').forEach(c=>{
+    if(cat==='all'||c.dataset.cat===cat){c.style.display='';c.style.animation='riseIn .4s ease forwards';}
+    else c.style.display='none';
+  });
+};
+
+/* ── SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}));
+
+})();
+</script>
+</body>
+</html>

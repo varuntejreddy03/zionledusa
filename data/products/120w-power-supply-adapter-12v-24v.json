@@ -1,0 +1,56 @@
+{
+  "name": "120W Power Supply / Adapter – 12V/24V",
+  "slug": "120w-power-supply-adapter-12v-24v",
+  "url": "https://zionledusa.com/product/120w-12v-24v-power-supply-adapter/",
+  "sku": "",
+  "price": "",
+  "description": "ZION LED USA Power Supply with a maximum current output of 10 amps and a power rating of 120 watts, this power supply is perfect for use with a wide range of applications. ZION LED USA power supply provides a stable and reliable power source to keep your devices running smoothly. Its compact and durable design makes it easy to use and store, while its efficient conversion of AC power to DC power saves you money on your electricity bill.",
+  "short_desc": "Specifications: Watts: 120 Watts Mean Well: 10 AMPS Power Supply: 12V Input Voltage: AC 100-240V Output Voltage: DC 12VDC MAX 10000Ma Output Current: Upto 10 Amps Output Wattage: Max 120W Dimensions: 145(L) x 45(W) x 40(H) mm Cable length: about 110CM Output adaptor: 5.5mm x 2.1mm Condition: Brand New 100% Power Cord is included: 120CM Intended Use: LED Strips, LED Rope, IP Camera",
+  "images": [
+    {
+      "original": "images\\products\\4-6-300x300.png",
+      "webp": "images_optimized\\products\\4-6-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/4-6-300x300.png",
+      "filename": "4-6-300x300.png",
+      "alt": "100W Power Supply / Adapter - 12V/24V - IP67 Rated"
+    },
+    {
+      "original": "images\\products\\7-4-300x300.png",
+      "webp": "images_optimized\\products\\7-4-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/7-4-300x300.png",
+      "filename": "7-4-300x300.png",
+      "alt": "300W Power Supply / Adapter - 12V/24V - IP67 Rated"
+    },
+    {
+      "original": "images\\products\\5-14-300x300.png",
+      "webp": "images_optimized\\products\\5-14-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/5-14-300x300.png",
+      "filename": "5-14-300x300.png",
+      "alt": "200W Power Supply / Adapter - 12V/24V - IP67 Rated"
+    },
+    {
+      "original": "images\\products\\6-8-300x300.png",
+      "webp": "images_optimized\\products\\6-8-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/6-8-300x300.png",
+      "filename": "6-8-300x300.png",
+      "alt": "150W Power Supply / Adapter - 12V/24V - IP67 Rated"
+    },
+    {
+      "original": "images\\products\\1-7-300x300.png",
+      "webp": "images_optimized\\products\\1-7-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/1-7-300x300.png",
+      "filename": "1-7-300x300.png",
+      "alt": "60W Power Supply / Adapter - 12V/24V"
+    }
+  ],
+  "categories": [
+    {
+      "name": "POWER SUPPLIES / DRIVERS",
+      "slug": "power-supplies-drivers"
+    }
+  ],
+  "attributes": {},
+  "meta_title": "120W Power Supply / Adapter – 12V/24V",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:26:14.968074"
+}

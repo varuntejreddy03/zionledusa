@@ -1,0 +1,20 @@
+{
+  "id": 1932,
+  "name": "Outdoor Catalogue",
+  "slug": "outdoor-catalogue",
+  "url": "https://zionledusa.com/outdoor-catalogue/",
+  "description": "",
+  "short_desc": "",
+  "images": [],
+  "categories": [
+    {
+      "name": "Catalogue",
+      "slug": "catalogue"
+    },
+    {
+      "name": "Outdoor",
+      "slug": "outdoor"
+    }
+  ],
+  "scraped_at": "2026-03-26T21:21:34.916381"
+}

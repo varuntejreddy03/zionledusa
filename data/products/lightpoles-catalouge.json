@@ -1,0 +1,20 @@
+{
+  "id": 1934,
+  "name": "Lightpoles Catalouge",
+  "slug": "lightpoles-catalouge",
+  "url": "https://zionledusa.com/lightpoles-catalouge/",
+  "description": "",
+  "short_desc": "",
+  "images": [],
+  "categories": [
+    {
+      "name": "Catalogue",
+      "slug": "catalogue"
+    },
+    {
+      "name": "Lightpoles",
+      "slug": "lightpoles"
+    }
+  ],
+  "scraped_at": "2026-03-26T21:21:34.915382"
+}

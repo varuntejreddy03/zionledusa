@@ -1,0 +1,30 @@
+{
+  "name": "TROFFER LIGHTS",
+  "slug": "troffer-lights",
+  "url": "https://zionledusa.com/product-category/indoor/troffer-lights/",
+  "sku": "",
+  "price": "",
+  "description": "",
+  "short_desc": "",
+  "images": [
+    {
+      "original": "images\\products\\1-12-300x300.png",
+      "webp": "images_optimized\\products\\1-12-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/1-12-300x300.png",
+      "filename": "1-12-300x300.png",
+      "alt": "2X2 LED Troffer Light Wattage 15/20/25/30/40W 3CCT"
+    },
+    {
+      "original": "images\\products\\4-11-300x300.png",
+      "webp": "images_optimized\\products\\4-11-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/4-11-300x300.png",
+      "filename": "4-11-300x300.png",
+      "alt": "2X4 LED Troffer Light Wattage 25/30/35/40/50W 3CCT"
+    }
+  ],
+  "categories": [],
+  "attributes": {},
+  "meta_title": "TROFFER LIGHTS",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:25:27.741759"
+}

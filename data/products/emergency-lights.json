@@ -1,0 +1,30 @@
+{
+  "name": "EMERGENCY LIGHTS",
+  "slug": "emergency-lights",
+  "url": "https://zionledusa.com/product-category/outdoor/emergency-lights/",
+  "sku": "",
+  "price": "",
+  "description": "",
+  "short_desc": "",
+  "images": [
+    {
+      "original": "images\\products\\LED-Emergency-Lights-4-300x300.png",
+      "webp": "images_optimized\\products\\LED-Emergency-Lights-4-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/LED-Emergency-Lights-4-300x300.png",
+      "filename": "LED-Emergency-Lights-4-300x300.png",
+      "alt": "LED Emergency Light With Adjustable Duel Heads And Battery Backup"
+    },
+    {
+      "original": "images\\products\\LED-Emergency-Lights-1-300x300.png",
+      "webp": "images_optimized\\products\\LED-Emergency-Lights-1-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/LED-Emergency-Lights-1-300x300.png",
+      "filename": "LED-Emergency-Lights-1-300x300.png",
+      "alt": "LED Outdoor Emergency Light With Adjustable Duel Heads And Battery Backup"
+    }
+  ],
+  "categories": [],
+  "attributes": {},
+  "meta_title": "EMERGENCY LIGHTS",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:24:33.150065"
+}

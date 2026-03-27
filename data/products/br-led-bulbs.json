@@ -1,0 +1,37 @@
+{
+  "name": "BR LED BULBS",
+  "slug": "br-led-bulbs",
+  "url": "https://zionledusa.com/product-category/indoor/led-bulbs/br-led-bulbs/",
+  "sku": "",
+  "price": "",
+  "description": "",
+  "short_desc": "",
+  "images": [
+    {
+      "original": "images\\products\\BR20-300x300.png",
+      "webp": "images_optimized\\products\\BR20-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/BR20-300x300.png",
+      "filename": "BR20-300x300.png",
+      "alt": "BR20 LED Bulb - 550 Lumens"
+    },
+    {
+      "original": "images\\products\\BR30-300x300.png",
+      "webp": "images_optimized\\products\\BR30-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/BR30-300x300.png",
+      "filename": "BR30-300x300.png",
+      "alt": "BR30 LED Light Bulb – 10W – UL Approved"
+    },
+    {
+      "original": "images\\products\\BR40-300x300.png",
+      "webp": "images_optimized\\products\\BR40-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/BR40-300x300.png",
+      "filename": "BR40-300x300.png",
+      "alt": "BR40 LED Light Bulb - 17W – Energy Star Approved"
+    }
+  ],
+  "categories": [],
+  "attributes": {},
+  "meta_title": "BR LED BULBS",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:24:39.225562"
+}

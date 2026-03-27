@@ -1,0 +1,27 @@
+# Node / Next
+node_modules/
+zionled-nextjs/node_modules/
+zionled-nextjs/.next/
+zionled-nextjs/.next-dev/
+.vercel/
+zionled-nextjs/.vercel/
+
+# Environment
+.env
+.env.*
+!.env.example
+zionled-nextjs/.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS / Editor
+.DS_Store
+Thumbs.db

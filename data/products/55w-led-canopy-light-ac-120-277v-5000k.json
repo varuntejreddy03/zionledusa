@@ -1,0 +1,49 @@
+{
+  "name": "55W LED Canopy Light AC 120~277V 5000K",
+  "slug": "55w-led-canopy-light-ac-120-277v-5000k",
+  "url": "https://zionledusa.com/product/55w-led-canopy-light-5000k/",
+  "sku": "",
+  "price": "",
+  "description": "The ZION LED USA 55W LED Canopy Light is a compact yet powerful lighting solution, designed for both commercial and residential applications. Operating on a wide voltage range of AC 120–277V, this fixture delivers bright, uniform illumination at a crisp 5000K color temperature—ideal for spaces that require enhanced visibility and safety. Built with energy efficiency and durability in mind, it is perfect for long-term performance in a variety of demanding environments.",
+  "short_desc": "Features: Wattage: 55W Input Voltage: AC 120–277V Color Temperature: 5000K (neutral daylight) High Luminous Efficiency: Bright output with reduced energy use Overheat Protection: Ensures safe, reliable operation UV & IR Free: No harmful emissions Durable Build: Robust construction for long-lasting performance Applications: Commercial Buildings Parking Garages Gas Stations Industrial Facilities Retail Spaces Educational Institutions",
+  "images": [
+    {
+      "original": "images\\products\\5-12-300x300.png",
+      "webp": "images_optimized\\products\\5-12-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/5-12-300x300.png",
+      "filename": "5-12-300x300.png",
+      "alt": "40W LED Canopy Light Motion Sensor AC 120-277V 5000K"
+    },
+    {
+      "original": "images\\products\\12-1-300x300.png",
+      "webp": "images_optimized\\products\\12-1-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/12-1-300x300.png",
+      "filename": "12-1-300x300.png",
+      "alt": "140W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K"
+    },
+    {
+      "original": "images\\products\\8-6-300x300.png",
+      "webp": "images_optimized\\products\\8-6-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/8-6-300x300.png",
+      "filename": "8-6-300x300.png",
+      "alt": "150W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K"
+    },
+    {
+      "original": "images\\products\\CANOPY-LIGHTS-1-300x300.png",
+      "webp": "images_optimized\\products\\CANOPY-LIGHTS-1-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/CANOPY-LIGHTS-1-300x300.png",
+      "filename": "CANOPY-LIGHTS-1-300x300.png",
+      "alt": "240W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K"
+    }
+  ],
+  "categories": [
+    {
+      "name": "CANOPY LIGHTS",
+      "slug": "canopy-lights"
+    }
+  ],
+  "attributes": {},
+  "meta_title": "55W LED Canopy Light AC 120~277V 5000K",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:24:42.640076"
+}

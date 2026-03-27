@@ -1,0 +1,30 @@
+{
+  "name": "STRIP LIGHTS",
+  "slug": "strip-lights",
+  "url": "https://zionledusa.com/product-category/indoor/strip-lights/",
+  "sku": "",
+  "price": "",
+  "description": "",
+  "short_desc": "",
+  "images": [
+    {
+      "original": "images\\products\\3-21-300x300.png",
+      "webp": "images_optimized\\products\\3-21-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/3-21-300x300.png",
+      "filename": "3-21-300x300.png",
+      "alt": "LED Dotless Linear Strip Lights - Single Colour - Water Resistant"
+    },
+    {
+      "original": "images\\products\\1-20-300x300.png",
+      "webp": "images_optimized\\products\\1-20-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/1-20-300x300.png",
+      "filename": "1-20-300x300.png",
+      "alt": "RGB Colourful LED Strip Lights 220V/110V - 100 Meter IP68"
+    }
+  ],
+  "categories": [],
+  "attributes": {},
+  "meta_title": "STRIP LIGHTS",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:25:46.175353"
+}

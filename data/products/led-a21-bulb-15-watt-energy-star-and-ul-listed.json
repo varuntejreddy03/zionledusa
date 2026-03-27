@@ -1,0 +1,42 @@
+{
+  "name": "LED A21 Bulb – 15 Watt – Energy Star and UL listed.",
+  "slug": "led-a21-bulb-15-watt-energy-star-and-ul-listed",
+  "url": "https://zionledusa.com/product/led-a21-bulb-15-watt-energy-star-and-ul-listed/",
+  "sku": "",
+  "price": "",
+  "description": "ZION LED USA A21 bulb is an energy-efficient lighting option that uses only 15 watts of power but provides the same brightness as a 110 watt incandescent bulb. Our A21 emits a cool white light with a 6500K color temperature, making it suitable for spaces where bright, natural-looking light is needed.",
+  "short_desc": "Specifications: Wattage: 15 Watts Lumen: 1600 Lm Lumens Efficacy: 106LM/Watt Adjustable CCT: 6500 K Dimmable: Yes Housing Color: White Base Type: E26 Operating Temperature: -4F TO 113 F Watt Equivalent: 110W Beam Angle: 230 D Outdoor Rated: No Height: 4.2 IN Weight: 0.15 LBS Power Factor: 0.9 Certification: UL Listed CRI: >80 Diameter: 2.4 Dimension: 4.7*2.78 Life Hours: 50000 Application: Indoor Voltage: 120V AC Warranty: 1 year",
+  "images": [
+    {
+      "original": "images\\products\\GU24-LED-BULB-300x300.png",
+      "webp": "images_optimized\\products\\GU24-LED-BULB-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/GU24-LED-BULB-300x300.png",
+      "filename": "GU24-LED-BULB-300x300.png",
+      "alt": "A19 LED Bulb, GU24, 9W, 800 Lumens"
+    },
+    {
+      "original": "images\\products\\A21-LED-BULB-3-300x300.png",
+      "webp": "images_optimized\\products\\A21-LED-BULB-3-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/A21-LED-BULB-3-300x300.png",
+      "filename": "A21-LED-BULB-3-300x300.png",
+      "alt": "LED A19 Bulb - 9 Watt - Energy Star and UL listed."
+    },
+    {
+      "original": "images\\products\\A19-LED-BULB-300x300.png",
+      "webp": "images_optimized\\products\\A19-LED-BULB-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/A19-LED-BULB-300x300.png",
+      "filename": "A19-LED-BULB-300x300.png",
+      "alt": "LED A19 Bulb - 12 Watt - Energy Star and UL listed."
+    }
+  ],
+  "categories": [
+    {
+      "name": "A19 & A21 LED BULBS",
+      "slug": "a19-a21-led-bulbs"
+    }
+  ],
+  "attributes": {},
+  "meta_title": "LED A21 Bulb – 15 Watt – Energy Star and UL listed.",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:25:18.067758"
+}

@@ -1,0 +1,51 @@
+{
+  "name": "CANOPY LIGHTS",
+  "slug": "canopy-lights",
+  "url": "https://zionledusa.com/product-category/outdoor/canopy-lights/",
+  "sku": "",
+  "price": "",
+  "description": "",
+  "short_desc": "",
+  "images": [
+    {
+      "original": "images\\products\\12-1-300x300.png",
+      "webp": "images_optimized\\products\\12-1-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/12-1-300x300.png",
+      "filename": "12-1-300x300.png",
+      "alt": "140W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K"
+    },
+    {
+      "original": "images\\products\\8-6-300x300.png",
+      "webp": "images_optimized\\products\\8-6-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/8-6-300x300.png",
+      "filename": "8-6-300x300.png",
+      "alt": "150W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K"
+    },
+    {
+      "original": "images\\products\\CANOPY-LIGHTS-1-300x300.png",
+      "webp": "images_optimized\\products\\CANOPY-LIGHTS-1-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/CANOPY-LIGHTS-1-300x300.png",
+      "filename": "CANOPY-LIGHTS-1-300x300.png",
+      "alt": "240W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K"
+    },
+    {
+      "original": "images\\products\\5-12-300x300.png",
+      "webp": "images_optimized\\products\\5-12-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/5-12-300x300.png",
+      "filename": "5-12-300x300.png",
+      "alt": "40W LED Canopy Light Motion Sensor AC 120-277V 5000K"
+    },
+    {
+      "original": "images\\products\\9-1-300x300.png",
+      "webp": "images_optimized\\products\\9-1-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/9-1-300x300.png",
+      "filename": "9-1-300x300.png",
+      "alt": "55W LED Canopy Light AC 120~277V 5000K"
+    }
+  ],
+  "categories": [],
+  "attributes": {},
+  "meta_title": "CANOPY LIGHTS",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:24:31.055126"
+}

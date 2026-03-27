@@ -1,0 +1,35 @@
+{
+  "name": "BR40 LED Light Bulb – 17W – Energy Star Approved",
+  "slug": "br40-led-light-bulb-17w-energy-star-approved",
+  "url": "https://zionledusa.com/product/br40-led-light-bulb/",
+  "sku": "",
+  "price": "",
+  "description": "Features: Energy Efficient: 17W LED bulb replaces a 95W incandescent bulb, significantly reducing energy costs. Adjustable CCT: Offers three color temperature options (3000K, 4000K, 5000K) to suit different lighting preferences. Dimmable Functionality: Compatible with most standard dimmers, allowing adjustable brightness levels. Long Lifespan: Provides up to 25,000 hours of consistent, reliable illumination. ETL Certified: Meets rigorous safety and performance standards for indoor lighting applications.",
+  "short_desc": "Product Attributes: Wattage: 17W Lumen Output: 1400 lm Adjustable CCT: 3000K, 4000K, 5000K Dimmable: Yes Housing Color: White Size: BR40 Base Type: E26 Light Color: WW (Warm White), NW (Neutral White), CW (Cool White) Watt Equivalent: 95W Brightness Rating: 4 of 5 Pack Size: 4 Pack ETL Listed: Yes Height: 6.41 in Diameter: 4.9 in Voltage: 120V AC Warranty: 1 Year CRI (Color Rendering Index): >80 Lifespan: 25,000 hours",
+  "images": [
+    {
+      "original": "images\\products\\BR30-300x300.png",
+      "webp": "images_optimized\\products\\BR30-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/BR30-300x300.png",
+      "filename": "BR30-300x300.png",
+      "alt": "BR30 LED Light Bulb – 10W – UL Approved"
+    },
+    {
+      "original": "images\\products\\BR20-300x300.png",
+      "webp": "images_optimized\\products\\BR20-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/BR20-300x300.png",
+      "filename": "BR20-300x300.png",
+      "alt": "BR20 LED Bulb - 550 Lumens"
+    }
+  ],
+  "categories": [
+    {
+      "name": "BR LED BULBS",
+      "slug": "br-led-bulbs"
+    }
+  ],
+  "attributes": {},
+  "meta_title": "BR40 LED Light Bulb – 17W – Energy Star Approved",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:23:41.575864"
+}

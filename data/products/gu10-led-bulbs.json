@@ -1,0 +1,23 @@
+{
+  "name": "GU10 LED BULBS",
+  "slug": "gu10-led-bulbs",
+  "url": "https://zionledusa.com/product-category/indoor/led-bulbs/gu10-led-bulbs/",
+  "sku": "",
+  "price": "",
+  "description": "",
+  "short_desc": "",
+  "images": [
+    {
+      "original": "images\\products\\3-7-300x300.png",
+      "webp": "images_optimized\\products\\3-7-300x300.webp",
+      "url": "https://zionledusa.com/wp-content/uploads/2025/05/3-7-300x300.png",
+      "filename": "3-7-300x300.png",
+      "alt": "LED GU10 Bulb – 7 Watt | 6500K | 500 Lumens"
+    }
+  ],
+  "categories": [],
+  "attributes": {},
+  "meta_title": "GU10 LED BULBS",
+  "meta_desc": "",
+  "scraped_at": "2026-03-26T21:22:30.421460"
+}
