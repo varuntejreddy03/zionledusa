@@ -3,6 +3,7 @@ import HomeInteractive from '@/components/sections/HomeInteractive'
 import PerformanceSection from '@/components/sections/PerformanceSection'
 import StatsSection from '@/components/sections/StatsSection'
 import TestimonialSection from '@/components/sections/TestimonialSection'
+import TrustBadgesSection from '@/components/sections/TrustBadgesSection'
 import WhySection from '@/components/sections/WhySection'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
@@ -44,6 +45,7 @@ export default function HomePage() {
         <WhySection features={whyFeatures} />
         <PerformanceSection metrics={performanceMetrics} />
         <TestimonialSection testimonials={testimonials} />
+        <TrustBadgesSection />
         <ContactSection meta={meta} />
       </main>
       <Footer meta={meta} navigation={navigation} />

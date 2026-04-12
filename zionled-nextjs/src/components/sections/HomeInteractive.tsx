@@ -1,6 +1,4 @@
-import CategoryGrid from '@/components/sections/CategoryGrid'
 import HeroSection from '@/components/sections/HeroSection'
-import ProductsSection from '@/components/sections/ProductsSection'
 import Ticker from '@/components/sections/Ticker'
 import TrustRow from '@/components/sections/TrustRow'
 
@@ -26,8 +24,6 @@ export default function HomeInteractive({
       <HeroSection meta={meta} stats={stats} />
       <TrustRow phone={meta.phone} />
       <Ticker />
-      <CategoryGrid primaryCategories={primaryCategories} tiles={categoryTiles} />
-      <ProductsSection products={featuredProducts} primaryCategories={primaryCategories} />
     </>
   )
 }
