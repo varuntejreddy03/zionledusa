@@ -44,13 +44,19 @@ export default function HeroSection({ meta, stats }: HeroSectionProps) {
           <div className="hero-orbit-dot hero-orbit-dot--2" />
           <div className="hero-orbit-dot hero-orbit-dot--3" />
 
+          {/* Edge corner numeric markers */}
+          <div className="hero-orbit-corner hero-orbit-corner--tl">01</div>
+          <div className="hero-orbit-corner hero-orbit-corner--tr">02</div>
+          <div className="hero-orbit-corner hero-orbit-corner--bl">03</div>
+          <div className="hero-orbit-corner hero-orbit-corner--br">04</div>
+
           {/* Glow base */}
           <div className="hero-eagle-glow" />
 
           {/* Eagle Logo */}
           <div className="hero-eagle-shell">
             <Image
-              src="/assets/branding/eagle-icon.png"
+              src="/assets/branding/eagle-hero-logo.png"
               alt="ZION LED USA Eagle"
               width={200}
               height={200}
