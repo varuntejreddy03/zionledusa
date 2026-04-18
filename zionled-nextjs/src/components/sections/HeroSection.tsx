@@ -12,7 +12,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ meta, stats }: HeroSectionProps) {
   return (
-    <section className="hero-section">
+    <section className="hero-section custom-hero-bg">
       <div className="hero-gradient-mesh" />
 
       {/* Mission & Vision - Top Left Corner */}
@@ -56,8 +56,8 @@ export default function HeroSection({ meta, stats }: HeroSectionProps) {
           {/* Eagle Logo */}
           <div className="hero-eagle-shell">
             <Image
-              src="/assets/branding/eagle-hero-logo.png"
-              alt="ZION LED USA Eagle"
+              src="/assets/branding/eagle-icon.png"
+              alt="ZION LED USA Eagle Icon"
               width={200}
               height={200}
               className="hero-eagle-image"

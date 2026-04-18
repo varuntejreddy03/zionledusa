@@ -3279,6 +3279,7 @@ section {
     max-width: 100%;
     flex-direction: row;
     margin-bottom: 1.5rem;
+    padding: 0 1rem;
   }
 
   .hero-mv-card {
@@ -3321,7 +3322,6 @@ section {
     flex-direction: column;
     gap: 0.75rem;
     margin-bottom: 1.5rem;
-    padding: 0 1rem;
   }
 
   .hero-mv-card {
@@ -4121,4 +4121,8 @@ section {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+.custom-hero-bg {
+  background: linear-gradient(135deg, #0a1a2f 60%, #1a2a3a 100%);
 }
