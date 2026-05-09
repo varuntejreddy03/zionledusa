@@ -203,25 +203,23 @@ export function getProductImageSrc(input?: Product | ProductImage | null): strin
   const image = 'images' in input ? input.images[0] : input
   if (!image) return null
 
-  const candidate = image.webp ?? image.original ?? image.url
+  const candidate = image.url ?? image.original ?? image.webp
   if (!candidate) return null
 
   if (/^https?:\/\//.test(candidate)) {
     return candidate
   }
 
+  // Already a local path like /assets/new-product-images/file.png
+  if (candidate.startsWith('/')) {
+    return candidate
+  }
+
   const normalized = candidate
     .replace(/\\/g, '/')
     .replace(/^\.?\//, '')
-    .replace(/^images_optimized\//, '')
-    .replace(/^images\//, '')
 
-  const encoded = normalized
-    .split('/')
-    .map((segment) => encodeURIComponent(segment))
-    .join('/')
-
-  return `/assets/${encoded}`
+  return `/assets/${encodeURIComponent(normalized).replace(/%2F/g, '/')}`
 }
 
 export function formatCategoryName(name: string) {

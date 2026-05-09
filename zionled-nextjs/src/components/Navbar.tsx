@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 
+import SearchBar from '@/components/SearchBar'
 import { BLUR_DATA_URL } from '@/lib/ui'
 import type { NavigationGroup, SiteMeta } from '@/types/product'
 
@@ -164,6 +165,8 @@ export default function Navbar({ meta, navigation }: NavbarProps) {
           <Link href="/#contact" className="nav-cta btn-glow" onClick={closeAllMenus}>
             Free Quote
           </Link>
+
+          <SearchBar />
 
           <button
             type="button"

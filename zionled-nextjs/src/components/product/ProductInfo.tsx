@@ -240,38 +240,6 @@ export default function ProductInfo({ product, phone, phoneHref, email }: Produc
 
       <div style={{ height: 1, background: 'var(--border)', margin: '1.2rem 0' }} />
 
-      <div className="product-stock-row" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
-        <span
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 6,
-            background: product.in_stock === false ? 'rgba(240,165,0,0.12)' : 'rgba(16,185,129,0.12)',
-            border: product.in_stock === false ? '1px solid rgba(240,165,0,0.3)' : '1px solid rgba(16,185,129,0.3)',
-            color: product.in_stock === false ? 'var(--gold)' : '#10b981',
-            fontFamily: 'var(--font-head)',
-            fontSize: '0.72rem',
-            fontWeight: 700,
-            letterSpacing: '2px',
-            textTransform: 'uppercase',
-            padding: '0.3rem 0.9rem',
-            borderRadius: '100px',
-          }}
-        >
-          <span
-            style={{
-              width: 6,
-              height: 6,
-              borderRadius: '50%',
-              background: product.in_stock === false ? 'var(--gold)' : '#10b981',
-              boxShadow: product.in_stock === false ? '0 0 0 0 rgba(240,165,0,0.4)' : '0 0 0 0 rgba(16,185,129,0.4)',
-              animation: 'pulseDot 2s ease-in-out infinite',
-            }}
-          />
-          {product.in_stock === false ? 'Contact for Availability' : 'In Stock'}
-        </span>
-      </div>
-
       <div className="product-info-actions">
         <a href={`tel:${phoneHref}`} className="btn-glow product-info-button">
           Get a Quote

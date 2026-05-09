@@ -1,1 +1,41 @@
-.vercel
+# Dependencies
+node_modules/
+
+# Next.js build
+.next/
+.next-dev/
+out/
+
+# Vercel
+.vercel/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+tsconfig.tsbuildinfo
+
+# Scraper output (not for production)
+scrape-results.json
+
+# Utility scripts (dev only)
+verify-*.js
+build-*.js
+fix-*.js
+cleanup.js
+remove-*.js
+list-*.js
+check-*.js
+scrape-*.js

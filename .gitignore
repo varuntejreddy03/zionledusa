@@ -25,3 +25,10 @@ __pycache__/
 # OS / Editor
 .DS_Store
 Thumbs.db
+
+# Build artifacts
+zionled-nextjs/tsconfig.tsbuildinfo
+
+# Scraper outputs (not for production)
+scraper/ledsion_products_enriched.json
+scraper/ledsion_products_enriched.csv
