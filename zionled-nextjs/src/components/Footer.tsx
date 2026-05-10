@@ -59,7 +59,7 @@ export default function Footer({ meta, navigation }: FooterProps) {
           <div className="footer-column-title">Company</div>
           <div className="footer-links">
             <Link href="/#about">About Us</Link>
-            <Link href="/#categories">Browse Catalog</Link>
+            <Link href="/category/outdoor">Browse Catalog</Link>
             <Link href="/#products">Featured Products</Link>
             <Link href="/#contact">Request Quote</Link>
           </div>

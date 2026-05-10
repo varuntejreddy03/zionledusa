@@ -78,7 +78,7 @@ export default function HeroSection({ meta, stats }: HeroSectionProps) {
 
         {/* CTA buttons */}
         <div className="hero-actions reveal" style={{ transitionDelay: '0.7s' }}>
-          <Link href="/#categories" className="btn-glow">
+          <Link href="/category/outdoor" className="btn-glow">
             Browse Catalog
           </Link>
           <Link href="/#contact" className="btn-outline">

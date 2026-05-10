@@ -433,7 +433,15 @@
           "slug": "led-shoebox-lights"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/100w-led-shoebox-area-light-brown-housing-ac-120-277v-cct-5000k-sbc8b-100w-120v-50k.webp",
+          "original": "new-product-images/100w-led-shoebox-area-light-brown-housing-ac-120-277v-cct-5000k-sbc8b-100w-120v-50k.webp",
+          "webp": "",
+          "alt": "100W LED Shoebox Light Brown Housing AC 120~277V CCT 5000K",
+          "filename": "100w-led-shoebox-area-light-brown-housing-ac-120-277v-cct-5000k-sbc8b-100w-120v-50k.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "Type III Light distribution",
@@ -474,7 +482,15 @@
           "slug": "led-shoebox-lights"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/100w-led-shoebox-area-light-brown-housing-ac-120-277v-cct-5000k-sbc8b-100w-120v-50k-copy.webp",
+          "original": "new-product-images/100w-led-shoebox-area-light-brown-housing-ac-120-277v-cct-5000k-sbc8b-100w-120v-50k-copy.webp",
+          "webp": "",
+          "alt": "100W LED Shoebox Light Brown Housing AC 120~277V CCT 5000K Photocell",
+          "filename": "100w-led-shoebox-area-light-brown-housing-ac-120-277v-cct-5000k-sbc8b-100w-120v-50k-copy.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "Type III Light distribution",
@@ -515,7 +531,15 @@
           "slug": "led-shoebox-lights"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/100w-led-shoebox-light-brown-housing-ac-120-277v-cct-5000k-sbc8b-100w-120v-50k-copy.webp",
+          "original": "new-product-images/100w-led-shoebox-light-brown-housing-ac-120-277v-cct-5000k-sbc8b-100w-120v-50k-copy.webp",
+          "webp": "",
+          "alt": "150W LED Shoebox Light Brown Housing AC 120~277V CCT 5000K",
+          "filename": "100w-led-shoebox-light-brown-housing-ac-120-277v-cct-5000k-sbc8b-100w-120v-50k-copy.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "Type III Light distribution",
@@ -556,7 +580,15 @@
           "slug": "led-shoebox-lights"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/150w-led-shoebox-light-brown-housing-ac-120-277v-cct-5000k-photocell.webp",
+          "original": "new-product-images/150w-led-shoebox-light-brown-housing-ac-120-277v-cct-5000k-photocell.webp",
+          "webp": "",
+          "alt": "150W LED Shoebox Light Brown Housing AC 120~277V CCT 5000K Photocell",
+          "filename": "150w-led-shoebox-light-brown-housing-ac-120-277v-cct-5000k-photocell.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "Type III Light distribution",
@@ -1170,24 +1202,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/100w-all-in-one-solar-street-light-microwave-motion-sensor-dusk-to-dawn-photocell-cct-5700k-sls-100w-57k.webp",
-          "original": "new-product-images/100w-all-in-one-solar-street-light-microwave-motion-sensor-dusk-to-dawn-photocell-cct-5700k-sls-100w-57k.png",
+          "original": "new-product-images/100w-all-in-one-solar-street-light-microwave-motion-sensor-dusk-to-dawn-photocell-cct-5700k-sls-100w-57k.webp",
           "webp": "",
           "alt": "100W All in One Solar Street Light- Microwave Motion Sensor+Dusk to Dawn Photocell-CCT 5700K",
           "filename": "100w-all-in-one-solar-street-light-microwave-motion-sensor-dusk-to-dawn-photocell-cct-5700k-sls-100w-57k.webp"
-        },
-        {
-          "url": "/assets/new-product-images/100w-all-in-one-solar-street-light-microwave-motion-sensor-dusk-to-dawn-photocell-cct-5700k-sls-100w-57k-15.webp",
-          "original": "new-product-images/100w-all-in-one-solar-street-light-microwave-motion-sensor-dusk-to-dawn-photocell-cct-5700k-sls-100w-57k-15.png",
-          "webp": "",
-          "alt": "100W All in One Solar Street Light- Microwave Motion Sensor+Dusk to Dawn Photocell-CCT 5700K",
-          "filename": "100w-all-in-one-solar-street-light-microwave-motion-sensor-dusk-to-dawn-photocell-cct-5700k-sls-100w-57k-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/100w-all-in-one-solar-street-light-microwave-motion-sensor-dusk-to-dawn-photocell-cct-5700k-sls-100w-57k-16.webp",
-          "original": "new-product-images/100w-all-in-one-solar-street-light-microwave-motion-sensor-dusk-to-dawn-photocell-cct-5700k-sls-100w-57k-16.png",
-          "webp": "",
-          "alt": "100W All in One Solar Street Light- Microwave Motion Sensor+Dusk to Dawn Photocell-CCT 5700K",
-          "filename": "100w-all-in-one-solar-street-light-microwave-motion-sensor-dusk-to-dawn-photocell-cct-5700k-sls-100w-57k-16.webp"
         }
       ],
       "attributes": {
@@ -1649,17 +1667,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/150w-ucp-led-canopy-light-cct-5700k-ac-120-277v-ucp-150w-120v-57k-v2.webp",
-          "original": "new-product-images/150w-ucp-led-canopy-light-cct-5700k-ac-120-277v-ucp-150w-120v-57k-v2.png",
+          "original": "new-product-images/150w-ucp-led-canopy-light-cct-5700k-ac-120-277v-ucp-150w-120v-57k-v2.webp",
           "webp": "",
           "alt": "150W UCP LED Canopy Light CCT 5700K AC 120-277V",
           "filename": "150w-ucp-led-canopy-light-cct-5700k-ac-120-277v-ucp-150w-120v-57k-v2.webp"
-        },
-        {
-          "url": "/assets/new-product-images/150w-ucp-led-canopy-light-cct-5700k-ac-120-277v-ucp-150w-120v-57k-v2-15.webp",
-          "original": "new-product-images/150w-ucp-led-canopy-light-cct-5700k-ac-120-277v-ucp-150w-120v-57k-v2-15.png",
-          "webp": "",
-          "alt": "150W UCP LED Canopy Light CCT 5700K AC 120-277V",
-          "filename": "150w-ucp-led-canopy-light-cct-5700k-ac-120-277v-ucp-150w-120v-57k-v2-15.webp"
         }
       ],
       "attributes": {
@@ -1822,31 +1833,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k.webp",
-          "original": "new-product-images/180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k.png",
+          "original": "new-product-images/180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k.webp",
           "webp": "",
           "alt": "180W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K",
           "filename": "180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k.webp"
-        },
-        {
-          "url": "/assets/new-product-images/180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k-15.webp",
-          "original": "new-product-images/180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k-15.png",
-          "webp": "",
-          "alt": "180W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K",
-          "filename": "180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k-16.webp",
-          "original": "new-product-images/180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k-16.png",
-          "webp": "",
-          "alt": "180W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K",
-          "filename": "180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k-16.webp"
-        },
-        {
-          "url": "/assets/new-product-images/180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k-17.webp",
-          "original": "new-product-images/180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k-17.png",
-          "webp": "",
-          "alt": "180W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K",
-          "filename": "180w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-180w-120v-57k-17.webp"
         }
       ],
       "attributes": {
@@ -1889,31 +1879,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k.webp",
-          "original": "new-product-images/240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k.png",
+          "original": "new-product-images/240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k.webp",
           "webp": "",
           "alt": "240W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K",
           "filename": "240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k.webp"
-        },
-        {
-          "url": "/assets/new-product-images/240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k-15.webp",
-          "original": "new-product-images/240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k-15.png",
-          "webp": "",
-          "alt": "240W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K",
-          "filename": "240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k-16.webp",
-          "original": "new-product-images/240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k-16.png",
-          "webp": "",
-          "alt": "240W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K",
-          "filename": "240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k-16.webp"
-        },
-        {
-          "url": "/assets/new-product-images/240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k-17.webp",
-          "original": "new-product-images/240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k-17.png",
-          "webp": "",
-          "alt": "240W LED Canopy Light AC 120~277V 0~10V Dimming CCT 5700K",
-          "filename": "240w-led-canopy-light-ac-120-277v-0-10v-dimming-cct-5700k-bcpnho-240w-120v-57k-17.webp"
         }
       ],
       "attributes": {
@@ -2718,7 +2687,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/15-20-35w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-knuckle-mount-flcn-15-20-35w-xxk-k.webp",
-          "original": "new-product-images/15-20-35w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-knuckle-mount-flcn-15-20-35w-xxk-k.png",
+          "original": "new-product-images/15-20-35w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-knuckle-mount-flcn-15-20-35w-xxk-k.webp",
           "webp": "",
           "alt": "15/20/35W LED Flood Light AC 120-277V CCT 3000K/4000K/5000K Knuckle Mount",
           "filename": "15-20-35w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-knuckle-mount-flcn-15-20-35w-xxk-k.webp"
@@ -2813,7 +2782,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/35-60-80w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-knuckle-mount.webp",
-          "original": "new-product-images/35-60-80w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-knuckle-mount.png",
+          "original": "new-product-images/35-60-80w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-knuckle-mount.webp",
           "webp": "",
           "alt": "35/60/80W LED Flood Light AC 120-277V CCT 3000K/4000K/5000K Knuckle Mount",
           "filename": "35-60-80w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-knuckle-mount.webp"
@@ -2902,24 +2871,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/100-120-150w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-slip-fitter-mount.webp",
-          "original": "new-product-images/100-120-150w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-slip-fitter-mount.png",
+          "original": "new-product-images/100-120-150w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-slip-fitter-mount.webp",
           "webp": "",
           "alt": "100/120/150W LED Flood Light AC 120-277V CCT 3000K/4000K/5000K Slip Fitter Mount",
           "filename": "100-120-150w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-slip-fitter-mount.webp"
-        },
-        {
-          "url": "/assets/new-product-images/100-120-150w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-slip-fitter-mount-15.webp",
-          "original": "new-product-images/100-120-150w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-slip-fitter-mount-15.png",
-          "webp": "",
-          "alt": "100/120/150W LED Flood Light AC 120-277V CCT 3000K/4000K/5000K Slip Fitter Mount",
-          "filename": "100-120-150w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-slip-fitter-mount-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/100-120-150w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-slip-fitter-mount-16.webp",
-          "original": "new-product-images/100-120-150w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-slip-fitter-mount-16.png",
-          "webp": "",
-          "alt": "100/120/150W LED Flood Light AC 120-277V CCT 3000K/4000K/5000K Slip Fitter Mount",
-          "filename": "100-120-150w-led-flood-light-ac-120-277v-cct-3000k-4000k-5000k-slip-fitter-mount-16.webp"
         }
       ],
       "attributes": {
@@ -3048,7 +3003,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/led-post-top-light-garden-light.webp",
-          "original": "new-product-images/led-post-top-light-garden-light.jpg",
+          "original": "new-product-images/led-post-top-light-garden-light.webp",
           "webp": "",
           "alt": "20W/30W/40W/60W Selectable LED Post Top Light 3CCT Tunable",
           "filename": "led-post-top-light-garden-light.webp"
@@ -3090,7 +3045,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/20w-30w-40w-60w-selectable-led-post-top-light-3cct-tunable-2pt-20-30-40-60w-xxk-u-copy.webp",
-          "original": "new-product-images/20w-30w-40w-60w-selectable-led-post-top-light-3cct-tunable-2pt-20-30-40-60w-xxk-u-copy.jpg",
+          "original": "new-product-images/20w-30w-40w-60w-selectable-led-post-top-light-3cct-tunable-2pt-20-30-40-60w-xxk-u-copy.webp",
           "webp": "",
           "alt": "80W/100W/120W/150W Selectable LED Post Top Light 3CCT Tunable",
           "filename": "20w-30w-40w-60w-selectable-led-post-top-light-3cct-tunable-2pt-20-30-40-60w-xxk-u-copy.webp"
@@ -3132,17 +3087,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/3-5ft-24w-led-bollard-light-3cct-selectable.webp",
-          "original": "new-product-images/3-5ft-24w-led-bollard-light-3cct-selectable.png",
+          "original": "new-product-images/3-5ft-24w-led-bollard-light-3cct-selectable.webp",
           "webp": "",
           "alt": "24W Led Bollard Light AC 120~277V 3CCT Selectable",
           "filename": "3-5ft-24w-led-bollard-light-3cct-selectable.webp"
-        },
-        {
-          "url": "/assets/new-product-images/3-5ft-24w-led-bollard-light-3cct-selectable-15.webp",
-          "original": "new-product-images/3-5ft-24w-led-bollard-light-3cct-selectable-15.png",
-          "webp": "",
-          "alt": "24W Led Bollard Light AC 120~277V 3CCT Selectable",
-          "filename": "3-5ft-24w-led-bollard-light-3cct-selectable-15.webp"
         }
       ],
       "attributes": {
@@ -3183,7 +3131,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/28w-led-gooseneck-light-3080-lumens-ac-120-277v-cct-selectable-integrated-photocell.webp",
-          "original": "new-product-images/28w-led-gooseneck-light-3080-lumens-ac-120-277v-cct-selectable-integrated-photocell.png",
+          "original": "new-product-images/28w-led-gooseneck-light-3080-lumens-ac-120-277v-cct-selectable-integrated-photocell.webp",
           "webp": "",
           "alt": "28W LED Gooseneck Light-3080 Lumens-AC 120~277V-CCT Selectable-Integrated Photocell",
           "filename": "28w-led-gooseneck-light-3080-lumens-ac-120-277v-cct-selectable-integrated-photocell.webp"
@@ -3325,7 +3273,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-copy.webp",
-          "original": "new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-copy.png",
+          "original": "new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-copy.webp",
           "webp": "",
           "alt": "2x4 LED Backlit Panel Light-Selectable Wattage 30W/40W/50W/60W/72W- Selectable CCT 3000K/3500K/4000K/5000K/6500K",
           "filename": "2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-copy.webp"
@@ -3373,11 +3321,11 @@
       ],
       "images": [
         {
-          "url": "/assets/new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-copy.webp",
-          "original": "new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-copy.png",
+          "url": "/assets/new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-copy-2.webp",
+          "original": "new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-copy-2.webp",
           "webp": "",
           "alt": "2x4 LED Backlit Panel Light-Selectable Wattage 30W/40W/50W/60W/72W- Selectable CCT 3000K/3500K/4000K/5000K/6500K",
-          "filename": "2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-copy.webp"
+          "filename": "2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-copy-2.webp"
         }
       ],
       "attributes": {
@@ -3510,17 +3458,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-xl-pluf24m72dn.webp",
-          "original": "new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-xl-pluf24m72dn.png",
+          "original": "new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-xl-pluf24m72dn.webp",
           "webp": "",
           "alt": "2x4 LED Backlit Panel Light-Selectable Wattage 30W/40W/50W/60W/72W- Selectable CCT 3000K/3500K/4000K/5000K/6500K",
           "filename": "2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-xl-pluf24m72dn.webp"
-        },
-        {
-          "url": "/assets/new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-xl-pluf24m72dn-15.webp",
-          "original": "new-product-images/2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-xl-pluf24m72dn-15.png",
-          "webp": "",
-          "alt": "2x4 LED Backlit Panel Light-Selectable Wattage 30W/40W/50W/60W/72W- Selectable CCT 3000K/3500K/4000K/5000K/6500K",
-          "filename": "2x4-led-backlit-panel-light-selectable-wattage-30w-40w-50w-60w-72w-selectable-cct-3000k-3500k-4000k-5000k-6500k-xl-pluf24m72dn-15.webp"
         }
       ],
       "attributes": {
@@ -3570,13 +3511,6 @@
           "webp": "",
           "alt": "2x2ft LED Backlit Panel Light-Selectable Wattage 20W/25W/30W/35W/40W- Selectable CCT 3000K/3500K/4000K/5000K/6500K",
           "filename": "2x2-led-backlit-panel-light-selectable-wattage-20w-25w-30w-35w-40w-selectable-cct-3000k-3500k-4000k-5000k-5700k-ls-pl22-m40w-cct-vl-copy.webp"
-        },
-        {
-          "url": "/assets/new-product-images/2x2-led-backlit-panel-light-selectable-wattage-20w-25w-30w-35w-40w-selectable-cct-3000k-3500k-4000k-5000k-5700k-ls-pl22-m40w-cct-vl-copy-15.webp",
-          "original": "new-product-images/2x2-led-backlit-panel-light-selectable-wattage-20w-25w-30w-35w-40w-selectable-cct-3000k-3500k-4000k-5000k-5700k-ls-pl22-m40w-cct-vl-copy-15.png",
-          "webp": "",
-          "alt": "2x2ft LED Backlit Panel Light-Selectable Wattage 20W/25W/30W/35W/40W- Selectable CCT 3000K/3500K/4000K/5000K/6500K",
-          "filename": "2x2-led-backlit-panel-light-selectable-wattage-20w-25w-30w-35w-40w-selectable-cct-3000k-3500k-4000k-5000k-5700k-ls-pl22-m40w-cct-vl-copy-15.webp"
         }
       ],
       "attributes": {
@@ -3622,17 +3556,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/3watts-3cct-led-troffer-light-22-4tf-30-35-40w-30-40-50k-copy.webp",
-          "original": "new-product-images/3watts-3cct-led-troffer-light-22-4tf-30-35-40w-30-40-50k-copy.jpg",
+          "original": "new-product-images/3watts-3cct-led-troffer-light-22-4tf-30-35-40w-30-40-50k-copy.webp",
           "webp": "",
           "alt": "2*2ft LED Troffer Light Wattage 15/20/25/30/40W 5CCT",
           "filename": "3watts-3cct-led-troffer-light-22-4tf-30-35-40w-30-40-50k-copy.webp"
-        },
-        {
-          "url": "/assets/new-product-images/3watts-3cct-led-troffer-light-22-4tf-30-35-40w-30-40-50k-copy-15.webp",
-          "original": "new-product-images/3watts-3cct-led-troffer-light-22-4tf-30-35-40w-30-40-50k-copy-15.jpg",
-          "webp": "",
-          "alt": "2*2ft LED Troffer Light Wattage 15/20/25/30/40W 5CCT",
-          "filename": "3watts-3cct-led-troffer-light-22-4tf-30-35-40w-30-40-50k-copy-15.webp"
         }
       ],
       "attributes": {
@@ -3671,17 +3598,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/2-4ft-led-troffer-light-wattage-40-45-50w-cct-3500-4000-5000k-lsdm-tr924xxw.webp",
-          "original": "new-product-images/2-4ft-led-troffer-light-wattage-40-45-50w-cct-3500-4000-5000k-lsdm-tr924xxw.png",
+          "original": "new-product-images/2-4ft-led-troffer-light-wattage-40-45-50w-cct-3500-4000-5000k-lsdm-tr924xxw.webp",
           "webp": "",
           "alt": "2*4ft LED Troffer Light Wattage 25/30/35/40/50W 5CCT",
           "filename": "2-4ft-led-troffer-light-wattage-40-45-50w-cct-3500-4000-5000k-lsdm-tr924xxw.webp"
-        },
-        {
-          "url": "/assets/new-product-images/2-4ft-led-troffer-light-wattage-40-45-50w-cct-3500-4000-5000k-lsdm-tr924xxw-15.webp",
-          "original": "new-product-images/2-4ft-led-troffer-light-wattage-40-45-50w-cct-3500-4000-5000k-lsdm-tr924xxw-15.png",
-          "webp": "",
-          "alt": "2*4ft LED Troffer Light Wattage 25/30/35/40/50W 5CCT",
-          "filename": "2-4ft-led-troffer-light-wattage-40-45-50w-cct-3500-4000-5000k-lsdm-tr924xxw-15.webp"
         }
       ],
       "attributes": {
@@ -3719,24 +3639,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-copy.webp",
-          "original": "new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-copy.jpg",
+          "original": "new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-copy.webp",
           "webp": "",
           "alt": "2ft 165W LED Linear High Bay CCT 5000K AC 120-277V",
           "filename": "2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-copy.webp"
-        },
-        {
-          "url": "/assets/new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-copy-15.webp",
-          "original": "new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-copy-15.jpg",
-          "webp": "",
-          "alt": "2ft 165W LED Linear High Bay CCT 5000K AC 120-277V",
-          "filename": "2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-copy-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-copy-16.webp",
-          "original": "new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-copy-16.jpg",
-          "webp": "",
-          "alt": "2ft 165W LED Linear High Bay CCT 5000K AC 120-277V",
-          "filename": "2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-copy-16.webp"
         }
       ],
       "attributes": {
@@ -3779,24 +3685,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/3ft-300w-led-linear-high-bay.webp",
-          "original": "new-product-images/3ft-300w-led-linear-high-bay.jpg",
+          "original": "new-product-images/3ft-300w-led-linear-high-bay.webp",
           "webp": "",
           "alt": "4ft 300W LED Linear High Bay CCT 5000K AC 120-277V",
           "filename": "3ft-300w-led-linear-high-bay.webp"
-        },
-        {
-          "url": "/assets/new-product-images/3ft-300w-led-linear-high-bay-15.webp",
-          "original": "new-product-images/3ft-300w-led-linear-high-bay-15.jpg",
-          "webp": "",
-          "alt": "4ft 300W LED Linear High Bay CCT 5000K AC 120-277V",
-          "filename": "3ft-300w-led-linear-high-bay-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/3ft-300w-led-linear-high-bay-16.webp",
-          "original": "new-product-images/3ft-300w-led-linear-high-bay-16.jpg",
-          "webp": "",
-          "alt": "4ft 300W LED Linear High Bay CCT 5000K AC 120-277V",
-          "filename": "3ft-300w-led-linear-high-bay-16.webp"
         }
       ],
       "attributes": {
@@ -3839,38 +3731,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk.webp",
-          "original": "new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk.jpg",
+          "original": "new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk.webp",
           "webp": "",
           "alt": "2ft 110W/165W/220W LED Linear High Bay CCT 4000K/5000K AC 120-277V",
           "filename": "2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk.webp"
-        },
-        {
-          "url": "/assets/new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-15.webp",
-          "original": "new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-15.jpg",
-          "webp": "",
-          "alt": "2ft 110W/165W/220W LED Linear High Bay CCT 4000K/5000K AC 120-277V",
-          "filename": "2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-16.webp",
-          "original": "new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-16.jpg",
-          "webp": "",
-          "alt": "2ft 110W/165W/220W LED Linear High Bay CCT 4000K/5000K AC 120-277V",
-          "filename": "2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-16.webp"
-        },
-        {
-          "url": "/assets/new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-17.webp",
-          "original": "new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-17.jpg",
-          "webp": "",
-          "alt": "2ft 110W/165W/220W LED Linear High Bay CCT 4000K/5000K AC 120-277V",
-          "filename": "2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-17.webp"
-        },
-        {
-          "url": "/assets/new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-18.webp",
-          "original": "new-product-images/2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-18.jpg",
-          "webp": "",
-          "alt": "2ft 110W/165W/220W LED Linear High Bay CCT 4000K/5000K AC 120-277V",
-          "filename": "2ft-110w-165w-220w-led-linear-high-bay-cct-4000k-5000k-ac-120-277v-lhb-110w-165w-220w-xxk-18.webp"
         }
       ],
       "attributes": {
@@ -3993,17 +3857,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/4ft-led-linear-high-bay-light-360w-380w-400w-selectable-cct-5000k-lhb-360w-380w-400w-50k.webp",
-          "original": "new-product-images/4ft-led-linear-high-bay-light-360w-380w-400w-selectable-cct-5000k-lhb-360w-380w-400w-50k.png",
+          "original": "new-product-images/4ft-led-linear-high-bay-light-360w-380w-400w-selectable-cct-5000k-lhb-360w-380w-400w-50k.webp",
           "webp": "",
           "alt": "4FT LED Linear High Bay Light-360W/380W/400W Selectable-CCT 5000K",
           "filename": "4ft-led-linear-high-bay-light-360w-380w-400w-selectable-cct-5000k-lhb-360w-380w-400w-50k.webp"
-        },
-        {
-          "url": "/assets/new-product-images/4ft-led-linear-high-bay-light-360w-380w-400w-selectable-cct-5000k-lhb-360w-380w-400w-50k-15.webp",
-          "original": "new-product-images/4ft-led-linear-high-bay-light-360w-380w-400w-selectable-cct-5000k-lhb-360w-380w-400w-50k-15.png",
-          "webp": "",
-          "alt": "4FT LED Linear High Bay Light-360W/380W/400W Selectable-CCT 5000K",
-          "filename": "4ft-led-linear-high-bay-light-360w-380w-400w-selectable-cct-5000k-lhb-360w-380w-400w-50k-15.webp"
         }
       ],
       "attributes": {
@@ -4517,7 +4374,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/4ft-24-32-40w-linkable-led-linear-strip-light-ac-100-277v-cct-3500k-4000k-5000k.webp",
-          "original": "new-product-images/4ft-24-32-40w-linkable-led-linear-strip-light-ac-100-277v-cct-3500k-4000k-5000k.jpg",
+          "original": "new-product-images/4ft-24-32-40w-linkable-led-linear-strip-light-ac-100-277v-cct-3500k-4000k-5000k.webp",
           "webp": "",
           "alt": "4FT 24/32/40W Linkable LED Linear Strip Light AC 100-277V CCT 3500K/4000K/5000K",
           "filename": "4ft-24-32-40w-linkable-led-linear-strip-light-ac-100-277v-cct-3500k-4000k-5000k.webp"
@@ -4562,24 +4419,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/8ft-led-linear-strip-light-wattage-cct-selectable-64w-75-90w-cct-3500k-4000k-5000k-ls-8ft40-50-64w-xxk.webp",
-          "original": "new-product-images/8ft-led-linear-strip-light-wattage-cct-selectable-64w-75-90w-cct-3500k-4000k-5000k-ls-8ft40-50-64w-xxk.png",
+          "original": "new-product-images/8ft-led-linear-strip-light-wattage-cct-selectable-64w-75-90w-cct-3500k-4000k-5000k-ls-8ft40-50-64w-xxk.webp",
           "webp": "",
           "alt": "8ft LED Linear Strip Light Wattage & CCT Selectable- 90W/75W/64W-CCT 3500K/4000K/5000K",
           "filename": "8ft-led-linear-strip-light-wattage-cct-selectable-64w-75-90w-cct-3500k-4000k-5000k-ls-8ft40-50-64w-xxk.webp"
-        },
-        {
-          "url": "/assets/new-product-images/8ft-led-linear-strip-light-wattage-cct-selectable-64w-75-90w-cct-3500k-4000k-5000k-ls-8ft40-50-64w-xxk-15.webp",
-          "original": "new-product-images/8ft-led-linear-strip-light-wattage-cct-selectable-64w-75-90w-cct-3500k-4000k-5000k-ls-8ft40-50-64w-xxk-15.png",
-          "webp": "",
-          "alt": "8ft LED Linear Strip Light Wattage & CCT Selectable- 90W/75W/64W-CCT 3500K/4000K/5000K",
-          "filename": "8ft-led-linear-strip-light-wattage-cct-selectable-64w-75-90w-cct-3500k-4000k-5000k-ls-8ft40-50-64w-xxk-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/8ft-led-linear-strip-light-wattage-cct-selectable-64w-75-90w-cct-3500k-4000k-5000k-ls-8ft40-50-64w-xxk-16.webp",
-          "original": "new-product-images/8ft-led-linear-strip-light-wattage-cct-selectable-64w-75-90w-cct-3500k-4000k-5000k-ls-8ft40-50-64w-xxk-16.png",
-          "webp": "",
-          "alt": "8ft LED Linear Strip Light Wattage & CCT Selectable- 90W/75W/64W-CCT 3500K/4000K/5000K",
-          "filename": "8ft-led-linear-strip-light-wattage-cct-selectable-64w-75-90w-cct-3500k-4000k-5000k-ls-8ft40-50-64w-xxk-16.webp"
         }
       ],
       "attributes": {
@@ -4616,7 +4459,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/4ft-24-32-40w-linkable-led-linear-strip-light-ac-100-277v-cct-3500k-4000k-5000k-ls-4ft24-32-40w-xxk-copy.webp",
-          "original": "new-product-images/4ft-24-32-40w-linkable-led-linear-strip-light-ac-100-277v-cct-3500k-4000k-5000k-ls-4ft24-32-40w-xxk-copy.jpg",
+          "original": "new-product-images/4ft-24-32-40w-linkable-led-linear-strip-light-ac-100-277v-cct-3500k-4000k-5000k-ls-4ft24-32-40w-xxk-copy.webp",
           "webp": "",
           "alt": "4FT 24/32/40W Linkable LED Linear Strip Light AC 100-277V CCT 3500K/4000K/5000K",
           "filename": "4ft-24-32-40w-linkable-led-linear-strip-light-ac-100-277v-cct-3500k-4000k-5000k-ls-4ft24-32-40w-xxk-copy.webp"
@@ -4660,7 +4503,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/4ft-vapor-tight-led-light-selectable-wattage-cct.webp",
-          "original": "new-product-images/4ft-vapor-tight-led-light-selectable-wattage-cct.png",
+          "original": "new-product-images/4ft-vapor-tight-led-light-selectable-wattage-cct.webp",
           "webp": "",
           "alt": "4FT LED Vapor Tight Light Selectable Wattage & CCT AC 120~277V",
           "filename": "4ft-vapor-tight-led-light-selectable-wattage-cct.webp"
@@ -4746,24 +4589,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/dlc-led-triproof-light-40w.webp",
-          "original": "new-product-images/dlc-led-triproof-light-40w.jpg",
+          "original": "new-product-images/dlc-led-triproof-light-40w.webp",
           "webp": "",
           "alt": "4FT 40W LED Triproof Light AC 100-277V CCT 5000K",
           "filename": "dlc-led-triproof-light-40w.webp"
-        },
-        {
-          "url": "/assets/new-product-images/dlc-led-triproof-light-40w-15.webp",
-          "original": "new-product-images/dlc-led-triproof-light-40w-15.jpg",
-          "webp": "",
-          "alt": "4FT 40W LED Triproof Light AC 100-277V CCT 5000K",
-          "filename": "dlc-led-triproof-light-40w-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/dlc-led-triproof-light-40w-16.webp",
-          "original": "new-product-images/dlc-led-triproof-light-40w-16.jpg",
-          "webp": "",
-          "alt": "4FT 40W LED Triproof Light AC 100-277V CCT 5000K",
-          "filename": "dlc-led-triproof-light-40w-16.webp"
         }
       ],
       "attributes": {
@@ -4809,45 +4638,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/6-inch-gimbal-trim-retrofit-led-downlight.webp",
-          "original": "new-product-images/6-inch-gimbal-trim-retrofit-led-downlight.jpg",
+          "original": "new-product-images/6-inch-gimbal-trim-retrofit-led-downlight.webp",
           "webp": "",
           "alt": "6'' Gimbal Trim Retrofit LED Downlight AC 120V 5CCT Selectable",
           "filename": "6-inch-gimbal-trim-retrofit-led-downlight.webp"
-        },
-        {
-          "url": "/assets/new-product-images/6-inch-gimbal-trim-retrofit-led-downlight-15.webp",
-          "original": "new-product-images/6-inch-gimbal-trim-retrofit-led-downlight-15.jpg",
-          "webp": "",
-          "alt": "6'' Gimbal Trim Retrofit LED Downlight AC 120V 5CCT Selectable",
-          "filename": "6-inch-gimbal-trim-retrofit-led-downlight-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/6-inch-gimbal-trim-retrofit-led-downlight-16.webp",
-          "original": "new-product-images/6-inch-gimbal-trim-retrofit-led-downlight-16.jpg",
-          "webp": "",
-          "alt": "6'' Gimbal Trim Retrofit LED Downlight AC 120V 5CCT Selectable",
-          "filename": "6-inch-gimbal-trim-retrofit-led-downlight-16.webp"
-        },
-        {
-          "url": "/assets/new-product-images/6-inch-gimbal-trim-retrofit-led-downlight-17.webp",
-          "original": "new-product-images/6-inch-gimbal-trim-retrofit-led-downlight-17.jpg",
-          "webp": "",
-          "alt": "6'' Gimbal Trim Retrofit LED Downlight AC 120V 5CCT Selectable",
-          "filename": "6-inch-gimbal-trim-retrofit-led-downlight-17.webp"
-        },
-        {
-          "url": "/assets/new-product-images/6-inch-gimbal-trim-retrofit-led-downlight-18.webp",
-          "original": "new-product-images/6-inch-gimbal-trim-retrofit-led-downlight-18.jpg",
-          "webp": "",
-          "alt": "6'' Gimbal Trim Retrofit LED Downlight AC 120V 5CCT Selectable",
-          "filename": "6-inch-gimbal-trim-retrofit-led-downlight-18.webp"
-        },
-        {
-          "url": "/assets/new-product-images/6-inch-gimbal-trim-retrofit-led-downlight-19.webp",
-          "original": "new-product-images/6-inch-gimbal-trim-retrofit-led-downlight-19.jpg",
-          "webp": "",
-          "alt": "6'' Gimbal Trim Retrofit LED Downlight AC 120V 5CCT Selectable",
-          "filename": "6-inch-gimbal-trim-retrofit-led-downlight-19.webp"
         }
       ],
       "attributes": {
@@ -4892,38 +4686,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct.webp",
-          "original": "new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct.jpg",
+          "original": "new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct.webp",
           "webp": "",
           "alt": "4 inch LED Silm Panel Downlight 5 CCT Selectable",
           "filename": "4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct.webp"
-        },
-        {
-          "url": "/assets/new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-15.webp",
-          "original": "new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-15.jpg",
-          "webp": "",
-          "alt": "4 inch LED Silm Panel Downlight 5 CCT Selectable",
-          "filename": "4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-16.webp",
-          "original": "new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-16.jpg",
-          "webp": "",
-          "alt": "4 inch LED Silm Panel Downlight 5 CCT Selectable",
-          "filename": "4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-16.webp"
-        },
-        {
-          "url": "/assets/new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-17.webp",
-          "original": "new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-17.jpg",
-          "webp": "",
-          "alt": "4 inch LED Silm Panel Downlight 5 CCT Selectable",
-          "filename": "4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-17.webp"
-        },
-        {
-          "url": "/assets/new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-18.webp",
-          "original": "new-product-images/4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-18.jpg",
-          "webp": "",
-          "alt": "4 inch LED Silm Panel Downlight 5 CCT Selectable",
-          "filename": "4-inch-led-silm-panel-downlight-5-cct-selectable-2nd4-s3-9w-5cct-18.webp"
         }
       ],
       "attributes": {
@@ -4960,38 +4726,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/recessed-round-led-down-light.webp",
-          "original": "new-product-images/recessed-round-led-down-light.jpg",
+          "original": "new-product-images/recessed-round-led-down-light.webp",
           "webp": "",
           "alt": "6 inch LED Silm Panel Downlight 5 CCT Selectable",
           "filename": "recessed-round-led-down-light.webp"
-        },
-        {
-          "url": "/assets/new-product-images/recessed-round-led-down-light-15.webp",
-          "original": "new-product-images/recessed-round-led-down-light-15.jpg",
-          "webp": "",
-          "alt": "6 inch LED Silm Panel Downlight 5 CCT Selectable",
-          "filename": "recessed-round-led-down-light-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/recessed-round-led-down-light-16.webp",
-          "original": "new-product-images/recessed-round-led-down-light-16.jpg",
-          "webp": "",
-          "alt": "6 inch LED Silm Panel Downlight 5 CCT Selectable",
-          "filename": "recessed-round-led-down-light-16.webp"
-        },
-        {
-          "url": "/assets/new-product-images/recessed-round-led-down-light-17.webp",
-          "original": "new-product-images/recessed-round-led-down-light-17.jpg",
-          "webp": "",
-          "alt": "6 inch LED Silm Panel Downlight 5 CCT Selectable",
-          "filename": "recessed-round-led-down-light-17.webp"
-        },
-        {
-          "url": "/assets/new-product-images/recessed-round-led-down-light-18.webp",
-          "original": "new-product-images/recessed-round-led-down-light-18.jpg",
-          "webp": "",
-          "alt": "6 inch LED Silm Panel Downlight 5 CCT Selectable",
-          "filename": "recessed-round-led-down-light-18.webp"
         }
       ],
       "attributes": {
@@ -5025,7 +4763,15 @@
           "slug": "led-downlights"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/4-inch-wattage-cct-selectable-led-commercial-downlight-4c-6-9-12w-xxk.webp",
+          "original": "new-product-images/4-inch-wattage-cct-selectable-led-commercial-downlight-4c-6-9-12w-xxk.webp",
+          "webp": "",
+          "alt": "4 inch Wattage & CCT Selectable LED Commercial Downlight",
+          "filename": "4-inch-wattage-cct-selectable-led-commercial-downlight-4c-6-9-12w-xxk.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "Baffle Trim Design",
@@ -5066,7 +4812,15 @@
           "slug": "led-downlights"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/3watts-5cct-recessed-commercial-downlight-copy.webp",
+          "original": "new-product-images/3watts-5cct-recessed-commercial-downlight-copy.webp",
+          "webp": "",
+          "alt": "6 Inch Wattage & CCT Selectable LED Commercial Downlight",
+          "filename": "3watts-5cct-recessed-commercial-downlight-copy.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "6 inch LED Commercial downlights replace legacy CFL, HID, or incandescent downlights",
@@ -5104,7 +4858,15 @@
           "slug": "led-downlights"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/6-inch-wattage-cct-selectable-led-commercial-downlight-6c-12-17-22w-xxk-copy.webp",
+          "original": "new-product-images/6-inch-wattage-cct-selectable-led-commercial-downlight-6c-12-17-22w-xxk-copy.webp",
+          "webp": "",
+          "alt": "8 Inch Wattage & CCT Selectable LED Commercial Downlight",
+          "filename": "6-inch-wattage-cct-selectable-led-commercial-downlight-6c-12-17-22w-xxk-copy.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "8 inch LED Commercial downlights replace legacy CFL, HID, or incandescent downlights",
@@ -5142,7 +4904,15 @@
           "slug": "led-downlights"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/ledsion-led-commercial-downlight.webp",
+          "original": "new-product-images/ledsion-led-commercial-downlight.webp",
+          "webp": "",
+          "alt": "10 Inch Wattage & CCT Selectable LED Commercial Downlight",
+          "filename": "ledsion-led-commercial-downlight.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "10 inch LED Commercial downlights replace legacy CFL, HID, or incandescent downlight",
@@ -5183,17 +4953,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/ledsion-6-inch-12w-square-panel-downlight-5cct-selectable-fd6-s3-12w-5cct.webp",
-          "original": "new-product-images/ledsion-6-inch-12w-square-panel-downlight-5cct-selectable-fd6-s3-12w-5cct.png",
+          "original": "new-product-images/ledsion-6-inch-12w-square-panel-downlight-5cct-selectable-fd6-s3-12w-5cct.webp",
           "webp": "",
           "alt": "6 Inch 12W Square Panel Downlight 5CCT Selectable",
           "filename": "ledsion-6-inch-12w-square-panel-downlight-5cct-selectable-fd6-s3-12w-5cct.webp"
-        },
-        {
-          "url": "/assets/new-product-images/ledsion-6-inch-12w-square-panel-downlight-5cct-selectable-fd6-s3-12w-5cct-15.webp",
-          "original": "new-product-images/ledsion-6-inch-12w-square-panel-downlight-5cct-selectable-fd6-s3-12w-5cct-15.png",
-          "webp": "",
-          "alt": "6 Inch 12W Square Panel Downlight 5CCT Selectable",
-          "filename": "ledsion-6-inch-12w-square-panel-downlight-5cct-selectable-fd6-s3-12w-5cct-15.webp"
         }
       ],
       "attributes": {
@@ -5239,17 +5002,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/ledsion-4-inch-9w-square-panel-downlight-5cct-selectable-fd4-s3-9w-5cctl.webp",
-          "original": "new-product-images/ledsion-4-inch-9w-square-panel-downlight-5cct-selectable-fd4-s3-9w-5cctl.png",
+          "original": "new-product-images/ledsion-4-inch-9w-square-panel-downlight-5cct-selectable-fd4-s3-9w-5cctl.webp",
           "webp": "",
           "alt": "4 Inch 9W Square Panel Downlight 5CCT Selectable",
           "filename": "ledsion-4-inch-9w-square-panel-downlight-5cct-selectable-fd4-s3-9w-5cctl.webp"
-        },
-        {
-          "url": "/assets/new-product-images/ledsion-4-inch-9w-square-panel-downlight-5cct-selectable-fd4-s3-9w-5cctl-15.webp",
-          "original": "new-product-images/ledsion-4-inch-9w-square-panel-downlight-5cct-selectable-fd4-s3-9w-5cctl-15.png",
-          "webp": "",
-          "alt": "4 Inch 9W Square Panel Downlight 5CCT Selectable",
-          "filename": "ledsion-4-inch-9w-square-panel-downlight-5cct-selectable-fd4-s3-9w-5cctl-15.webp"
         }
       ],
       "attributes": {
@@ -5295,17 +5051,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/6-inch-15w-disk-light-120v-triac-dimming-5cct-selectable-dk6-15w-5cct.webp",
-          "original": "new-product-images/6-inch-15w-disk-light-120v-triac-dimming-5cct-selectable-dk6-15w-5cct.png",
+          "original": "new-product-images/6-inch-15w-disk-light-120v-triac-dimming-5cct-selectable-dk6-15w-5cct.webp",
           "webp": "",
           "alt": "6 Inch 15W Disk Light 120V Triac Dimming 5CCT Selectable",
           "filename": "6-inch-15w-disk-light-120v-triac-dimming-5cct-selectable-dk6-15w-5cct.webp"
-        },
-        {
-          "url": "/assets/new-product-images/6-inch-15w-disk-light-120v-triac-dimming-5cct-selectable-dk6-15w-5cct-15.webp",
-          "original": "new-product-images/6-inch-15w-disk-light-120v-triac-dimming-5cct-selectable-dk6-15w-5cct-15.png",
-          "webp": "",
-          "alt": "6 Inch 15W Disk Light 120V Triac Dimming 5CCT Selectable",
-          "filename": "6-inch-15w-disk-light-120v-triac-dimming-5cct-selectable-dk6-15w-5cct-15.webp"
         }
       ],
       "attributes": {
@@ -5350,24 +5099,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/6-inch-15w-led-eco-retrofit-kit-5cct-selectable-120v-triac-dimming-e26-base-6rd15w120v.webp",
-          "original": "new-product-images/6-inch-15w-led-eco-retrofit-kit-5cct-selectable-120v-triac-dimming-e26-base-6rd15w120v.png",
+          "original": "new-product-images/6-inch-15w-led-eco-retrofit-kit-5cct-selectable-120v-triac-dimming-e26-base-6rd15w120v.webp",
           "webp": "",
           "alt": "6 Inch 15W LED ECO Retrofit Kit 5CCT Selectable 120V Triac dimming E26 Base",
           "filename": "6-inch-15w-led-eco-retrofit-kit-5cct-selectable-120v-triac-dimming-e26-base-6rd15w120v.webp"
-        },
-        {
-          "url": "/assets/new-product-images/6-inch-15w-led-eco-retrofit-kit-5cct-selectable-120v-triac-dimming-e26-base-6rd15w120v-15.webp",
-          "original": "new-product-images/6-inch-15w-led-eco-retrofit-kit-5cct-selectable-120v-triac-dimming-e26-base-6rd15w120v-15.png",
-          "webp": "",
-          "alt": "6 Inch 15W LED ECO Retrofit Kit 5CCT Selectable 120V Triac dimming E26 Base",
-          "filename": "6-inch-15w-led-eco-retrofit-kit-5cct-selectable-120v-triac-dimming-e26-base-6rd15w120v-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/6-inch-15w-led-eco-retrofit-kit-5cct-selectable-120v-triac-dimming-e26-base-6rd15w120v-16.webp",
-          "original": "new-product-images/6-inch-15w-led-eco-retrofit-kit-5cct-selectable-120v-triac-dimming-e26-base-6rd15w120v-16.png",
-          "webp": "",
-          "alt": "6 Inch 15W LED ECO Retrofit Kit 5CCT Selectable 120V Triac dimming E26 Base",
-          "filename": "6-inch-15w-led-eco-retrofit-kit-5cct-selectable-120v-triac-dimming-e26-base-6rd15w120v-16.webp"
         }
       ],
       "attributes": {
@@ -5486,17 +5221,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/wattage-cct-selectable-tube-light.webp",
-          "original": "new-product-images/wattage-cct-selectable-tube-light.jpg",
+          "original": "new-product-images/wattage-cct-selectable-tube-light.webp",
           "webp": "",
           "alt": "4FT T8 LED Tube Light 5 Watts & CCT Selectable Tube Light",
           "filename": "wattage-cct-selectable-tube-light.webp"
-        },
-        {
-          "url": "/assets/new-product-images/wattage-cct-selectable-tube-light-15.webp",
-          "original": "new-product-images/wattage-cct-selectable-tube-light-15.jpg",
-          "webp": "",
-          "alt": "4FT T8 LED Tube Light 5 Watts & CCT Selectable Tube Light",
-          "filename": "wattage-cct-selectable-tube-light-15.webp"
         }
       ],
       "attributes": {
@@ -5538,31 +5266,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/emergency-t8-led-tube-light-with-battery-copy.webp",
-          "original": "new-product-images/emergency-t8-led-tube-light-with-battery-copy.jpg",
+          "original": "new-product-images/emergency-t8-led-tube-light-with-battery-copy.webp",
           "webp": "",
           "alt": "4FT 18W T8 LED Emergency Tube With Backup Battery Clear Cover CCT 5000K",
           "filename": "emergency-t8-led-tube-light-with-battery-copy.webp"
-        },
-        {
-          "url": "/assets/new-product-images/emergency-t8-led-tube-light-with-battery-copy-15.webp",
-          "original": "new-product-images/emergency-t8-led-tube-light-with-battery-copy-15.jpg",
-          "webp": "",
-          "alt": "4FT 18W T8 LED Emergency Tube With Backup Battery Clear Cover CCT 5000K",
-          "filename": "emergency-t8-led-tube-light-with-battery-copy-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/emergency-t8-led-tube-light-with-battery-copy-16.webp",
-          "original": "new-product-images/emergency-t8-led-tube-light-with-battery-copy-16.jpg",
-          "webp": "",
-          "alt": "4FT 18W T8 LED Emergency Tube With Backup Battery Clear Cover CCT 5000K",
-          "filename": "emergency-t8-led-tube-light-with-battery-copy-16.webp"
-        },
-        {
-          "url": "/assets/new-product-images/emergency-t8-led-tube-light-with-battery-copy-17.webp",
-          "original": "new-product-images/emergency-t8-led-tube-light-with-battery-copy-17.jpg",
-          "webp": "",
-          "alt": "4FT 18W T8 LED Emergency Tube With Backup Battery Clear Cover CCT 5000K",
-          "filename": "emergency-t8-led-tube-light-with-battery-copy-17.webp"
         }
       ],
       "attributes": {
@@ -5854,7 +5561,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/14-inch-20w-flush-mount-ceiling-light-3cct-selectable-3500k-4000k-5000k-cl-20w-120v-xxk.webp",
-          "original": "new-product-images/14-inch-20w-flush-mount-ceiling-light-3cct-selectable-3500k-4000k-5000k-cl-20w-120v-xxk.png",
+          "original": "new-product-images/14-inch-20w-flush-mount-ceiling-light-3cct-selectable-3500k-4000k-5000k-cl-20w-120v-xxk.webp",
           "webp": "",
           "alt": "14 inch 20W Flush Mount Ceiling Light 3CCT Selectable 3500K/4000K/5000K",
           "filename": "14-inch-20w-flush-mount-ceiling-light-3cct-selectable-3500k-4000k-5000k-cl-20w-120v-xxk.webp"
@@ -5897,7 +5604,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/16-inch-25w-flush-mount-ceiling-light-3cct-selectable-3500k-4000k-5000k-cl-20w-120v-xxk.webp",
-          "original": "new-product-images/16-inch-25w-flush-mount-ceiling-light-3cct-selectable-3500k-4000k-5000k-cl-20w-120v-xxk.png",
+          "original": "new-product-images/16-inch-25w-flush-mount-ceiling-light-3cct-selectable-3500k-4000k-5000k-cl-20w-120v-xxk.webp",
           "webp": "",
           "alt": "16 inch 25W Flush Mount Ceiling Light 3CCT Selectable 3500K/4000K/5000K",
           "filename": "16-inch-25w-flush-mount-ceiling-light-3cct-selectable-3500k-4000k-5000k-cl-20w-120v-xxk.webp"
@@ -5993,31 +5700,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy.webp",
-          "original": "new-product-images/red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy.jpg",
+          "original": "new-product-images/red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy.webp",
           "webp": "",
           "alt": "Green Combo LED Emergency Exit Sign-Battery Backup-Adjustable Light Heads",
           "filename": "red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy.webp"
-        },
-        {
-          "url": "/assets/new-product-images/red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy-15.webp",
-          "original": "new-product-images/red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy-15.jpg",
-          "webp": "",
-          "alt": "Green Combo LED Emergency Exit Sign-Battery Backup-Adjustable Light Heads",
-          "filename": "red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy-16.webp",
-          "original": "new-product-images/red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy-16.jpg",
-          "webp": "",
-          "alt": "Green Combo LED Emergency Exit Sign-Battery Backup-Adjustable Light Heads",
-          "filename": "red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy-16.webp"
-        },
-        {
-          "url": "/assets/new-product-images/red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy-17.webp",
-          "original": "new-product-images/red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy-17.jpg",
-          "webp": "",
-          "alt": "Green Combo LED Emergency Exit Sign-Battery Backup-Adjustable Light Heads",
-          "filename": "red-green-combo-led-emergency-exit-sign-battery-backup-adjustable-light-heads-single-or-double-face-copy-17.webp"
         }
       ],
       "attributes": {
@@ -6437,24 +6123,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/30w-emergency-backup-battery-for-ufo-high-bay-light-emufo-30347-yyy.webp",
-          "original": "new-product-images/30w-emergency-backup-battery-for-ufo-high-bay-light-emufo-30347-yyy.png",
+          "original": "new-product-images/30w-emergency-backup-battery-for-ufo-high-bay-light-emufo-30347-yyy.webp",
           "webp": "",
           "alt": "30W Emergency Backup Battery for UFO High Bay Light",
           "filename": "30w-emergency-backup-battery-for-ufo-high-bay-light-emufo-30347-yyy.webp"
-        },
-        {
-          "url": "/assets/new-product-images/30w-emergency-backup-battery-for-ufo-high-bay-light-emufo-30347-yyy-15.webp",
-          "original": "new-product-images/30w-emergency-backup-battery-for-ufo-high-bay-light-emufo-30347-yyy-15.png",
-          "webp": "",
-          "alt": "30W Emergency Backup Battery for UFO High Bay Light",
-          "filename": "30w-emergency-backup-battery-for-ufo-high-bay-light-emufo-30347-yyy-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/30w-emergency-backup-battery-for-ufo-high-bay-light-emufo-30347-yyy-16.webp",
-          "original": "new-product-images/30w-emergency-backup-battery-for-ufo-high-bay-light-emufo-30347-yyy-16.png",
-          "webp": "",
-          "alt": "30W Emergency Backup Battery for UFO High Bay Light",
-          "filename": "30w-emergency-backup-battery-for-ufo-high-bay-light-emufo-30347-yyy-16.webp"
         }
       ],
       "attributes": {
@@ -6661,7 +6333,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/20w-led-explosion-proof-hazardous-location-handlamp-class-i-division-i-cec-20w-120v-50k.webp",
-          "original": "new-product-images/20w-led-explosion-proof-hazardous-location-handlamp-class-i-division-i-cec-20w-120v-50k.png",
+          "original": "new-product-images/20w-led-explosion-proof-hazardous-location-handlamp-class-i-division-i-cec-20w-120v-50k.webp",
           "webp": "",
           "alt": "20W LED Explosion Proof Hazardous Location Handlamp-Class I Division I",
           "filename": "20w-led-explosion-proof-hazardous-location-handlamp-class-i-division-i-cec-20w-120v-50k.webp"
@@ -6722,45 +6394,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/led-jelly-jar-light.webp",
-          "original": "new-product-images/led-jelly-jar-light.jpg",
+          "original": "new-product-images/led-jelly-jar-light.webp",
           "webp": "",
           "alt": "21W LED Jelly Jar Light AC 100-277V",
           "filename": "led-jelly-jar-light.webp"
-        },
-        {
-          "url": "/assets/new-product-images/led-jelly-jar-light-15.webp",
-          "original": "new-product-images/led-jelly-jar-light-15.jpg",
-          "webp": "",
-          "alt": "21W LED Jelly Jar Light AC 100-277V",
-          "filename": "led-jelly-jar-light-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/led-jelly-jar-light-16.webp",
-          "original": "new-product-images/led-jelly-jar-light-16.jpg",
-          "webp": "",
-          "alt": "21W LED Jelly Jar Light AC 100-277V",
-          "filename": "led-jelly-jar-light-16.webp"
-        },
-        {
-          "url": "/assets/new-product-images/led-jelly-jar-light-17.webp",
-          "original": "new-product-images/led-jelly-jar-light-17.jpg",
-          "webp": "",
-          "alt": "21W LED Jelly Jar Light AC 100-277V",
-          "filename": "led-jelly-jar-light-17.webp"
-        },
-        {
-          "url": "/assets/new-product-images/led-jelly-jar-light-18.webp",
-          "original": "new-product-images/led-jelly-jar-light-18.jpg",
-          "webp": "",
-          "alt": "21W LED Jelly Jar Light AC 100-277V",
-          "filename": "led-jelly-jar-light-18.webp"
-        },
-        {
-          "url": "/assets/new-product-images/led-jelly-jar-light-19.webp",
-          "original": "new-product-images/led-jelly-jar-light-19.jpg",
-          "webp": "",
-          "alt": "21W LED Jelly Jar Light AC 100-277V",
-          "filename": "led-jelly-jar-light-19.webp"
         }
       ],
       "attributes": {
@@ -6934,24 +6571,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/led-explosion-proof-linear-strip-light.webp",
-          "original": "new-product-images/led-explosion-proof-linear-strip-light.jpg",
+          "original": "new-product-images/led-explosion-proof-linear-strip-light.webp",
           "webp": "",
           "alt": "60W 4FT LED Linear Strip Light Class 1 Division 2",
           "filename": "led-explosion-proof-linear-strip-light.webp"
-        },
-        {
-          "url": "/assets/new-product-images/led-explosion-proof-linear-strip-light-15.webp",
-          "original": "new-product-images/led-explosion-proof-linear-strip-light-15.jpg",
-          "webp": "",
-          "alt": "60W 4FT LED Linear Strip Light Class 1 Division 2",
-          "filename": "led-explosion-proof-linear-strip-light-15.webp"
-        },
-        {
-          "url": "/assets/new-product-images/led-explosion-proof-linear-strip-light-16.webp",
-          "original": "new-product-images/led-explosion-proof-linear-strip-light-16.jpg",
-          "webp": "",
-          "alt": "60W 4FT LED Linear Strip Light Class 1 Division 2",
-          "filename": "led-explosion-proof-linear-strip-light-16.webp"
         }
       ],
       "attributes": {
@@ -7395,7 +7018,15 @@
           "slug": "poles-brackets"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/4-4-inch-square-steel-light-pole-11-gauge.webp",
+          "original": "new-product-images/4-4-inch-square-steel-light-pole-11-gauge.webp",
+          "webp": "",
+          "alt": "20ft 4*4 inch Square Steel Light Pole 11 Gauge",
+          "filename": "4-4-inch-square-steel-light-pole-11-gauge.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "Made from 11 gauge steel for superior strength and durability",
@@ -7424,7 +7055,15 @@
           "slug": "poles-brackets"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/25ft-4-4-inch-square-steel-light-pole-11-gaug.webp",
+          "original": "new-product-images/25ft-4-4-inch-square-steel-light-pole-11-gaug.webp",
+          "webp": "",
+          "alt": "25ft 4*4 inch Square Steel Light Pole 11 Gauge",
+          "filename": "25ft-4-4-inch-square-steel-light-pole-11-gaug.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "Made from 11 gauge steel for superior strength and durability",
@@ -7453,7 +7092,15 @@
           "slug": "poles-brackets"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/new-product-images/30ft-5-5-inch-square-steel-light-pole-10-gauge.webp",
+          "original": "new-product-images/30ft-5-5-inch-square-steel-light-pole-10-gauge.webp",
+          "webp": "",
+          "alt": "30ft 5*5 inch Square Steel Light Pole 10 Gauge",
+          "filename": "30ft-5-5-inch-square-steel-light-pole-10-gauge.webp"
+        }
+      ],
       "attributes": {
         "Key Features": [
           "Made from 10 gauge steel for superior strength and durability",
@@ -7484,11 +7131,11 @@
       ],
       "images": [
         {
-          "url": "/assets/new-product-images/15-foot-steel-3-inch-round-light-pole-black-housing-copy-15.webp",
-          "original": "new-product-images/15-foot-steel-3-inch-round-light-pole-black-housing-copy-15.png",
+          "url": "/assets/new-product-images/15-foot-steel-3-inch-round-light-pole-black-housing-copy.webp",
+          "original": "new-product-images/15-foot-steel-3-inch-round-light-pole-black-housing-copy.webp",
           "webp": "",
           "alt": "10 Foot Steel 3 Inch Round Light Pole Black Housing",
-          "filename": "15-foot-steel-3-inch-round-light-pole-black-housing-copy-15.webp"
+          "filename": "15-foot-steel-3-inch-round-light-pole-black-housing-copy.webp"
         }
       ],
       "attributes": {
@@ -7522,11 +7169,11 @@
       ],
       "images": [
         {
-          "url": "/assets/new-product-images/20-foot-steel-4-inch-round-light-pole-black-housing-dl2.webp",
-          "original": "new-product-images/20-foot-steel-4-inch-round-light-pole-black-housing-dl2.png",
+          "url": "/assets/new-product-images/20-foot-steel-4-inch-round-light-pole-black-housing.webp",
+          "original": "new-product-images/20-foot-steel-4-inch-round-light-pole-black-housing.webp",
           "webp": "",
           "alt": "20 Foot Steel 4.5 Inch Round Light Pole Black Housing",
-          "filename": "20-foot-steel-4-inch-round-light-pole-black-housing-dl2.webp"
+          "filename": "20-foot-steel-4-inch-round-light-pole-black-housing.webp"
         }
       ],
       "attributes": {
@@ -7564,7 +7211,7 @@
       "images": [
         {
           "url": "/assets/new-product-images/180-low-profile-bullhorn-with-3-2-3-8in-o-d-tenon-bh3hl.webp",
-          "original": "new-product-images/180-low-profile-bullhorn-with-3-2-3-8in-o-d-tenon-bh3hl.png",
+          "original": "new-product-images/180-low-profile-bullhorn-with-3-2-3-8in-o-d-tenon-bh3hl.webp",
           "webp": "",
           "alt": "180° Low Profile Bullhorn with (3) 2-3/8in O.D. Tenon For 3 Fixtures",
           "filename": "180-low-profile-bullhorn-with-3-2-3-8in-o-d-tenon-bh3hl.webp"
@@ -7603,17 +7250,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx.webp",
-          "original": "new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx.png",
+          "original": "new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx.webp",
           "webp": "",
           "alt": "90 Degree Quad Square Vertical Tenon For 4 Fixtures",
           "filename": "90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx.webp"
-        },
-        {
-          "url": "/assets/new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx-15.webp",
-          "original": "new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx-15.jpg",
-          "webp": "",
-          "alt": "90 Degree Quad Square Vertical Tenon For 4 Fixtures",
-          "filename": "90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx-15.webp"
         }
       ],
       "attributes": {
@@ -7739,17 +7379,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/3in-round-base.webp",
-          "original": "new-product-images/3in-round-base.png",
+          "original": "new-product-images/3in-round-base.webp",
           "webp": "",
           "alt": "3in round base tenon adapter",
           "filename": "3in-round-base.webp"
-        },
-        {
-          "url": "/assets/new-product-images/3in-round-base-15.webp",
-          "original": "new-product-images/3in-round-base-15.png",
-          "webp": "",
-          "alt": "3in round base tenon adapter",
-          "filename": "3in-round-base-15.webp"
         }
       ],
       "attributes": {
@@ -7785,17 +7418,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/4in-round-base.webp",
-          "original": "new-product-images/4in-round-base.png",
+          "original": "new-product-images/4in-round-base.webp",
           "webp": "",
           "alt": "4in round base tenon adapter",
           "filename": "4in-round-base.webp"
-        },
-        {
-          "url": "/assets/new-product-images/4in-round-base-15.webp",
-          "original": "new-product-images/4in-round-base-15.png",
-          "webp": "",
-          "alt": "4in round base tenon adapter",
-          "filename": "4in-round-base-15.webp"
         }
       ],
       "attributes": {
@@ -7831,17 +7457,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/5in-round-base.webp",
-          "original": "new-product-images/5in-round-base.png",
+          "original": "new-product-images/5in-round-base.webp",
           "webp": "",
           "alt": "5in round base tenon adapter",
           "filename": "5in-round-base.webp"
-        },
-        {
-          "url": "/assets/new-product-images/5in-round-base-15.webp",
-          "original": "new-product-images/5in-round-base-15.png",
-          "webp": "",
-          "alt": "5in round base tenon adapter",
-          "filename": "5in-round-base-15.webp"
         }
       ],
       "attributes": {
@@ -7877,17 +7496,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/4in-square-base.webp",
-          "original": "new-product-images/4in-square-base.png",
+          "original": "new-product-images/4in-square-base.webp",
           "webp": "",
           "alt": "4in square base tenon adapter",
           "filename": "4in-square-base.webp"
-        },
-        {
-          "url": "/assets/new-product-images/4in-square-base-15.webp",
-          "original": "new-product-images/4in-square-base-15.png",
-          "webp": "",
-          "alt": "4in square base tenon adapter",
-          "filename": "4in-square-base-15.webp"
         }
       ],
       "attributes": {
@@ -7924,17 +7536,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/4-light-bullhorn-light-pole-adapter-for-slip-fitter-mount.webp",
-          "original": "new-product-images/4-light-bullhorn-light-pole-adapter-for-slip-fitter-mount.png",
+          "original": "new-product-images/4-light-bullhorn-light-pole-adapter-for-slip-fitter-mount.webp",
           "webp": "",
           "alt": "4 Light Bullhorn Light Pole Adapter for Slip Fitter Mount",
           "filename": "4-light-bullhorn-light-pole-adapter-for-slip-fitter-mount.webp"
-        },
-        {
-          "url": "/assets/new-product-images/4-light-bullhorn-light-pole-adapter-for-slip-fitter-mount-15.webp",
-          "original": "new-product-images/4-light-bullhorn-light-pole-adapter-for-slip-fitter-mount-15.png",
-          "webp": "",
-          "alt": "4 Light Bullhorn Light Pole Adapter for Slip Fitter Mount",
-          "filename": "4-light-bullhorn-light-pole-adapter-for-slip-fitter-mount-15.webp"
         }
       ],
       "attributes": {
@@ -7974,17 +7579,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/triple-bullhorn-tenon-for-3-fixtures-120-degree-round-bh3n3h-2.webp",
-          "original": "new-product-images/triple-bullhorn-tenon-for-3-fixtures-120-degree-round-bh3n3h-2.png",
+          "original": "new-product-images/triple-bullhorn-tenon-for-3-fixtures-120-degree-round-bh3n3h-2.webp",
           "webp": "",
           "alt": "Triple Bullhorn Tenon for 3 fixtures-120 Degree Round",
           "filename": "triple-bullhorn-tenon-for-3-fixtures-120-degree-round-bh3n3h-2.webp"
-        },
-        {
-          "url": "/assets/new-product-images/triple-bullhorn-tenon-for-3-fixtures-120-degree-round-bh3n3h-2-15.webp",
-          "original": "new-product-images/triple-bullhorn-tenon-for-3-fixtures-120-degree-round-bh3n3h-2-15.png",
-          "webp": "",
-          "alt": "Triple Bullhorn Tenon for 3 fixtures-120 Degree Round",
-          "filename": "triple-bullhorn-tenon-for-3-fixtures-120-degree-round-bh3n3h-2-15.webp"
         }
       ],
       "attributes": {
@@ -8018,17 +7616,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/slip-fitter-to-arm-mount-adaptor-sfa01.webp",
-          "original": "new-product-images/slip-fitter-to-arm-mount-adaptor-sfa01.png",
+          "original": "new-product-images/slip-fitter-to-arm-mount-adaptor-sfa01.webp",
           "webp": "",
           "alt": "Slip Fitter to arm mount adaptor",
           "filename": "slip-fitter-to-arm-mount-adaptor-sfa01.webp"
-        },
-        {
-          "url": "/assets/new-product-images/slip-fitter-to-arm-mount-adaptor-sfa01-15.webp",
-          "original": "new-product-images/slip-fitter-to-arm-mount-adaptor-sfa01-15.png",
-          "webp": "",
-          "alt": "Slip Fitter to arm mount adaptor",
-          "filename": "slip-fitter-to-arm-mount-adaptor-sfa01-15.webp"
         }
       ],
       "attributes": {},
@@ -8056,17 +7647,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/twin-square-straight-bull-horn-for-2-fixtures.webp",
-          "original": "new-product-images/twin-square-straight-bull-horn-for-2-fixtures.png",
+          "original": "new-product-images/twin-square-straight-bull-horn-for-2-fixtures.webp",
           "webp": "",
           "alt": "Twin Square Straight Bull Horn for 2 fixtures",
           "filename": "twin-square-straight-bull-horn-for-2-fixtures.webp"
-        },
-        {
-          "url": "/assets/new-product-images/twin-square-straight-bull-horn-for-2-fixtures-15.webp",
-          "original": "new-product-images/twin-square-straight-bull-horn-for-2-fixtures-15.png",
-          "webp": "",
-          "alt": "Twin Square Straight Bull Horn for 2 fixtures",
-          "filename": "twin-square-straight-bull-horn-for-2-fixtures-15.webp"
         }
       ],
       "attributes": {
@@ -8143,17 +7727,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/pole-tenon-spoke-double-180-horizontal-tenon-adaptor-tn2h180d.webp",
-          "original": "new-product-images/pole-tenon-spoke-double-180-horizontal-tenon-adaptor-tn2h180d.png",
+          "original": "new-product-images/pole-tenon-spoke-double-180-horizontal-tenon-adaptor-tn2h180d.webp",
           "webp": "",
           "alt": "Pole Tenon Spoke Double 180‘ Horizontal Tenon Adaptor",
           "filename": "pole-tenon-spoke-double-180-horizontal-tenon-adaptor-tn2h180d.webp"
-        },
-        {
-          "url": "/assets/new-product-images/pole-tenon-spoke-double-180-horizontal-tenon-adaptor-tn2h180d-15.webp",
-          "original": "new-product-images/pole-tenon-spoke-double-180-horizontal-tenon-adaptor-tn2h180d-15.png",
-          "webp": "",
-          "alt": "Pole Tenon Spoke Double 180‘ Horizontal Tenon Adaptor",
-          "filename": "pole-tenon-spoke-double-180-horizontal-tenon-adaptor-tn2h180d-15.webp"
         }
       ],
       "attributes": {
@@ -8187,17 +7764,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/180-degree-round-triple-bullhorn-tenon-for-3-fixtures-bh3n3h.webp",
-          "original": "new-product-images/180-degree-round-triple-bullhorn-tenon-for-3-fixtures-bh3n3h.png",
+          "original": "new-product-images/180-degree-round-triple-bullhorn-tenon-for-3-fixtures-bh3n3h.webp",
           "webp": "",
           "alt": "180 Degree Round Triple Bullhorn Tenon for 3 fixtures",
           "filename": "180-degree-round-triple-bullhorn-tenon-for-3-fixtures-bh3n3h.webp"
-        },
-        {
-          "url": "/assets/new-product-images/180-degree-round-triple-bullhorn-tenon-for-3-fixtures-bh3n3h-15.webp",
-          "original": "new-product-images/180-degree-round-triple-bullhorn-tenon-for-3-fixtures-bh3n3h-15.png",
-          "webp": "",
-          "alt": "180 Degree Round Triple Bullhorn Tenon for 3 fixtures",
-          "filename": "180-degree-round-triple-bullhorn-tenon-for-3-fixtures-bh3n3h-15.webp"
         }
       ],
       "attributes": {
@@ -8232,17 +7802,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/180-degree-round-double-bullhorn-tenon-for-2-fixtures-bht180d.webp",
-          "original": "new-product-images/180-degree-round-double-bullhorn-tenon-for-2-fixtures-bht180d.png",
+          "original": "new-product-images/180-degree-round-double-bullhorn-tenon-for-2-fixtures-bht180d.webp",
           "webp": "",
           "alt": "180 Degree Round Double Bullhorn Tenon for 2 fixtures",
           "filename": "180-degree-round-double-bullhorn-tenon-for-2-fixtures-bht180d.webp"
-        },
-        {
-          "url": "/assets/new-product-images/180-degree-round-double-bullhorn-tenon-for-2-fixtures-bht180d-15.webp",
-          "original": "new-product-images/180-degree-round-double-bullhorn-tenon-for-2-fixtures-bht180d-15.png",
-          "webp": "",
-          "alt": "180 Degree Round Double Bullhorn Tenon for 2 fixtures",
-          "filename": "180-degree-round-double-bullhorn-tenon-for-2-fixtures-bht180d-15.webp"
         }
       ],
       "attributes": {
@@ -8276,17 +7839,10 @@
       "images": [
         {
           "url": "/assets/new-product-images/180-low-profile-bullhorn-with-4-2-3-8in-o-d-tenon-bh4hl.webp",
-          "original": "new-product-images/180-low-profile-bullhorn-with-4-2-3-8in-o-d-tenon-bh4hl.png",
+          "original": "new-product-images/180-low-profile-bullhorn-with-4-2-3-8in-o-d-tenon-bh4hl.webp",
           "webp": "",
           "alt": "180° Low Profile Bullhorn with (4) 2-3/8in O.D. Tenon",
           "filename": "180-low-profile-bullhorn-with-4-2-3-8in-o-d-tenon-bh4hl.webp"
-        },
-        {
-          "url": "/assets/new-product-images/180-low-profile-bullhorn-with-4-2-3-8in-o-d-tenon-bh4hl-15.webp",
-          "original": "new-product-images/180-low-profile-bullhorn-with-4-2-3-8in-o-d-tenon-bh4hl-15.jpg",
-          "webp": "",
-          "alt": "180° Low Profile Bullhorn with (4) 2-3/8in O.D. Tenon",
-          "filename": "180-low-profile-bullhorn-with-4-2-3-8in-o-d-tenon-bh4hl-15.webp"
         }
       ],
       "attributes": {
@@ -8321,11 +7877,11 @@
       ],
       "images": [
         {
-          "url": "/assets/new-product-images/180-low-profile-bullhorn-with-3-2-3-8in-o-d-tenon-bh3hl.webp",
-          "original": "new-product-images/180-low-profile-bullhorn-with-3-2-3-8in-o-d-tenon-bh3hl.png",
+          "url": "/assets/new-product-images/180-low-profile-bullhorn-with-3-2-3-8in-o-d-tenon-bh3hl-2.webp",
+          "original": "new-product-images/180-low-profile-bullhorn-with-3-2-3-8in-o-d-tenon-bh3hl-2.webp",
           "webp": "",
           "alt": "180° Low Profile Bullhorn with (3) 2-3/8in O.D. Tenon For 3 Fixtures",
-          "filename": "180-low-profile-bullhorn-with-3-2-3-8in-o-d-tenon-bh3hl.webp"
+          "filename": "180-low-profile-bullhorn-with-3-2-3-8in-o-d-tenon-bh3hl-2.webp"
         }
       ],
       "attributes": {
@@ -8360,18 +7916,11 @@
       ],
       "images": [
         {
-          "url": "/assets/new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx.webp",
-          "original": "new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx.png",
+          "url": "/assets/new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx-2.webp",
+          "original": "new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx-2.webp",
           "webp": "",
           "alt": "90 Degree Quad Square Vertical Tenon For 4 Fixtures",
-          "filename": "90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx.webp"
-        },
-        {
-          "url": "/assets/new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx-15.webp",
-          "original": "new-product-images/90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx-15.jpg",
-          "webp": "",
-          "alt": "90 Degree Quad Square Vertical Tenon For 4 Fixtures",
-          "filename": "90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx-15.webp"
+          "filename": "90-degree-quad-square-vertical-tenon-for-4-fixtures-bh4hx-2.webp"
         }
       ],
       "attributes": {
