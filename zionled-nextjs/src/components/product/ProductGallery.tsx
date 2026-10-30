@@ -1,10 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { getProductImageSrc } from '@/lib/catalog'
-import { BLUR_DATA_URL } from '@/lib/ui'
 import type { ProductImage } from '@/types/product'
 
 interface ProductGalleryProps {
@@ -13,174 +12,76 @@ interface ProductGalleryProps {
 }
 
 export default function ProductGallery({ images, productName }: ProductGalleryProps) {
-  const galleryImages = useMemo(
+  const gallery = useMemo(
     () =>
       images
-        .map((image, index) => ({
-          key: `${image.url || image.original || image.webp || index}-${index}`,
-          src: getProductImageSrc(image),
-          alt: image.alt || `${productName} view ${index + 1}`,
-        }))
-        .filter((image): image is { key: string; src: string; alt: string } => Boolean(image.src)),
+        .map((image, index) => ({ src: getProductImageSrc(image), alt: image.alt || `${productName} view ${index + 1}` }))
+        .filter((image): image is { src: string; alt: string } => Boolean(image.src)),
     [images, productName],
   )
-
   const [active, setActive] = useState(0)
-  const [loaded, setLoaded] = useState(false)
-  const [zooming, setZooming] = useState(false)
-  const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 })
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => { setActive(0) }, [galleryImages.length])
-  useEffect(() => { setLoaded(false) }, [active])
+  const [zoom, setZoom] = useState<{ x: number; y: number } | null>(null)
 
   useEffect(() => {
-    if (galleryImages.length === 0) return
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight') setActive(i => (i + 1) % galleryImages.length)
-      if (e.key === 'ArrowLeft') setActive(i => (i - 1 + galleryImages.length) % galleryImages.length)
+    if (gallery.length < 2) return
+    const onKey = (event: KeyboardEvent) => {
+      if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName ?? '')) return
+      if (event.key === 'ArrowRight') setActive((i) => (i + 1) % gallery.length)
+      if (event.key === 'ArrowLeft') setActive((i) => (i - 1 + gallery.length) % gallery.length)
     }
-    window.addEventListener('keydown', handler)
-    return () => window.removeEventListener('keydown', handler)
-  }, [galleryImages.length])
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [gallery.length])
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return
-    const rect = containerRef.current.getBoundingClientRect()
-    const x = ((e.clientX - rect.left) / rect.width) * 100
-    const y = ((e.clientY - rect.top) / rect.height) * 100
-    setZoomPos({ x, y })
-  }
-
-  const currentImage = galleryImages[active] || galleryImages[0]
-
-  if (!currentImage) {
-    return (
-      <div className="gallery-sticky product-gallery-shell">
-        <div
-          className="product-gallery-main product-gallery-empty"
-          style={{
-            position: 'relative',
-            width: '100%',
-            aspectRatio: '1 / 1',
-            background: 'var(--bg-card)',
-            border: '1px solid var(--border)',
-            borderRadius: '16px',
-            display: 'grid',
-            placeItems: 'center',
-            color: 'var(--muted)',
-            fontFamily: 'var(--font-head)',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-          }}
-        >
-          Image unavailable
-        </div>
-      </div>
-    )
-  }
+  const current = gallery[active] ?? gallery[0]
 
   return (
-    <div className="gallery-sticky product-gallery-shell">
+    <div className="gallery">
       <div
-        ref={containerRef}
-        className="product-gallery-main"
-        onMouseEnter={() => setZooming(true)}
-        onMouseLeave={() => setZooming(false)}
-        onMouseMove={handleMouseMove}
-        style={{
-          position: 'relative',
-          width: '100%',
-          aspectRatio: '1 / 1',
-          background: 'var(--bg-card)',
-          border: '1px solid var(--border)',
-          borderRadius: '16px',
-          overflow: 'hidden',
-          cursor: 'crosshair',
+        className="gallery-main"
+        onMouseMove={(event) => {
+          const rect = event.currentTarget.getBoundingClientRect()
+          setZoom({ x: ((event.clientX - rect.left) / rect.width) * 100, y: ((event.clientY - rect.top) / rect.height) * 100 })
         }}
+        onMouseLeave={() => setZoom(null)}
       >
-        {/* Normal image */}
-        <Image
-          key={currentImage.key}
-          src={currentImage.src}
-          alt={currentImage.alt}
-          fill
-          priority={active === 0}
-          loading={active === 0 ? 'eager' : 'lazy'}
-          placeholder="blur"
-          blurDataURL={BLUR_DATA_URL}
-          sizes="(max-width: 768px) 100vw, 45vw"
-          onLoad={() => setLoaded(true)}
-          style={{
-            objectFit: 'contain',
-            padding: '2rem',
-            opacity: loaded ? 1 : 0,
-            transition: 'opacity 0.2s ease',
-          }}
-        />
-
-        {/* Zoom overlay - follows mouse */}
-        {zooming && loaded && (
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundImage: `url(${currentImage.src})`,
-              backgroundSize: '250%',
-              backgroundPosition: `${zoomPos.x}% ${zoomPos.y}%`,
-              backgroundRepeat: 'no-repeat',
-              opacity: 1,
-              zIndex: 10,
-              borderRadius: '16px',
-            }}
-          />
+        {current ? (
+          <Image key={current.src} src={current.src} alt={current.alt} fill priority sizes="(max-width: 960px) 100vw, 640px" />
+        ) : (
+          <div className="empty" style={{ border: 0 }}>
+            Image coming soon
+          </div>
         )}
+        {current && zoom ? (
+          <div
+            className="gallery-zoom"
+            aria-hidden="true"
+            style={{ backgroundImage: `url(${current.src})`, backgroundPosition: `${zoom.x}% ${zoom.y}%` }}
+          />
+        ) : null}
+        {gallery.length > 1 ? (
+          <span className="gallery-count">
+            {active + 1} / {gallery.length}
+          </span>
+        ) : null}
       </div>
 
-      {galleryImages.length > 1 && (
-        <div
-          className="product-thumb-strip"
-          style={{
-            display: 'flex',
-            gap: '10px',
-            marginTop: '16px',
-            overflowX: 'auto',
-            paddingBottom: '2px',
-          }}
-        >
-          {galleryImages.map((image, index) => (
+      {gallery.length > 1 ? (
+        <div className="gallery-thumbs">
+          {gallery.map((image, index) => (
             <button
-              key={image.key}
+              key={image.src}
               type="button"
+              className={`gallery-thumb ${index === active ? 'is-active' : ''}`}
+              aria-label={`Show image ${index + 1}`}
+              aria-pressed={index === active}
               onClick={() => setActive(index)}
-              aria-label={`Show ${productName} image ${index + 1}`}
-              style={{
-                width: 80,
-                height: 80,
-                flexShrink: 0,
-                position: 'relative',
-                background: 'var(--bg-card)',
-                border: `2px solid ${index === active ? 'var(--blue-bright)' : 'transparent'}`,
-                borderRadius: '10px',
-                overflow: 'hidden',
-                cursor: 'pointer',
-                transition: 'border-color 0.2s ease',
-                boxShadow: index === active ? '0 0 12px rgba(13,127,212,0.4)' : 'none',
-              }}
             >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                placeholder="blur"
-                blurDataURL={BLUR_DATA_URL}
-                sizes="80px"
-                style={{ objectFit: 'contain', padding: '4px' }}
-              />
+              <Image src={image.src} alt="" fill sizes="78px" />
             </button>
           ))}
         </div>
-      )}
+      ) : null}
     </div>
   )
 }

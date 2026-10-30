@@ -1,67 +1,48 @@
-'use client'
+import Link from 'next/link'
 
-import dynamic from 'next/dynamic'
+import Icon, { type IconName } from '@/components/ui/Icon'
 
-import type { WhyFeature } from '@/types/product'
+const FEATURES: { icon: IconName; title: string; text: string }[] = [
+  { icon: 'shield', title: 'DLC & UL listed', text: 'Spec-grade fixtures that pass inspection and qualify for utility rebates.' },
+  { icon: 'truck', title: 'Ships from Dallas', text: 'Stock on hand in Texas with fast, tracked freight to job sites nationwide.' },
+  { icon: 'layout', title: 'Free lighting layouts', text: 'Send a floor plan or site map. We return fixture counts and a photometric plan.' },
+  { icon: 'dollar', title: 'Rebate & pricing help', text: 'Contractor pricing on project quantities, and we help you claim local rebates.' },
+]
 
-const EnergyCanvas = dynamic(() => import('@/components/three/EnergyCanvas'), {
-  ssr: false,
-  loading: () => <div className="canvas-placeholder" />,
-})
-
-interface WhySectionProps {
-  features: WhyFeature[]
-}
-
-const ICON_CODES: Record<string, string> = {
-  'High Performance': 'HP',
-  'Value Pricing': 'VP',
-  'Warranty Backed': 'WB',
-  'Free Consultation': 'FC',
-}
-
-export default function WhySection({ features }: WhySectionProps) {
-  const certifications = ['DLC Listed', 'UL Certified', 'RoHS', 'CE', 'FCC', 'IP65+']
-
+export default function WhySection({ stats }: { stats: { value: string; label: string }[] }) {
   return (
-    <section id="about" className="why-section">
-      <div className="site-shell split-grid">
-        <div className="reveal">
-          <div className="s-label">Why ZION LED USA</div>
-          <h2 className="section-title">
-            BUILT TO <span className="text-accent-gold">SERVE</span>
-          </h2>
-          <p className="section-copy">
-            Commercial buyers do not need decorative noise. They need support, compliance confidence, and products framed like systems that belong in a real project package.
-          </p>
-
-          <div className="feature-grid">
-            {features.map((feature) => (
-              <article key={feature.title} className="feature-card reveal">
-                <div className="feature-topline" />
-                <div className="feature-icon">{ICON_CODES[feature.title] ?? 'LED'}</div>
-                <h3>{feature.title}</h3>
-                <p>{feature.text}</p>
-              </article>
-            ))}
+    <section id="why" className="section night">
+      <div className="shell">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow">Why ZION LED</span>
+            <h2>A lighting partner, not just a catalog</h2>
+            <p>Contractors, facility managers and property owners buy from us because the order is the easy part. The support is what they come back for.</p>
           </div>
+          <Link href="/about" className="text-link" style={{ color: '#ffffff' }}>
+            Our story &amp; team <Icon name="arrow" size={16} />
+          </Link>
         </div>
 
-        <div className="why-visual reveal">
-          <div className="why-canvas-shell">
-            <EnergyCanvas className="why-tech-canvas" />
-
-            <div className="why-cert-card">
-              <div className="why-cert-label">Certifications &amp; Standards</div>
-              <div className="why-cert-list">
-                {certifications.map((badge) => (
-                  <span key={badge} className="why-cert-pill">
-                    {badge}
-                  </span>
-                ))}
-              </div>
+        <div className="why-grid">
+          {FEATURES.map((feature) => (
+            <div key={feature.title} className="why-card">
+              <span className="trust-icon">
+                <Icon name={feature.icon} size={20} />
+              </span>
+              <h3>{feature.title}</h3>
+              <p>{feature.text}</p>
             </div>
-          </div>
+          ))}
+        </div>
+
+        <div className="stat-row">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

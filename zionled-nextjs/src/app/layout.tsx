@@ -1,24 +1,19 @@
 import type { Metadata } from 'next'
-import { Exo_2, Rajdhani } from 'next/font/google'
-
-import GlobalEffects from '@/components/effects/GlobalEffects'
+import { Inter, Inter_Tight } from 'next/font/google'
 
 import './globals.css'
 
-const rajdhani = Rajdhani({
+const head = Inter_Tight({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['500', '600', '700'],
   variable: '--font-head',
   display: 'swap',
-  preload: true,
 })
 
-const exo2 = Exo_2({
+const body = Inter({
   subsets: ['latin'],
-  weight: ['200', '300', '400', '600', '700'],
   variable: '--font-body',
   display: 'swap',
-  preload: true,
 })
 
 export const metadata: Metadata = {
@@ -33,15 +28,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   metadataBase: new URL('https://zionledusa.com'),
+  alternates: { canonical: '/' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${rajdhani.variable} ${exo2.variable}`}>
-      <body>
-        <GlobalEffects />
-        <div className="site-root">{children}</div>
-      </body>
+    <html lang="en" className={`${head.variable} ${body.variable}`}>
+      <body>{children}</body>
     </html>
   )
 }

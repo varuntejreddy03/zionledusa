@@ -441,6 +441,16 @@ function extractSummary(text: string) {
   return summarizeText(sentences.slice(0, 2).join(' '), 180)
 }
 
+function cleanCategoryDescription(desc?: string): string {
+  if (!desc) return ''
+  return desc
+    .replace(/^Features\.\s*/i, '')
+    .replace(/^High Efficiency\.\s*:\s*/i, 'High efficiency: ')
+    .replace(/\.{2,}$/g, '.')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 function buildCategoryDescription(categoryName: string, product?: Product) {
   const summary = summarizeText(product?.short_desc || product?.description || '', 160)
   return summary || `${categoryName} commercial LED lighting products.`
@@ -556,8 +566,10 @@ export function getNavigationGroups(): NavigationGroup[] {
         return {
           label: category.name,
           href: getCategoryHref(category.slug),
+          count: category.count,
         }
       })
+    const products = getProductsByGroup(group.key)
 
     return {
       key: group.key,
@@ -565,6 +577,8 @@ export function getNavigationGroups(): NavigationGroup[] {
       href: getCategoryHref(group.key),
       description: group.description,
       items,
+      image: getProductImageSrc(group.featuredSlugs.flatMap(getProductsByCategory)[0] ?? products[0]),
+      productCount: products.length,
     }
   })
 }
@@ -651,7 +665,7 @@ export function getCategoryPageData(slug: string): CategoryPageData | undefined 
     slug: category.slug,
     name: category.name,
     title: category.name.toUpperCase(),
-    description: category.description || buildCategoryDescription(category.name, products[0]),
+    description: cleanCategoryDescription(category.description) || buildCategoryDescription(category.name, products[0]),
     href: getCategoryHref(category.slug),
     group: category.group,
     groupLabel: resolvedGroup.label,
@@ -669,24 +683,24 @@ export function getProductBreadcrumbItems(product: Product): BreadcrumbItem[] {
   const primaryCategory = product.categories.find((category) => category.slug && !ROOT_CATEGORY_SLUGS.has(category.slug))
   const groupKey = primaryCategory ? groupFromSlug(primaryCategory.slug) ?? product.group ?? null : product.group ?? null
 
-  const items: BreadcrumbItem[] = [{ label: 'HOME', href: '/' }]
+  const items: BreadcrumbItem[] = [{ label: 'Home', href: '/' }]
 
   if (groupKey) {
     const group = getGroupConfig(groupKey)
     items.push({
-      label: group.label.toUpperCase(),
+      label: group.label,
       href: getCategoryHref(group.key),
     })
   }
 
   if (primaryCategory) {
     items.push({
-      label: primaryCategory.name.toUpperCase(),
+      label: primaryCategory.name,
       href: getCategoryHref(primaryCategory.slug),
     })
   }
 
-  items.push({ label: product.name.toUpperCase() })
+  items.push({ label: product.name })
 
   return items
 }

@@ -1,33 +1,30 @@
 import type { Testimonial } from '@/types/product'
 
-interface TestimonialSectionProps {
-  testimonials: Testimonial[]
-}
-
-export default function TestimonialSection({ testimonials }: TestimonialSectionProps) {
+export default function TestimonialSection({ testimonials }: { testimonials: Testimonial[] }) {
   return (
-    <section className="testimonials-section">
-      <div className="site-shell">
-        <div className="section-heading reveal">
-          <div className="s-label">Client Feedback</div>
-          <h2 className="section-title">
-            WHAT CLIENTS <span className="text-accent-blue">REMEMBER</span>
-          </h2>
+    <section className="section">
+      <div className="shell">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow">Customer Trust</span>
+            <h2>Tested on Commercial Job Sites</h2>
+          </div>
         </div>
-
-        <div className="testimonial-grid">
-          {testimonials.map((testimonial) => (
-            <article key={testimonial.name} className="testimonial-card reveal">
-              <div className="testimonial-rating">5 / 5</div>
-              <p className="testimonial-quote">{testimonial.quote}</p>
-              <div className="testimonial-person">
-                <div className="testimonial-avatar">{testimonial.initials}</div>
+        <div className="quotes">
+          {testimonials.map((item) => (
+            <figure key={item.name} className="quote" style={{ margin: 0 }}>
+              <span className="quote-stars" aria-label="5 out of 5">
+                ★★★★★
+              </span>
+              <blockquote>&ldquo;{item.quote}&rdquo;</blockquote>
+              <footer>
+                <span className="avatar">{item.initials}</span>
                 <div>
-                  <div className="testimonial-name">{testimonial.name}</div>
-                  <div className="testimonial-role">{testimonial.role}</div>
+                  <strong>{item.name}</strong>
+                  <small>{item.role}</small>
                 </div>
-              </div>
-            </article>
+              </footer>
+            </figure>
           ))}
         </div>
       </div>

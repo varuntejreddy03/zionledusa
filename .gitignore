@@ -32,3 +32,8 @@ zionled-nextjs/tsconfig.tsbuildinfo
 # Scraper outputs (not for production)
 scraper/ledsion_products_enriched.json
 scraper/ledsion_products_enriched.csv
+
+# Large source assets
+data/Specsheets - ZION LED/
+*.pdf
+

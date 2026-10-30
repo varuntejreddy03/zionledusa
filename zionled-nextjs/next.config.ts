@@ -11,7 +11,6 @@ const nextConfig = (phase: string): NextConfig => {
       remotePatterns: [
         { protocol: 'https', hostname: 'zionledusa.com' },
         { protocol: 'https', hostname: '*.zionledusa.com' },
-        { protocol: 'https', hostname: 'ledsion.com' },
         { protocol: 'https', hostname: 'res.cloudinary.com' },
       ],
       formats: ['image/avif', 'image/webp'],

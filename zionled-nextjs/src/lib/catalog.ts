@@ -47,7 +47,7 @@ export const CATALOG_GROUPS: CatalogGroupConfig[] = [
       'led-retrofit-corn-bulbs',
     ],
     featuredSlugs: [
-      'ufo-highbay-lights',
+      'ufo-high-bay-lights',
       'led-panel-light',
       'linear-highbays',
       'led-downlights',

@@ -1,9 +1,8 @@
-'use client'
-
 import Link from 'next/link'
 
-import { getGroupConfig, groupFromSlug } from '@/lib/catalog'
-import { getHighlights, parseSpecsFromText } from '@/lib/parseSpecs'
+import { getSpecChips } from '@/components/ProductCard'
+import Icon from '@/components/ui/Icon'
+import { parseFeatures } from '@/lib/parseSpecs'
 import type { Product } from '@/types/product'
 
 interface ProductInfoProps {
@@ -13,311 +12,119 @@ interface ProductInfoProps {
   email: string
 }
 
-function formatSpecKey(key: string) {
-  const cleaned = key.replace(/[_-]+/g, ' ').trim()
-  if (!cleaned) return ''
+const ASSURANCES = [
+  'DLC & UL listed for utility rebates',
+  'Ships from stock in Dallas, Texas',
+  '5-year commercial factory warranty',
+  'Tiered volume & contractor pricing',
+]
 
-  return cleaned.charAt(0).toUpperCase() + cleaned.slice(1)
-}
-
-function formatAttributeValue(value: string | string[]) {
-  return Array.isArray(value) ? value.join(', ') : String(value)
-}
-
-export default function ProductInfo({ product, phone, phoneHref, email }: ProductInfoProps) {
-  const rawText = product.short_desc || product.description || ''
-  const specs = parseSpecsFromText(rawText)
-  const highlights = getHighlights(specs)
-  const attributeEntries = Object.entries(product.attributes || {})
-  const displayPrice = product.sale_price || product.price || product.regular_price || ''
-  const primaryCategory = product.categories[0]
-  const primaryGroup = getGroupConfig(primaryCategory?.slug ? groupFromSlug(primaryCategory.slug) ?? product.group ?? 'indoor' : product.group ?? 'indoor')
+export default function ProductInfo({ product, phone, phoneHref }: ProductInfoProps) {
+  const { features, applications } = parseFeatures(product.attributes?.['Key Features'])
+  const extraApps = parseFeatures(product.attributes?.['Suitable Applications']).features.map((item) => item.value)
+  const allApps = [...applications, ...extraApps]
+  const chips = getSpecChips(product.name)
+  const category = product.categories[0]
 
   return (
-    <div className="product-info-panel" style={{ paddingTop: '0.5rem' }}>
-      <div className="product-info-tags" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: '1.2rem' }}>
-        <Link href={`/category/${primaryGroup.key}`}>
-          <span
-            style={{
-              display: 'inline-block',
-              fontFamily: 'var(--font-head)',
-              fontSize: '0.65rem',
-              fontWeight: 700,
-              letterSpacing: '2px',
-              textTransform: 'uppercase',
-              padding: '4px 12px',
-              borderRadius: '100px',
-              background: 'rgba(13,127,212,0.15)',
-              border: '1px solid rgba(13,127,212,0.25)',
-              color: 'var(--blue-glow)',
-              cursor: 'pointer',
-              transition: 'border-color 0.2s ease',
-            }}
-          >
-            {primaryGroup.label}
-          </span>
-        </Link>
-
-        {product.categories.map((category, index) => (
-          <Link key={category.slug} href={`/category/${category.slug}`}>
-            <span
-              style={{
-                display: 'inline-block',
-                fontFamily: 'var(--font-head)',
-                fontSize: '0.65rem',
-                fontWeight: 700,
-                letterSpacing: '2px',
-                textTransform: 'uppercase',
-                padding: '4px 12px',
-                borderRadius: '100px',
-                background: index === 0 ? 'rgba(13,127,212,0.08)' : 'rgba(13,127,212,0.08)',
-                border: '1px solid rgba(13,127,212,0.15)',
-                color: 'var(--muted)',
-                cursor: 'pointer',
-                transition: 'border-color 0.2s ease',
-              }}
-            >
-              {category.name}
-            </span>
+    <div className="pd-info">
+      <div className="pd-badge-row">
+        {category ? (
+          <Link href={`/category/${category.slug}`} className="eyebrow" style={{ textTransform: 'uppercase' }}>
+            {category.name}
           </Link>
-        ))}
+        ) : null}
+        <span className="pd-cert-tag">DLC &amp; UL Spec</span>
       </div>
 
-      <h1
-        style={{
-          fontFamily: 'var(--font-head)',
-          fontSize: 'clamp(1.6rem, 2.5vw, 2.4rem)',
-          fontWeight: 700,
-          color: 'var(--off-white)',
-          letterSpacing: '1.5px',
-          textTransform: 'uppercase',
-          lineHeight: 1.1,
-          margin: 0,
-        }}
-      >
-        {product.name}
-      </h1>
+      <h1>{product.name}</h1>
 
-      {product.sku ? (
-        <p
-          style={{
-            margin: '0.75rem 0 0',
-            fontFamily: 'var(--font-head)',
-            fontSize: '0.8rem',
-            color: 'var(--dim)',
-          }}
-        >
-          SKU: {product.sku}
-        </p>
-      ) : null}
-
-      <p
-        style={{
-          margin: '1rem 0 0',
-          fontFamily: 'var(--font-head)',
-          fontSize: '1rem',
-          fontWeight: 700,
-          letterSpacing: '1px',
-          textTransform: 'uppercase',
-          color: displayPrice ? 'var(--gold)' : 'var(--muted)',
-        }}
-      >
-        {displayPrice ? displayPrice : 'Contact for Pricing'}
-      </p>
-
-      <div style={{ height: 1, background: 'var(--border)', margin: '1.2rem 0' }} />
-
-      <div className="s-label" style={{ marginBottom: '1rem' }}>
-        Product Highlights
-      </div>
-
-      {highlights.length > 0 ? (
-        <div className="product-highlight-list" style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.5rem' }}>
-          {highlights.map((spec, index) => (
-            <div key={`${spec.key}-${spec.value}-${index}`} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-              <div
-                style={{
-                  width: 8,
-                  height: 8,
-                  borderRadius: '50%',
-                  background: 'var(--blue-core)',
-                  boxShadow: '0 0 8px rgba(13,127,212,0.6)',
-                  flexShrink: 0,
-                  marginTop: 6,
-                }}
-              />
-              <p
-                style={{
-                  margin: 0,
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.9rem',
-                  lineHeight: 1.6,
-                  color: 'var(--off-white)',
-                  fontWeight: 300,
-                }}
-              >
-                {spec.key ? (
-                  <>
-                    <strong style={{ fontWeight: 600, color: 'var(--off-white)' }}>{formatSpecKey(spec.key)}:</strong>{' '}
-                    <span style={{ color: 'var(--muted)' }}>{spec.value}</span>
-                  </>
-                ) : (
-                  spec.value
-                )}
-              </p>
-            </div>
-          ))}
-        </div>
-      ) : product.short_desc ? (
-        <p
-          style={{
-            margin: '0 0 1.5rem',
-            fontFamily: 'var(--font-body)',
-            fontSize: '0.95rem',
-            color: 'var(--muted)',
-            lineHeight: 1.8,
-            fontWeight: 300,
-          }}
-        >
-          {product.short_desc}
-        </p>
-      ) : null}
-
-      {attributeEntries.length > 0 ? (
-        <>
-          <div style={{ height: 1, background: 'var(--border)', margin: '1.2rem 0' }} />
-          <div className="s-label" style={{ marginBottom: '1rem' }}>
-            Specifications
-          </div>
-
-          <div
-            className="product-quick-specs"
-            style={{
-              borderRadius: 12,
-              overflow: 'hidden',
-              border: '1px solid var(--border)',
-              marginBottom: '1.5rem',
-            }}
-          >
-            {attributeEntries.map(([key, value], index) => (
-              <div
-                key={key}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '35% 65%',
-                  padding: '0.7rem 1rem',
-                  background: index % 2 === 0 ? 'transparent' : 'rgba(13,127,212,0.04)',
-                  borderBottom: '1px solid var(--border)',
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: 'var(--font-head)',
-                    fontSize: '0.82rem',
-                    color: 'var(--muted)',
-                    fontWeight: 600,
-                    textTransform: 'capitalize',
-                    letterSpacing: '0.5px',
-                  }}
-                >
-                  {formatSpecKey(key)}
-                </span>
-                <span
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '0.85rem',
-                    color: 'var(--off-white)',
-                    fontWeight: 300,
-                  }}
-                >
-                  {formatAttributeValue(value)}
-                </span>
-              </div>
-            ))}
-          </div>
-        </>
-      ) : null}
-
-      <div style={{ height: 1, background: 'var(--border)', margin: '1.2rem 0' }} />
-
-      <div className="product-info-actions">
-        <a href={`tel:${phoneHref}`} className="btn-glow product-info-button">
-          Get a Quote
-        </a>
-        <a href={`mailto:${email}`} className="btn-outline product-info-button">
-          Email for Quote
-        </a>
-      </div>
-
-      <div className="product-trust-badges" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: '1.2rem' }}>
-        {['DLC Certified', 'UL Listed', '5-Year Warranty', 'Free Shipping'].map((badge) => (
-          <span
-            key={badge}
-            style={{
-              border: '1px solid var(--border)',
-              borderRadius: 6,
-              padding: '0.25rem 0.7rem',
-              fontFamily: 'var(--font-head)',
-              fontSize: '0.65rem',
-              fontWeight: 600,
-              color: 'var(--muted)',
-              letterSpacing: '0.5px',
-            }}
-          >
-            {badge}
+      <div className="pd-meta">
+        {product.sku ? (
+          <span>
+            SKU: <b>{product.sku}</b>
           </span>
-        ))}
-      </div>
-
-      <div
-        className="product-contact-strip"
-        style={{
-          marginTop: '1.5rem',
-          padding: '1rem 1.2rem',
-          background: 'rgba(13,127,212,0.05)',
-          border: '1px solid var(--border)',
-          borderRadius: 12,
-          display: 'flex',
-          gap: '2rem',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-        }}
-      >
-        <a
-          href={`tel:${phoneHref}`}
-          style={{
-            fontFamily: 'var(--font-head)',
-            fontWeight: 700,
-            fontSize: '0.85rem',
-            color: 'var(--gold)',
-            textDecoration: 'none',
-          }}
-        >
-          {phone}
-        </a>
-        <a
-          href={`mailto:${email}`}
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontWeight: 300,
-            fontSize: '0.85rem',
-            color: 'var(--muted)',
-            textDecoration: 'none',
-          }}
-        >
-          {email}
-        </a>
-        <span
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontWeight: 300,
-            fontSize: '0.82rem',
-            color: 'var(--dim)',
-          }}
-        >
-          Mon-Fri: 9AM-6PM CST
+        ) : null}
+        <span>
+          Stocked in <b>Dallas, TX</b>
+        </span>
+        <span>
+          Warranty: <b>5 Years</b>
         </span>
       </div>
+
+      {chips.length ? (
+        <div className="chips" style={{ marginTop: 14 }}>
+          {chips.map((chip, i) => (
+            <span key={chip} className={`chip ${i === 0 ? 'chip--highlight' : ''}`}>
+              {chip}
+            </span>
+          ))}
+          <span className="chip">0–10V Dimming</span>
+        </div>
+      ) : null}
+
+      <div className="pd-quote">
+        <div className="pd-quote-head">
+          <div>
+            <strong>Commercial &amp; Project Pricing</strong>
+            <p style={{ fontSize: '0.86rem', color: 'var(--ink-2)', marginTop: 2 }}>
+              Send fixture schedule or takeoff sheet. Official proposals returned within 24 hours.
+            </p>
+          </div>
+        </div>
+
+        <div className="cta-actions" style={{ marginTop: 16 }}>
+          <Link href="/quote" className="btn btn--primary">
+            Request Project Pricing <Icon name="arrow" size={16} />
+          </Link>
+          <a href={`tel:${phoneHref}`} className="btn btn--ghost">
+            <Icon name="phone" size={16} /> Call {phone}
+          </a>
+        </div>
+
+        <div className="pd-assure" style={{ marginTop: 20 }}>
+          {ASSURANCES.map((item) => (
+            <span key={item}>
+              <Icon name="check" size={16} /> {item}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {features.length ? (
+        <div className="pd-section">
+          <h2>Engineering Specifications</h2>
+          <ul className="feature-list">
+            {features.map((feature, index) => (
+              <li key={`${feature.key}-${index}`}>
+                <span>
+                  {feature.key ? <b>{feature.key}: </b> : null}
+                  {feature.value}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : product.short_desc ? (
+        <div className="pd-section">
+          <h2>Overview</h2>
+          <p style={{ color: 'var(--ink-2)' }}>{product.short_desc}</p>
+        </div>
+      ) : null}
+
+      {allApps.length ? (
+        <div className="pd-section">
+          <h2>Typical Commercial Applications</h2>
+          <div className="chips">
+            {allApps.map((app) => (
+              <span key={app} className="chip">
+                {app}
+              </span>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </div>
   )
 }

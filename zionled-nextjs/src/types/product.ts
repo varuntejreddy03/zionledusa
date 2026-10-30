@@ -86,6 +86,7 @@ export interface SitePage {
 export interface NavigationItem {
   label: string
   href: string
+  count?: number
 }
 
 export interface NavigationGroup {
@@ -94,6 +95,8 @@ export interface NavigationGroup {
   href: string
   description: string
   items: NavigationItem[]
+  image?: string | null
+  productCount?: number
 }
 
 export interface PrimaryCategory {

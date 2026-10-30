@@ -2,11 +2,11 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
-import { createPortal } from 'react-dom'
+import { useEffect, useState } from 'react'
 
 import SearchBar from '@/components/SearchBar'
-import { BLUR_DATA_URL } from '@/lib/ui'
+import Icon from '@/components/ui/Icon'
+import { APPLICATION_OPTIONS } from '@/lib/applicationsData'
 import type { NavigationGroup, SiteMeta } from '@/types/product'
 
 interface NavbarProps {
@@ -15,222 +15,253 @@ interface NavbarProps {
 }
 
 export default function Navbar({ meta, navigation }: NavbarProps) {
-  const [mounted, setMounted] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
   const [openGroup, setOpenGroup] = useState<string | null>(null)
-  const navRef = useRef<HTMLElement | null>(null)
-  const projectDeskLabel = meta.address.toLowerCase().includes('dallas') ? 'Dallas Project Desk' : 'Project Desk'
+  const [drawer, setDrawer] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
-
-    handleScroll()
-    window.addEventListener('scroll', handleScroll)
-
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
-
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [mobileOpen])
-
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    document.body.style.overflow = drawer ? 'hidden' : ''
+    const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setOpenGroup(null)
-        setMobileOpen(false)
+        setDrawer(false)
       }
     }
-
-    document.addEventListener('keydown', handleKeyDown)
-
+    document.addEventListener('keydown', onKey)
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = ''
+      document.removeEventListener('keydown', onKey)
     }
-  }, [])
+  }, [drawer])
 
-  const closeAllMenus = () => {
+  const close = () => {
     setOpenGroup(null)
-    setMobileOpen(false)
-  }
-
-  const toggleMobileMenu = () => {
-    setMobileOpen((value) => !value)
+    setDrawer(false)
   }
 
   return (
-    <header ref={navRef} className={`site-nav ${scrolled ? 'is-scrolled' : ''}`}>
-      <div className="site-shell nav-inner">
-        <Link href="/" className="nav-logo" aria-label="ZION LED USA home" onClick={closeAllMenus}>
-          <Image
-            src={meta.logo_url}
-            alt="ZION LED USA"
-            width={212}
-            height={58}
-            className="nav-logo-image"
-            priority
-            placeholder="blur"
-            blurDataURL={BLUR_DATA_URL}
-          />
-        </Link>
+    <>
+      <div className="topbar">
+        <div className="shell">
+          <div className="topbar-group">
+            <span className="topbar-live-badge">
+              <span className="topbar-dot" />
+              <strong className="topbar-live-tag">DALLAS HUB</strong>
+              <span className="topbar-live-time">· CST DESK</span>
+            </span>
+            <span className="topbar-hours">
+              Open {meta.business_hours} · Fast Nationwide Freight
+            </span>
+          </div>
+          <div className="topbar-group topbar-group--hide">
+            <span>Free lighting layouts &amp; rebate help</span>
+            <a href={`mailto:${meta.email}`}>{meta.email}</a>
+          </div>
+        </div>
+      </div>
 
-        <nav className="nav-desktop nav-links" aria-label="Primary">
-          <div className="nav-links-shell">
-            <ul className="nav-list">
-              <li className="nav-group nav-group--static">
-                <Link href="/" className="nav-link" onClick={closeAllMenus}>
-                  Home
-                </Link>
-              </li>
+      <header className={`nav ${scrolled ? 'is-scrolled' : ''}`} onMouseLeave={() => setOpenGroup(null)}>
+        <div className="shell nav-inner">
+          <Link href="/" className="nav-logo" aria-label="ZION LED USA home" onClick={close}>
+            <Image src={meta.logo_url} alt="ZION LED USA" width={220} height={22} priority />
+          </Link>
 
+          <nav aria-label="Primary">
+            <ul className="nav-menu">
               {navigation.map((group) => (
                 <li
                   key={group.key}
-                  className={`nav-group ${openGroup === group.key ? 'is-open' : ''}`}
+                  className={`nav-item ${openGroup === group.key ? 'is-open' : ''}`}
                   onMouseEnter={() => setOpenGroup(group.key)}
-                  onMouseLeave={() => setOpenGroup((current) => (current === group.key ? null : current))}
                 >
-                  <div className="nav-link-row">
-                    <Link href={group.href} className="nav-link nav-link--group" onClick={closeAllMenus}>
-                      <span>{group.label}</span>
-                    </Link>
+                  <button
+                    type="button"
+                    className="nav-link"
+                    aria-expanded={openGroup === group.key}
+                    onClick={() => setOpenGroup((current) => (current === group.key ? null : group.key))}
+                  >
+                    {group.label} <Icon name="chevron" size={15} />
+                  </button>
 
-                    <button
-                      type="button"
-                      className="nav-link-trigger"
-                      aria-expanded={openGroup === group.key}
-                      aria-label={`Toggle ${group.label} menu`}
-                      onClick={(event) => {
-                        event.preventDefault()
-                        event.stopPropagation()
-                        setOpenGroup((current) => (current === group.key ? null : group.key))
-                      }}
-                    >
-                      <span className="nav-link-caret" aria-hidden="true" />
-                    </button>
-                  </div>
-
-                  <div className="nav-dropdown">
-                    <div className="nav-dropdown-label">Browse {group.label}</div>
-                    <p className="nav-dropdown-copy">{group.description}</p>
-                    <div className="nav-dropdown-list">
-                      {group.items.map((item) => (
-                        <Link key={`${group.key}-${item.label}`} href={item.href} className="nav-dropdown-link" onClick={closeAllMenus}>
-                          {item.label}
-                        </Link>
-                      ))}
+                  <div className="mega">
+                    <div className="shell mega-inner">
+                      <div>
+                        <div className="mega-title">
+                          <h3>{group.label} lighting</h3>
+                          <Link href={group.href} className="text-link" onClick={close}>
+                            Shop all {group.productCount} products <Icon name="arrow" size={15} />
+                          </Link>
+                        </div>
+                        <div className="mega-links">
+                          {group.items.map((item) => (
+                            <Link key={item.href} href={item.href} onClick={close}>
+                              {item.label}
+                              {item.count ? <small>{item.count}</small> : null}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                      <Link href={group.href} className="mega-feature" onClick={close}>
+                        <div className="mega-feature-media">
+                          {group.image ? <Image src={group.image} alt="" fill sizes="260px" /> : null}
+                        </div>
+                        <p>{group.description}</p>
+                        <span className="text-link">
+                          Browse {group.label} <Icon name="arrow" size={15} />
+                        </span>
+                      </Link>
                     </div>
-                    <Link href={group.href} className="nav-dropdown-cta" onClick={closeAllMenus}>
-                      View All {group.label} <span aria-hidden="true">-&gt;</span>
-                    </Link>
                   </div>
                 </li>
               ))}
 
-              <li className="nav-group nav-group--static">
-                <Link href="/#about" className="nav-link" onClick={closeAllMenus}>
-                  About Us
-                </Link>
+              {/* Applications Mega Menu */}
+              <li
+                className={`nav-item ${openGroup === 'applications' ? 'is-open' : ''}`}
+                onMouseEnter={() => setOpenGroup('applications')}
+              >
+                <button
+                  type="button"
+                  className="nav-link"
+                  aria-expanded={openGroup === 'applications'}
+                  onClick={() => setOpenGroup((current) => (current === 'applications' ? null : 'applications'))}
+                >
+                  Applications <Icon name="chevron" size={15} />
+                </button>
+
+                <div className="mega">
+                  <div className="shell mega-inner">
+                    <div>
+                      <div className="mega-title">
+                        <h3>Lighting Applications</h3>
+                        <Link href="/applications" className="text-link" onClick={close}>
+                          Explore all 8 applications <Icon name="arrow" size={15} />
+                        </Link>
+                      </div>
+                      <div className="mega-links">
+                        {APPLICATION_OPTIONS.map((app) => (
+                          <Link key={app.slug} href={`/applications/${app.slug}`} onClick={close}>
+                            {app.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <Link href="/applications" className="mega-feature" onClick={close}>
+                      <p>
+                        Spec-grade fixtures tailored for optimal foot-candles, DLC qualified listings, and local code compliance.
+                      </p>
+                      <span className="text-link">
+                        View all applications <Icon name="arrow" size={15} />
+                      </span>
+                    </Link>
+                  </div>
+                </div>
               </li>
 
-              <li className="nav-group nav-group--static">
-                <Link href="/#contact" className="nav-link" onClick={closeAllMenus}>
+              {/* Static Links */}
+              <li className="nav-item" onMouseEnter={() => setOpenGroup(null)}>
+                <Link href="/about" className="nav-link">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item" onMouseEnter={() => setOpenGroup(null)}>
+                <Link href="/contact" className="nav-link">
                   Contact
                 </Link>
               </li>
             </ul>
+          </nav>
+
+          <div className="nav-actions">
+            <a href={`tel:${meta.phone_href}`} className="nav-phone">
+              {meta.phone}
+            </a>
+            <SearchBar />
+            <Link href="/quote" className="btn btn--primary btn--sm">
+              Get a quote
+            </Link>
+            <button
+              type="button"
+              className="icon-btn nav-burger"
+              aria-label="Open menu"
+              aria-expanded={drawer}
+              onClick={() => setDrawer(true)}
+            >
+              <Icon name="menu" />
+            </button>
           </div>
-        </nav>
-
-        <div className="nav-utility">
-          <div className="nav-status-chip">
-            <span className="nav-status-dot" aria-hidden="true" />
-            <span>{projectDeskLabel}</span>
-          </div>
-
-          <a href={`tel:${meta.phone_href}`} className="nav-phone-pill">
-            <span className="nav-phone-label">Call</span>
-            <span className="nav-phone-number">{meta.phone}</span>
-          </a>
-
-          <Link href="/#contact" className="nav-cta btn-glow" onClick={closeAllMenus}>
-            Free Quote
-          </Link>
-
-          <SearchBar />
-
-          <button
-            type="button"
-            className="mobile-menu-btn"
-            onClick={toggleMobileMenu}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-navigation"
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? '\u2715' : '\u2630'}
-          </button>
         </div>
-      </div>
+      </header>
 
-      {mounted && mobileOpen
-        ? createPortal(
-            <div id="mobile-navigation" className="nav-mobile is-open" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-              <div className="site-shell nav-mobile-panel">
-                <div className="nav-mobile-utility">
-                  <a href={`tel:${meta.phone_href}`} className="nav-mobile-phone" onClick={closeAllMenus}>
-                    {meta.phone}
-                  </a>
-                  <Link href="/#contact" className="btn-glow nav-mobile-cta" onClick={closeAllMenus}>
-                    Free Quote
+      {drawer ? (
+        <div className="drawer" onClick={close} role="dialog" aria-modal="true" aria-label="Menu">
+          <div className="drawer-panel" onClick={(event) => event.stopPropagation()}>
+            <div className="drawer-head">
+              <Image src={meta.logo_url} alt="ZION LED USA" width={170} height={17} />
+              <button type="button" className="icon-btn" aria-label="Close menu" onClick={close}>
+                <Icon name="close" />
+              </button>
+            </div>
+
+            {navigation.map((group) => (
+              <details key={group.key}>
+                <summary>
+                  {group.label} <Icon name="chevron" />
+                </summary>
+                <div className="drawer-links">
+                  <Link href={group.href} onClick={close}>
+                    <b>All {group.label}</b>
                   </Link>
+                  {group.items.map((item) => (
+                    <Link key={item.href} href={item.href} onClick={close}>
+                      {item.label}
+                    </Link>
+                  ))}
                 </div>
+              </details>
+            ))}
 
-                <div className="nav-mobile-footer">
-                  <Link href="/" className="nav-mobile-link" onClick={closeAllMenus}>
-                    Home
+            <details>
+              <summary>
+                Applications <Icon name="chevron" />
+              </summary>
+              <div className="drawer-links">
+                <Link href="/applications" onClick={close}>
+                  <b>All Applications</b>
+                </Link>
+                {APPLICATION_OPTIONS.map((app) => (
+                  <Link key={app.slug} href={`/applications/${app.slug}`} onClick={close}>
+                    {app.title}
                   </Link>
-                  <Link href="/#about" className="nav-mobile-link" onClick={closeAllMenus}>
-                    About Us
-                  </Link>
-                  <Link href="/#contact" className="nav-mobile-link" onClick={closeAllMenus}>
-                    Contact
-                  </Link>
-                </div>
-
-                {navigation.map((group) => (
-                  <div key={group.key} className="nav-mobile-group">
-                    <div className="nav-mobile-group-head">
-                      <Link href={group.href} className="nav-mobile-heading" onClick={closeAllMenus}>
-                        {group.label}
-                      </Link>
-                      <Link href={group.href} className="nav-mobile-viewall" onClick={closeAllMenus}>
-                        View all
-                      </Link>
-                    </div>
-
-                    <div className="nav-mobile-links">
-                      {group.items.map((item) => (
-                        <Link key={`${group.key}-${item.label}`} href={item.href} className="nav-mobile-link" onClick={closeAllMenus}>
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
                 ))}
               </div>
-            </div>,
-            document.body
-          )
-        : null}
-    </header>
+            </details>
+
+            <Link href="/about" className="drawer-plain" onClick={close}>
+              About
+            </Link>
+            <Link href="/contact" className="drawer-plain" onClick={close}>
+              Contact
+            </Link>
+
+            <div className="drawer-cta">
+              <Link href="/quote" className="btn btn--primary" onClick={close}>
+                Get a quote
+              </Link>
+              <a href={`tel:${meta.phone_href}`} className="btn btn--ghost">
+                <Icon name="phone" /> {meta.phone}
+              </a>
+            </div>
+          </div>
+        </div>
+      ) : null}
+    </>
   )
 }
